@@ -1,7 +1,7 @@
-# UrduPython
-> Ever had that random thought of programming in Urdu? Well, you're at the right place.
+# UniversalPython
+> Ever had that random thought of programming in Chinese? Or Russian, Arabic, Spanish? Well, you're at the right place.
 
-Programming Language in Urdu, based on Python - اردو میں کوڈ لکھیں
+An inclusive transpiler which lets you write Python code in any human language.
 
 ## Pre-requisites
 - Python 3+
@@ -11,17 +11,17 @@ Programming Language in Urdu, based on Python - اردو میں کوڈ لکھی�
 ## Why?
 Just look at how beautiful it is :)
 
-### Side by Side Comparison of UrduPython vs Python
-![Side by side comparison of UrduPython vs Python](./images/side-by-side-loop-code.png)
+### Side by Side Comparison of UniversalPython vs Python
+![Side by side comparison of UniversalPython vs Python](./images/side-by-side-loop-code.png)
 
 ### It works!
-![Running UrduPython code](./images/urdupython-loop-running-example.png)
+![Running UniversalPython code](./images/universalpython-loop-running-example.png)
 
 ## How to Install
 ### Pip
-If you've installed ```pip```, you can install UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
+If you've installed ```pip```, you can install UniversalPython from [Test PyPI](https://test.pypi.org/project/universalpython/) using the following command:
 ```
-pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  urdupython
+pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  universalpython
 ```
 
 ### Source
@@ -77,7 +77,7 @@ The mappings are as following:
 |    ```8```                 |       ۸|
 |    ```9```                 |       ۹|
 
-Find the whole list of keywords [here](./urdupython/languages/ur/ur_native.lang.yaml). Don't worry if you can't find a mapping, you can also use English Python!
+Find the whole list of keywords [here](./universalpython/languages/ur/ur_native.lang.yaml). Don't worry if you can't find a mapping, you can also use English Python!
 
 An example of a Hello World Program:
 ```
@@ -87,12 +87,12 @@ would be
 ```
 لکھو ("Hello world!")
 ```
-There are many more sample codes available [here](./urdupython/samples)
+There are many more sample codes available [here](./universalpython/samples)
 
 3. Open a Terminal in the folder of this file.
-4. Run the code in one command: ```urdupython <NAME_OF_YOUR_FILE>```
+4. Run the code in one command: ```universalpython <NAME_OF_YOUR_FILE>```
 
-For more help, run ```urdupython --help```. For better understanding, do run the sample code files in the "samples" folder.
+For more help, run ```universalpython --help```. For better understanding, do run the sample code files in the "samples" folder.
 
 ## Guide
 ### For macOS
