@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Bazaz"
+  given-names: "Saad"
+  orcid: "https://orcid.org/0009-0000-1038-3410"
+title: "UniversalPython - A Multilingual, Pythonic Programming Language"
+version: 0.0.1
+doi: 10.5281/zenodo.1234
+date-released: 2024-12-06
+url: "https://github.com/UniversalPython/UniversalPython"
