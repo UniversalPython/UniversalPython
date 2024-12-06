@@ -1,3 +1,12 @@
+## How to compile
+
+We recommend setting up Latex Live, and using VSCode with Latex Workshop to use this.
+
+Don't be a moron like our primary author, who decided to use a lighter version of Latex and ended up having to install everything separately.
+
+You must change your typesetting engine to "xelatex" or "lualatex".
+
+---
 
 August 26, 2015
 

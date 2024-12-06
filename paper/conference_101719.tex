@@ -10,6 +10,14 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 
+% Enable multilingual typesetting
+\usepackage{polyglossia}      % Supports multiple languages and their configurations
+\setdefaultlanguage{english}  % Set main language to English
+\setotherlanguage{urdu}       % Add Urdu as a secondary language
+
+% Font setup for each language
+\newfontfamily\urdufont[Script=Arabic,Scale=2]{Jameel Noori Nastaleeq} % Urdu font                 % English font
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -41,34 +49,81 @@ programming language, internationalization, python, artificial intelligence, mac
 \end{IEEEkeywords}
 
 \section{Introduction}
-The first step to better understanding is communication. In classroom settings and in our day to day lives, we use language as a medium to communicate concepts to one another, and produce thoughts in our heads which are otherwise impossible to conceive. When teaching and educating, we prefer to speak in a language understood by the learner, in order to facilitate the understanding process. Computer science is a field long dominated by the English language. To even begin stepping into the field, one must be at least acquainted with the English language in order to understand basic logical constructors. Without the help of a real-life translator, like a good teacher who speaks English and can translate concepts to a student’s native language, it is otherwise impossible to learn pro- gramming concepts just by looking at the English words. Hence comes a need for a formal translation of programming constructs into other languages, and also a usable, demonstrable and learnable framework in which a learner can program in the native language of their choice.
 
-We propose UniversalPython, the starting point for such a framework, and present and test hypotheses regarding the usefulness of such a framework. In this paper, our goals are to introduce a programming language which is translatable into Urdu and a functional code editor for this language. Eventually, we aim to facilitate Urdu speaking people in excelling in computer science and enable Urdu speakers to develop smart, understandable IT solutions.
+The first step to better understanding is communication. We use language to communicate concepts and produce thoughts. When teaching and educating, it is preferable to speak in the learner's native language to facilitate the understanding process.
+
+Computer science is a field dominated by the English language. Beginners must be acquainted with English to understand basic logical constructs. Without a real-life translator, learning programming concepts just by looking at English words is often impossible.
+
+Therefore, there is a need for formal translation of programming constructs into other languages and a usable framework for learners to program in their native language.
 
 \section{Related Work}
 
-\subsection{Learning in Local Language}
-
-Studies have shown that initially students face problems learning the syntax and rules of a programming language [1]. Additionally, research has also shown that learning in a local language has a significant positive impact on the learning outcomes of students [2]. Thus, complementing the idea that programming should not be restricted by the language barrier.
+Studies have shown that students face problems learning the syntax and rules of a programming language initially [1]. However, learning in a local language has a significant positive impact on learning outcomes [2]. This supports the idea that programming should not be restricted by a language barrier.
 
 \subsection{Multilingual/Localized Programming Languages}
 
+PsueToPy [3] proposes an intermediate pseudo language to communicate with the Python interpreter. This approach adds complexity for users due to potential inconsistencies in machine translation. Additionally, PsueToPy lacks a standard structure, making it difficult to transition between languages. 
 
-\section{Prepare Your Paper Before Styling}
-Before you begin to format your paper, first write and save the content as a 
-separate text file. Complete all content and organizational editing before 
-formatting. Please note sections \ref{AA}--\ref{SCM} below for more information on 
-proofreading, spelling and grammar.
+An African-based programming language [5] faced scalability issues and a lack of community backing. Another approach involved editing the Python source code to accommodate Chinese symbols [6]. However, this method is difficult to implement and maintain across different versions and languages.
 
-Keep your text and graphic files separate until after the text has been 
-formatted and styled. Do not number text heads---{\LaTeX} will do that 
-for you.
+Several attempts have been made to create Urdu programming languages [7, 8, 9, 10]. However, they suffer from issues like using Roman Urdu instead of Arabic script, lacking open-source libraries, and limited scalability to other languages.
 
-\subsection{Abbreviations and Acronyms}\label{AA}
-Define abbreviations and acronyms the first time they are used in the text, 
-even after they have been defined in the abstract. Abbreviations such as 
-IEEE, SI, MKS, CGS, ac, dc, and rms do not have to be defined. Do not use 
-abbreviations in the title or heads unless they are unavoidable.
+UrduScript [7] is similar to our approach but uses JavaScript instead of Python and Roman Urdu script. Our method leverages Python's extensive libraries and utilizes the more familiar Arabic script for Urdu speakers.
+
+\subsection{Multilingual Programming Environments}
+
+Approaches have been made to address the issue of development environments not supporting multiple languages [11, 12]. Additionally, some work translates Python programs into traditional Chinese for explanations [13]. However, this method uses Google Translate, making it slow and unsuitable for programming purposes.
+
+Our framework allows easy support for UniversalPython plugins in existing Python IDEs. It acts as a bridge, translating Urdu code into English before passing it to the IDE.
+
+\section{Approach}
+
+\subsection{Making the Language}
+
+We propose a framework as shown in “Fig. 1“, which is a wrapper around the Python Engine. The user writes code in Urdu, for example:
+
+This is passed to “UniversalPython”, which first translates the code to English using Lexical Analysis and Parsing with the PLY library.
+To do this, it first loads the Urdu dictionary, which is a YAML file containing mappings from Urdu to English. This dictionary is a mapping of each Urdu word to a Python keyword. Here is an example of such a dictionary:
+In PLY, we have the option to reserve some keywords so that the library automatically tokenizes them. We set a Grammar Rule which, whenever a reserved keyword (i.e. a word which is present as a key in a language dictionary) is tokenized, simply looks for the token in the language dictionary (key) and replaces it with the corresponding English keyword (value).
+We also set a Grammar Rule to ignore all content within double quotes or single quotes (i.e. strings and docstring) and to ignore content in comments (which start with a \#). We achieve this using Regular Expressions.
+Urdu numbers also lie on the Unicode scale. ۰ (or roman 0) is at 1776, while ۹ (or roman 9) is at 1785.
+
+Keeping this in mind, we define a Regular Expression
+which detects any symbols equal to or between this range, 1776 - 1785. These are the Urdu digits. We then use the same language dictionary to translate these numbers into roman numerals. For example, ۵ becomes 5, ۹۰ becomes 90, ۱۰ becomes 10, ۲۰۲۲ becomes 2022.
+Furthermore, we also replace all periods ( . ) and commas ( , ), as these look different in Urdu than they do in English.
+
+The rest of the code remains untouched. Whether it is a symbol,like :, ( or ), etc, or even if it causes the lexer to crash, we ignore it so we can preserve the original structure of the code as much as possible. It is not required to translate such symbols and errors anyway: They are meant to be handled by Python, not UniversalPython. Back to our initial example code, our engine detects and replaces it with print , 􏰁􏰃 is replaced with if ,
+is replaced with else , and all Arabic digits are replaced with Roman digits. Hence the translated code would be:
+
+The above code is essentially vanilla Python code which can now simply be executed by the Python engine. The Urdu variable name 􏰀 does not present any issue to Python, as from Python 3.0 onwards, Unicode is fully supported. So the above code is passed on to the Python engine. The Python engine outputs some response; it can be some print statements which the user entered, compiler/interpreter warnings, and/or errors. This response is passed up to UniversalPython, where again it is tokenized to replace keywords in case of error messages. In our example, since there are no errors, it simply outputs the response as-is. So the response would be:
+
+To demonstrate the ease by which plugins can be made for UniversalPython, we made a wrapper for the IPython kernel in which we imported UniversalPython as a package, and processed the code (i.e. translated it from Urdu to English) before it was passed onto IPython. This way, we overrode the
+
+functions and achieved a working kernel for UniversalPython. It works line-by-line while maintaining the program memory. This also gave us a visual interface for the language to test it thoroughly.
+
+The Urdu dictionary is a YAML file containing mappings from Urdu to English keywords, is used for translation. The PLY library allows reserving keywords for automatic tokenization and replacement with their English equivalents. Additionally, grammar rules are set to ignore content within quotes, comments, and Urdu numbers (which lie on the Unicode scale).
+
+\section{Experimentation}
+
+We propose the following requirements which UniversalPython should meet in order than it is considered effective:
+
+1) Programs which work in Python, should be recreatable in UniversalPython, and vice versa.
+
+2) UniversalPython should operate as a reasonable speed which at least does not disturb the programmer.
+
+3) Converting Plugins made for Python, into Urdu
+Python, should be fairly easy.
+
+\subsection{Benchmarks with Python}\label{AA}
+
+Time: Check the execution time / performance of Python vs UniversalPython. We use a benchmarking tool called hyperfine which runs each program multiple times to produce a mean execution time.
+
+Conversion: Convert simple programs from English Python to UniversalPython, and test if they still work. Our testing mechanism for the above is as below:
+1) We take an existing Python program, lets say multiplication.py.
+2) Run the UniversalPython system in reverse. This will flip the language dictionary and generate an Urdu version of the program (all the keywords would be translated from English to Urdu). Save it as multiplication.ur.py.
+3) Run multiplication.ur.py using UniversalPython, and multiplication.py using Python. If both give the same output on the terminal then no data loss has occurred; Both Urdu program and English program output the same message. Hence we can say that the program has safely converted from English to UniversalPython and vice versa without breaking the code or changing the logic.
+
+We take simple algorithmic programs from TheAlgorithms/Python [14], a repository containing implementations of well-known algorithms, in the Python programming language. We run a loop over them and run the above algorithm on each to test.
 
 \subsection{Units}
 \begin{itemize}
@@ -156,24 +211,19 @@ and by indexing services. Names should not be listed in columns nor group by
 affiliation. Please keep your affiliations as succinct as possible (for 
 example, do not differentiate among departments of the same organization).
 
-\subsection{Identify the Headings}
-Headings, or heads, are organizational devices that guide the reader through 
-your paper. There are two types: component heads and text heads.
+\subsection{Discussion and Future Work}
 
-Component heads identify the different components of your paper and are not 
-topically subordinate to each other. Examples include Acknowledgments and 
-References and, for these, the correct style to use is ``Heading 5''. Use 
-``figure caption'' for your Figure captions, and ``table head'' for your 
-table title. Run-in heads, such as ``Abstract'', will require you to apply a 
-style (in this case, italic) in addition to the style provided by the drop 
-down menu to differentiate the head from the text.
+UniversalPython can be developed as an extensible programming language which would grow alongside Python and would be interoperable with it. It is also maintainable, because since it is simply a wrapper, only the keywords need to be updated in the dictionary, and it will work for any future (or past) versions of Python. Furthermore, it is scalable to other languages because the dictionary structure allows for any language to be added to UniversalPython.
 
-Text heads organize the topics on a relational, hierarchical basis. For 
-example, the paper title is the primary text head because all subsequent 
-material relates and elaborates on this one topic. If there are two or more 
-sub-topics, the next level head (uppercase Roman numerals) should be used 
-and, conversely, if there are not at least two sub-topics, then no subheads 
-should be introduced.
+To improve the current implementation, it would be useful to accommodate as many Python keywords as possible, preferably all of them. It would also be useful to separately have translations for major libraries/packages such as pandas, numpy, cv2, etc. A scalable and eﬀicient method for this would be to automatically scan such libraries(the Python source code) to identify important keywords, automatically translate them to the nearest and best possible Urdu word, and add them to the Grammar. This can be achieved using Natural Language Processing, Deep Learning, Machine Learning and similar methods.
+
+It is possible to make this framework generic. We managed to make a dictionary for Hindi Python, and it works just as well as UniversalPython. We would prefer support for more languages such as Pashto, Punjabi, Balochi, Sindhi, Kashmiri and more.
+
+In the current framework, making it possible for the user to choose whether or not to detect variables and functions, and machine-translate them into their corresponding names, could make the experience better.
+
+It would also be helpful to conduct User Experience tests for UniversalPython, so that it can be determined whether or not UniversalPython really does benefit people who speak Urdu to learn programming.
+
+Designing and developing a better test metric to test the effectiveness of such a framework would also be useful for UniversalPython.
 
 \subsection{Figures and Tables}
 
