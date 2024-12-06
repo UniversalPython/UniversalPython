@@ -1,5 +1,5 @@
 <div align="center" style="display:flex; flex-direction: column; align-items: center">
-  <img src="./images/universalpython-logo.png" alt="Eliza Banner" width="100%" style="max-width: 240px;padding-bottom:10px" />
+  <img src="./images/universalpython-logo.png" alt="Eliza Banner" style="width: 240px;padding-bottom:10px" />
   <h1>UniversalPython</h1>
 </div>
 
