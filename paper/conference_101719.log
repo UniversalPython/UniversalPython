@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.28)  7 DEC 2024 12:51
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.28)  7 DEC 2024 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -544,6 +544,10 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 3058) in paragraph at lines 114--115
+[][]\TU/ptm/bx/it/10 Throughout this paper, we take the example of[]
+ []
+
 Missing character: There is no ۰ (U+06F0) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ۹ (U+06F9) in font [lmroman10-regular]:mapping=tex-text;!
 [1
@@ -562,7 +566,15 @@ Missing character: There is no ۲ (U+06F2) in font [lmroman10-regular]:mapping=t
 Missing character: There is no 􏰁 (U+10FC01) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 􏰃 (U+10FC03) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 􏰀 (U+10FC00) in font [lmroman10-regular]:mapping=tex-text;!
-[2]
+
+Underfull \hbox (badness 4108) in paragraph at lines 139--140
+[][]\TU/ptm/bx/it/10 We propose the following metrics which Univer-[]
+ []
+
+
+Underfull \vbox (badness 2150) has occurred while \output is active []
+
+ [2]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -587,7 +599,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  10058 strings out of 476290
  227352 string characters out of 5789827
- 1949839 words of memory out of 5000000
+ 1947839 words of memory out of 5000000
  31899 multiletter control sequences out of 15000+600000
  562182 words of font info for 97 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
