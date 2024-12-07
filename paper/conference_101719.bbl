@@ -20,6 +20,9 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Wiki_NonEnglish}
+{Wikipedia contributors}, ``Non-english-based programming languages --- wikipedia, the free encyclopedia,'' [Online; accessed 7-December-2024].
+
 \bibitem{backus1978history}
 J.~Backus, ``The history of fortran i, ii, and iii,'' \emph{ACM Sigplan Notices}, vol.~13, no.~8, pp. 165--180, 1978.
 
@@ -32,36 +35,57 @@ K.~Zuse, ``Ansätze einer theorie des allgemeinen rechnens unter besonderer ber�
 F.~L. Bauer and H.~W{\"o}ssner, ``The “plankalk{\"u}l” of konrad zuse: a forerunner of today's programming languages,'' \emph{Communications of the ACM}, vol.~15, no.~7, pp. 678--685, 1972.
 
 \bibitem{buhmann2008mother}
-D.~B{\"u}hmann, \emph{Mother tongue matters: Local language as a key to effective learning}.\hskip 1em plus 0.5em minus 0.4em\relax Unesco, 2008.
+D.~B{\"u}hmann, \emph{Mother tongue matters: Local language as a key to effective learning}.\hskip 1em plus 0.5em minus 0.4em\relax UNESCO, 2008.
 
 \bibitem{taylor2015finding}
 K.~Taylor-Leech, ``Finding space for non-dominant languages in education: Language policy and medium of instruction in timor-leste 2000--2012,'' \emph{Language Planning for Medium of Instruction in Asia}, pp. 119--136, 2015.
 
+\bibitem{trudell2009local}
+B.~Trudell, ``Local-language literacy and sustainable development in africa,'' \emph{International Journal of Educational Development}, vol.~29, no.~1, pp. 73--79, 2009.
+
+\bibitem{unescobangkok2005mothertongue}
+U.~Bangkok, ``Advocacy brief: Mother tongue-based teaching and education for girls,'' 2005, p. 2.
+
+\bibitem{10.1145/3304221.3319778}
+\BIBentryALTinterwordspacing
+H.~Gedawy, S.~Razak, and H.~Alshikhabobakr, ``The effectiveness of creating localized content for middle school computing curriculum,'' in \emph{Proceedings of the 2019 ACM Conference on Innovation and Technology in Computer Science Education}, ser. ITiCSE '19.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association for Computing Machinery, 2019, pp. 478--484. [Online]. Available: \url{https://doi.org/10.1145/3304221.3319778}
+\BIBentrySTDinterwordspacing
+
 \bibitem{dasgupta2017learning}
 S.~Dasgupta and B.~M. Hill, ``Learning to code in localized programming languages,'' in \emph{Proceedings of the fourth (2017) ACM conference on learning@ scale}, 2017, pp. 33--39.
 
-\bibitem{swidan2023framework}
-A.~Swidan and F.~Hermans, ``A framework for the localization of programming languages,'' in \emph{Proceedings of the 2023 ACM SIGPLAN International Symposium on SPLASH-E}, 2023, pp. 13--25.
-
-\bibitem{otten2023towards}
-J.~Otten, A.~Anastasopoulos, and K.~Moran, ``Towards a universal python: Translating the natural modality of python into other human languages,'' in \emph{2023 IEEE International Conference on Software Maintenance and Evolution (ICSME)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2023, pp. 352--357.
-
-\bibitem{Kalam_Programming_Language}
-\BIBentryALTinterwordspacing
-S.~Kadam, ``Kalaam.'' [Online]. Available: \url{https://github.com/Kalaam-Programming-Language/Kalaam}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Hermans_Hedy_A_Gradual}
 F.~Hermans, ``{Hedy: A Gradual Language for Programming Education}.''
+
+\bibitem{resnick2009scratch}
+M.~Resnick, J.~Maloney, A.~Monroy-Hern{\'a}ndez, N.~Rusk, E.~Eastmond, K.~Brennan, A.~Millner, E.~Rosenbaum, J.~Silver, B.~Silverman \emph{et~al.}, ``Scratch: programming for all,'' \emph{Communications of the ACM}, vol.~52, no.~11, pp. 60--67, 2009.
+
+\bibitem{wang2021pseutopy}
+P.~Wang, ``Pseutopy: Towards a non-english natural programming language,'' in \emph{Proceedings of the 17th ACM Conference on International Computing Education Research}, 2021, pp. 429--430.
 
 \bibitem{Memon_UrduScript_2019}
 \BIBentryALTinterwordspacing
 A.~Memon, ``{UrduScript},'' Aug. 2019. [Online]. Available: \url{https://www.github.com/asadm/urduscript}
 \BIBentrySTDinterwordspacing
 
-\bibitem{IEEEexample:tamethebeast}
+\bibitem{Urdu_Mein_Programming}
+------, ``Urduscript: Urdu mein programming,'' \url{https://asadmemon.com/urduscript/}.
+
+\bibitem{swidan2023framework}
+A.~Swidan and F.~Hermans, ``A framework for the localization of programming languages,'' in \emph{Proceedings of the 2023 ACM SIGPLAN International Symposium on SPLASH-E}, 2023, pp. 13--25.
+
+\bibitem{legesher}
 \BIBentryALTinterwordspacing
-N.~Markey. (2009, Oct.) Tame the beast --- the b to x of {{\BibTeX}}. [Online]. Available: \url{http://www.ctan.org/pkg/tamethebeast}
+M.~P. Edgar, Beomus, A.~Buhai, A.~Ramzaev, J.~Barzilaij, Sergio, J.~Yeung, A.~Singh, s.~taneja, R.~P. Mishra, and atom19 i, ``Legesher.'' [Online]. Available: \url{https://github.com/legesher/legesher}
 \BIBentrySTDinterwordspacing
+
+\bibitem{otten2023towards}
+J.~Otten, A.~Anastasopoulos, and K.~Moran, ``Towards a universal python: Translating the natural modality of python into other human languages,'' in \emph{2023 IEEE International Conference on Software Maintenance and Evolution (ICSME)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2023, pp. 352--357.
+
+\bibitem{thealgorithms_python}
+T.~A. Community, ``The algorithms - python,'' \url{https://github.com/TheAlgorithms/Python}.
+
+\bibitem{Understanding_TypeScript}
+G.~Bierman, M.~Abadi, and M.~Torgersen, ``Understanding typescript,'' in \emph{ECOOP 2014 -- Object-Oriented Programming}, R.~Jones, Ed.\hskip 1em plus 0.5em minus 0.4em\relax Berlin, Heidelberg: Springer Berlin Heidelberg, 2014, pp. 257--281.
 
 \end{thebibliography}

@@ -9,6 +9,12 @@
                 "xelatex",
                 "xelatex",
             ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex",
+            ]
         }
     ],
     "latex-workshop.latex.tools": [

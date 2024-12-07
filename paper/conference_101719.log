@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.28)  7 DEC 2024 23:27
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.28)  8 DEC 2024 03:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,48 +228,74 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \TX@delta=\dimen182
 \TX@cols=\count282
 \TX@ftn=\toks25
+) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count283
+\lst@gtempboxa=\box57
+\lst@token=\toks26
+\lst@length=\count284
+\lst@currlwidth=\dimen183
+\lst@column=\count285
+\lst@pos=\count286
+\lst@lostspace=\dimen184
+\lst@width=\dimen185
+\lst@newlines=\count287
+\lst@lineno=\count288
+\lst@maxwidth=\dimen186
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
+) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
+\c@lstnumber=\count289
+\lst@skipnumbers=\count290
+\lst@framebox=\box58
+) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/02/21 1.10 listings configuration
+))
+Package: listings 2024/02/21 1.10 (Carsten Heinz)
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/polyglossia/polyglossia.sty
 Package: polyglossia 2024/03/07 v2.1 Modern multilingual typesetting with XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count283
+\etb@tempcnta=\count291
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (/usr/local/texlive/2024basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2024basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
 )
-\XKV@depth=\count284
+\XKV@depth=\count292
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2024basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2024basic/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-02-20 L3 programming layer (loader) 
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
-\g__graphics_track_int=\count285
-\l__pdf_internal_box=\box57
-\g__pdf_backend_object_int=\count286
-\g__pdf_backend_annotation_int=\count287
-\g__pdf_backend_link_int=\count288
+\g__graphics_track_int=\count293
+\l__pdf_internal_box=\box59
+\g__pdf_backend_object_int=\count294
+\g__pdf_backend_annotation_int=\count295
+\g__pdf_backend_link_int=\count296
 ))
 Package: xparse 2024-02-18 L3 Experimental document command parser
 )
 Package: fontspec 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count289
-\l__fontspec_language_int=\count290
-\l__fontspec_strnum_int=\count291
-\l__fontspec_tmp_int=\count292
-\l__fontspec_tmpa_int=\count293
-\l__fontspec_tmpb_int=\count294
-\l__fontspec_tmpc_int=\count295
-\l__fontspec_em_int=\count296
-\l__fontspec_emdef_int=\count297
-\l__fontspec_strong_int=\count298
-\l__fontspec_strongdef_int=\count299
-\l__fontspec_tmpa_dim=\dimen183
-\l__fontspec_tmpb_dim=\dimen184
-\l__fontspec_tmpc_dim=\dimen185
+\l__fontspec_script_int=\count297
+\l__fontspec_language_int=\count298
+\l__fontspec_strnum_int=\count299
+\l__fontspec_tmp_int=\count300
+\l__fontspec_tmpa_int=\count301
+\l__fontspec_tmpb_int=\count302
+\l__fontspec_tmpc_int=\count303
+\l__fontspec_em_int=\count304
+\l__fontspec_emdef_int=\count305
+\l__fontspec_strong_int=\count306
+\l__fontspec_strongdef_int=\count307
+\l__fontspec_tmpa_dim=\dimen187
+\l__fontspec_tmpb_dim=\dimen188
+\l__fontspec_tmpc_dim=\dimen189
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2024basic/texmf-dist/tex/generic/iftex/iftex.sty
@@ -317,19 +343,19 @@ Package: bidi 2023/08/02 v39.8 (Release Donald Ervin Knuth) Bidirectional typese
 ****************************************************
 (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2022/06/15 v2.3 Programming tools for bidi package
-\@bidi@envbody=\toks28
-\@bidi@emptytoks=\toks29
-\bidi@poscount=\count300
-\bidi@tempcountb=\count301
-\bidi@temptoksa=\toks30
-\bidi@temptoksb=\toks31
-\bidi@dummies=\count302
-\bidi@are@these@correct=\toks32
-\bidi@toks@lista=\toks33
-\bidi@toks@listb=\toks34
-\bidi@stack@length=\count303
-\bidi@empty@stack=\toks35
-\bidi@looprepeat@depth=\count304
+\@bidi@envbody=\toks29
+\@bidi@emptytoks=\toks30
+\bidi@poscount=\count308
+\bidi@tempcountb=\count309
+\bidi@temptoksa=\toks31
+\bidi@temptoksb=\toks32
+\bidi@dummies=\count310
+\bidi@are@these@correct=\toks33
+\bidi@toks@lista=\toks34
+\bidi@toks@listb=\toks35
+\bidi@stack@length=\count311
+\bidi@empty@stack=\toks36
+\bidi@looprepeat@depth=\count312
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/zref/zref-base.sty
@@ -356,18 +382,18 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count305
+\c@abspage=\count313
 Package zref Info: New property: abspage on input line 67.
 )
 \@bidi@copyins@=\insert252
  (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2022/07/04 v1.4.9 bidi adaptations for `latex.ltx' for XeTeX engine
-\bidi@n@everypar=\toks36
-\bidi@column@check@number=\count306
+\bidi@n@everypar=\toks37
+\bidi@column@check@number=\count314
  (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2023/01/18 v1.2 bidi footnote macros for XeTeX engine
-\c@footdir@label=\count307
-\footdir@toks=\toks37
+\c@footdir@label=\count315
+\footdir@toks=\toks38
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/amsmath-xetex-bidi.def
 File: amsmath-xetex-bidi.def 2020/05/16 v1.2 bidi adaptations for amsmath package for XeTeX engine
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
@@ -383,12 +409,14 @@ LaTeX Info: Redefining \bidicolor on input line 91.
 File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx package for XeTeX engine
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/tabularx-xetex-bidi.def
 File: tabularx-xetex-bidi.def 2014/11/08 v0.1 bidi adaptations for tabularx package for XeTeX engine
+) (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/listings-xetex-bidi.def
+File: listings-xetex-bidi.def 2018/09/15 v1.5 bidi adaptations for listings package for XeTeX engine
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/array-xetex-bidi.def
 File: array-xetex-bidi.def 2015/11/07 v0.3 bidi adaptations for array package for XeTeX engine
 )) (/usr/local/texlive/2024basic/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the last package loaded
 )
-\bidi@digits=\count308
+\bidi@digits=\count316
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/polyglossia/arabicnumbers.sty
@@ -397,33 +425,33 @@ Package: arabicnumbers 2010/03/18 v0.2 Formatting of Arabic and Farsi digits and
 Package: hijrical 2010/07/12 v0.2 Islamic calendar
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count309
-\calc@Bcount=\count310
-\calc@Adimen=\dimen186
-\calc@Bdimen=\dimen187
+\calc@Acount=\count317
+\calc@Bcount=\count318
+\calc@Adimen=\dimen190
+\calc@Bdimen=\dimen191
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count311
+\calc@Ccount=\count319
 \calc@Cskip=\skip62
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/polyglossia/cal-util.def
-\c@tmpA=\count312
-\c@tmpB=\count313
-\c@tmpC=\count314
-\c@tmpD=\count315
-\c@tmpE=\count316
-\c@tmpF=\count317
+\c@tmpA=\count320
+\c@tmpB=\count321
+\c@tmpC=\count322
+\c@tmpD=\count323
+\c@tmpE=\count324
+\c@tmpF=\count325
 )
-\c@Hijriday=\count318
-\c@Hijrimonth=\count319
-\c@Hijriyear=\count320
+\c@Hijriday=\count326
+\c@Hijrimonth=\count327
+\c@Hijriyear=\count328
 )
 Package polyglossia Info: Option: Urdu, calendar=gregorian.
 Package polyglossia Info: Option: Urdu, numerals=eastern.
 )
 
-Package fontspec Info: Jameel Noori Nastaleeq scale = 2.
+Package fontspec Info: Jameel Noori Nastaleeq scale = 1.2.
 
 
 Package fontspec Info: Could not resolve font "Jameel Noori Nastaleeq/BI" (it
@@ -438,143 +466,166 @@ Package fontspec Info: Could not resolve font "Jameel Noori Nastaleeq/I" (it
 (fontspec)             probably doesn't exist).
 
 
-Package fontspec Info: Jameel Noori Nastaleeq scale = 2.
+Package fontspec Info: Jameel Noori Nastaleeq scale = 1.2.
 
 
 Package fontspec Info: Font family 'JameelNooriNastaleeq(0)' created for font
 (fontspec)             'Jameel Noori Nastaleeq' with options
-(fontspec)             [Script=Arabic,Scale=2].
+(fontspec)             [Script=Arabic,Scale=1.2].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[2]"Jameel Noori
-(fontspec)             Nastaleeq/OT:script=arab;language=dflt;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1.2]"Jameel
+(fontspec)             Noori Nastaleeq/OT:script=arab;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
  (./conference_101719.aux)
 \openout1 = `conference_101719.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 56.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 -- Lines per column: 56 (exact).
+\c@lstlisting=\count329
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 26.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 26.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 26.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 26.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 26.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 26.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 26.
-LaTeX Font Info:    Redeclaring math accent \check on input line 26.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 26.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 26.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 26.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 26.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 56.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 56.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 56.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 56.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 56.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 56.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 56.
+LaTeX Font Info:    Redeclaring math accent \check on input line 56.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 56.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 56.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 56.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 56.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 26.
+(Font)              `operators' in the math version `normal' on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 26.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 56.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 26.
+(Font)              `operators' in the math version `bold' on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 26.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 26.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 26.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 26.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 26.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 26.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 26.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 26.
-LaTeX Info: Redefining \rmfamily on input line 26.
-LaTeX Info: Redefining \sffamily on input line 26.
-LaTeX Info: Redefining \ttfamily on input line 26.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 56.
+LaTeX Info: Redefining \rmfamily on input line 56.
+LaTeX Info: Redefining \sffamily on input line 56.
+LaTeX Info: Redefining \ttfamily on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-File: UniversalPython-flowchart.png Graphic file (type bmp)
-<UniversalPython-flowchart.png>
-
-Underfull \hbox (badness 3058) in paragraph at lines 120--121
-[][]\TU/ptm/bx/it/10 Throughout this paper, we take the example of[]
- []
-
-[1
+) [1
 
 
 ]
-Missing character: There is no ۰ (U+06F0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۹ (U+06F9) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۵ (U+06F5) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۹ (U+06F9) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۰ (U+06F0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۱ (U+06F1) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۰ (U+06F0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۲ (U+06F2) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۰ (U+06F0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۲ (U+06F2) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ۲ (U+06F2) in font [lmroman10-regular]:mapping=tex-text;!
+File: UniversalPython-flowchart.png Graphic file (type bmp)
+<UniversalPython-flowchart.png>
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 9.59998pt on input line 161.
+LaTeX Info: Redefining \rmfamily on input line 161.
+LaTeX Info: Redefining \sffamily on input line 161.
+LaTeX Info: Redefining \ttfamily on input line 161.
+LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
+(Font)              scaled to size 11.99997pt on input line 165.
+Package polyglossia Info: Option: English, variant=american.
+LaTeX Info: Redefining \rmfamily on input line 176.
+LaTeX Info: Redefining \sffamily on input line 176.
+LaTeX Info: Redefining \ttfamily on input line 176.
+LaTeX Info: Redefining \rmfamily on input line 182.
+LaTeX Info: Redefining \sffamily on input line 182.
+LaTeX Info: Redefining \ttfamily on input line 182.
+LaTeX Info: Redefining \rmfamily on input line 182.
+LaTeX Info: Redefining \sffamily on input line 182.
+LaTeX Info: Redefining \ttfamily on input line 182.
+LaTeX Info: Redefining \rmfamily on input line 184.
+LaTeX Info: Redefining \sffamily on input line 184.
+LaTeX Info: Redefining \ttfamily on input line 184.
+LaTeX Info: Redefining \rmfamily on input line 184.
+LaTeX Info: Redefining \sffamily on input line 184.
+LaTeX Info: Redefining \ttfamily on input line 184.
+LaTeX Info: Redefining \rmfamily on input line 184.
+LaTeX Info: Redefining \sffamily on input line 184.
+LaTeX Info: Redefining \ttfamily on input line 184.
+LaTeX Info: Redefining \rmfamily on input line 184.
+LaTeX Info: Redefining \sffamily on input line 184.
+LaTeX Info: Redefining \ttfamily on input line 184.
+
 Missing character: There is no 􏰁 (U+10FC01) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 􏰃 (U+10FC03) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 􏰀 (U+10FC00) in font [lmroman10-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 4108) in paragraph at lines 149--150
+Underfull \hbox (badness 4108) in paragraph at lines 208--209
 [][]\TU/ptm/bx/it/10 We propose the following metrics which Univer-[]
  []
 
-[2]
+
+Underfull \vbox (badness 8094) has occurred while \output is active []
+
+ [2]
+Overfull \hbox (141.16032pt too wide) in alignment at lines 270--270
+[][][][][][][][][][][][][][][]
+ []
+
+File: UniversalPython-language-to-language.png Graphic file (type bmp)
+<UniversalPython-language-to-language.png>
+[3]
 Missing character: There is no و (U+0648) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ر (U+0631) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ن (U+0646) in font [lmroman10-regular]:mapping=tex-text;!
@@ -582,9 +633,14 @@ Missing character: There is no ہ (U+06C1) in font [lmroman10-regular]:mapping=t
 Missing character: There is no ا (U+0627) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no گ (U+06AF) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ر (U+0631) in font [lmroman10-regular]:mapping=tex-text;!
-(./conference_101719.bbl [3]
-Underfull \hbox (badness 6188) in paragraph at lines 51--53
-[][]\TU/lmr/m/n/8 S. Kadam, “Kalaam.” [Online]. Available:[]
+[4] (./conference_101719.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+[][]\TU/lmr/m/n/8 ——, “Urduscript: Urdu mein programming,”[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+[][]\TU/lmr/m/n/8 T. A. Community, “The algorithms - python,”[]
  []
 
 )
@@ -599,9 +655,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (./conference_101719.aux)
+[5] (./conference_101719.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -612,12 +666,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10093 strings out of 476290
- 228305 string characters out of 5789827
- 1945839 words of memory out of 5000000
- 31928 multiletter control sequences out of 15000+600000
- 562190 words of font info for 98 fonts, out of 8000000 for 9000
+ 11538 strings out of 476290
+ 250377 string characters out of 5789827
+ 1955839 words of memory out of 5000000
+ 33351 multiletter control sequences out of 15000+600000
+ 563260 words of font info for 105 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 93i,8n,107p,1070b,304s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,9n,107p,1218b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on conference_101719.pdf (4 pages).
+Output written on conference_101719.pdf (5 pages).

@@ -12,52 +12,52 @@ Warning--entry type for "Hermans_Hedy_A_Gradual" isn't style-file defined
 --line 61 of file bibtex/IEEEexample.bib
 Warning--entry type for "Memon_UrduScript_2019" isn't style-file defined
 --line 67 of file bibtex/IEEEexample.bib
-Warning--entry type for "Kalam_Programming_Language" isn't style-file defined
---line 76 of file bibtex/IEEEexample.bib
+Warning--entry type for "legesher" isn't style-file defined
+--line 266 of file bibtex/IEEEexample.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 12 entries,
+You've used 20 entries,
             4087 wiz_defined-function locations,
-            895 strings with 9428 characters,
-and the built_in function-call counts, 7286 in all, are:
-= -- 585
-> -- 116
-< -- 54
-+ -- 66
-- -- 17
-* -- 320
-:= -- 1161
-add.period$ -- 25
-call.type$ -- 12
-change.case$ -- 12
-chr.to.int$ -- 132
-cite$ -- 12
-duplicate$ -- 531
-empty$ -- 633
-format.name$ -- 21
-if$ -- 1669
+            946 strings with 11190 characters,
+and the built_in function-call counts, 13344 in all, are:
+= -- 1043
+> -- 286
+< -- 98
++ -- 157
+- -- 50
+* -- 596
+:= -- 2036
+add.period$ -- 43
+call.type$ -- 20
+change.case$ -- 24
+chr.to.int$ -- 237
+cite$ -- 20
+duplicate$ -- 975
+empty$ -- 1144
+format.name$ -- 58
+if$ -- 3091
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 94
-newline$ -- 67
-num.names$ -- 12
-pop$ -- 229
+int.to.str$ -- 20
+missing$ -- 185
+newline$ -- 91
+num.names$ -- 22
+pop$ -- 452
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 569
+skip$ -- 1030
 stack$ -- 0
-substring$ -- 320
-swap$ -- 402
-text.length$ -- 10
+substring$ -- 578
+swap$ -- 747
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 12
+type$ -- 20
 warning$ -- 0
-while$ -- 36
-width$ -- 14
-write$ -- 135
+while$ -- 64
+width$ -- 22
+write$ -- 208
 (There were 3 warnings)
