@@ -1,115 +1,60 @@
-> :warning: **Development has shifted to [UniversalPython](https://github.com/UniversalPython/UniversalPython)**, we recommend using it as it has Urdu support built-in. Use this for learning purposes if you wish.
+<div align="center">
+  <img src="./images/universalpython-logo.png" alt="UniversalPython Logo" style="width: 240px; padding-bottom: 10px" />
+  <h1>UniversalPython</h1>
+</div>
 
-# UrduPython
-> Ever had that random thought of programming in Urdu? Well, you're at the right place.
+<div align="center">
+  
+📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./urdupython/samples/) | 📄 [Research Paper](./paper/conference_101719.pdf)
 
-Programming Language in Urdu, based on Python - اردو میں کوڈ لکھیں
+**UniversalPython** is a transpiler that lets you write Python code in your own language. It translates your code into Python while keeping the syntax familiar.
 
-## Pre-requisites
-- Python 3+
-- Pip
-- (optional but recommended) Virtual environment, like ```conda``` or ```virtualenv```
+<!-- Available Translations:
+[中文说明](./README.cn.md) | [日本語の説明](./README.ja.md) | [한국어 설명](./README.kor.md) | [Français](./README.fr.md) | [Português](./README.ptbr.md) | [Türkçe](./README.tr.md) | [Русский](./README.ru.md) | [Español](./README.es.md) | [Italiano](./README.it.md) -->
 
-## Why?
-Just look at how beautiful it is :)
+</div>
 
-### Side by Side Comparison of UrduPython vs Python
-![Side by side comparison of UrduPython vs Python](./images/side-by-side-loop-code.png)
 
-### It works!
-![Running UrduPython code](./images/urdupython-loop-running-example.png)
+## Features
 
-## How to Install
-### Pip
-If you've installed ```pip```, you can install UrduPython from [Test PyPI](https://test.pypi.org/project/urdupython/) using the following command:
+- **Code in Any Language:** Write code in Urdu, Hindi, Spanish, and more. More languages coming soon!
+- **Easy Translation:** Automatically converts your code into Python.
+- **Simple Syntax:** Learn programming in your own language with relatable concepts.
+- **Access Python Libraries:** Use Python's powerful tools and frameworks.
+- **Open Source:** Add new languages or improve translations.
+
+## Why Use UniversalPython?
+
+- **Easier Learning:** No need to know English to code.
+- **Cultural Connection:** Code in the language you love.
+- **Have fun:** Makes programming available to more people.
+
+## 🚀 Get Started
+
+### Requirements
+
+You only need [Python 3.4+](https://www.python.org/downloads/).
+
+### Install
+
+Install UniversalPython with pip:
+
+```bash
+pip install -i urdupython
 ```
-pip install -i https://test.pypi.org/pypi/ --extra-index-url https://pypi.org/simple  urdupython
-```
 
-### Source
-1. Download this repo as a ZIP, or clone it via Git.
-2. Open the repo's folder in your Terminal.
-3. Run ```pip install -e .```
+### Learn More
 
-## How to Use
-1. Create a new file in a folder.
-2. Write some Urdu code in this new file.
-The mappings are as following:
+Check out the [documentation](https://universalpython.github.io/docs/).
 
-| Python (original)   | 🇵🇰 Ur          |
-| -------------       | ------------- |
-|    ```print```             |       لکھو|
-|    ```if```                |       اگر|
-|    ```elif```              |       ورنہاگر|
-|    ```else```              |       ورنہ|
-|    ```while```             |       جبتک|
-|    ```for```               |       جو|
-|    ```in```               |       اندر|
-|    ```input```             |       داخله|
-|    ```break```             |       توڑ|
-|    ```continue```          |       جاری|
-|    ```pass```              |       گزر|
-|    ```True```              |       حق|
-|    ```False```             |       باطل|
-|    ```is```                |       ہے|
-|    ```class```             |       طبقه|
-|    ```def```               |       وضح|
-|    ```init```              |       ابتدا|
-|    ```self```              |       خود|
-|    ```return```            |       واپس|
-|    ```string```            |       ستلی|
-|    ```str```               |   ستل|
-|    ```append```                |   شامل|
-|    ```pop```               |   نکل|
-|    ```and```               |   اور|
-|    ```or```                   |   یا|
-|    ```all```               |   سب|
-|    ```any```               |   کوئ|
-|    ```None```              |   ندارد
-|    ```,```                |       ،       |
-|    ```.```                |       ۔|
-|    ```0```                 |       ۰|
-|    ```1```                 |       ۱|
-|    ```2```                 |       ۲|
-|    ```3```                 |       ۳|
-|    ```4```                 |       ۴|
-|    ```5```                 |       ۵|
-|    ```6```                 |       ۶|
-|    ```7```                 |       ۷|
-|    ```8```                 |       ۸|
-|    ```9```                 |       ۹|
+## Join Us!
 
-Find the whole list of keywords [here](./urdupython/languages/ur/ur_native.lang.yaml). Don't worry if you can't find a mapping, you can also use English Python!
+- **Community Forum:** [Discord](https://discord.gg/xcBpqMDP2E)
+- **Contribute:** Help us add languages or improve the project.
+- **Report Issues:** [Submit issues](https://github.com/UniversalPython/UniversalPython/issues).
 
-An example of a Hello World Program:
-```
-print ("Hello world!")
-```
-would be
-```
-لکھو ("Hello world!")
-```
-There are many more sample codes available [here](./urdupython/samples)
+UniversalPython is still growing. Join us to make programming truly universal!
 
-3. Open a Terminal in the folder of this file.
-4. Run the code in one command: ```urdupython <NAME_OF_YOUR_FILE>```
+## License
 
-For more help, run ```urdupython --help```. For better understanding, do run the sample code files in the "samples" folder.
-
-## Guide
-### For macOS
-- Use TextEdit (default text editor) to write Urdu code. 
-- Activate right-to-left typing through Menu: Format->Text->Writing Direction->Right-to-Left
-
-### For Windows
-- Download and install Notepad++. 
-- Right click and activate RTL (Right-to-left).
-
-### For Linux
-Open gEdit (or any similar text-editing program), and start coding right away.
-
-## Tests
-### Platform(s) tested on
-- macOS Big Sur 11.1
-- Termux (Android)
-- Ubuntu 20.04.3 LTS
+[Apache-2.0 license](./LICENSE)

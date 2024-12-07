@@ -7,23 +7,32 @@ from setuptools import setup, find_packages
 files = ["samples/*/*", "languages/*/*.yaml"]
 
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
+# with open('requirements.txt') as f:
+#     _required = f.read().splitlines()
+#     required = []
+#     for line in _required:
+#         required.append(line.split('==', 1)[0])
 
 setup(
-    name='urdupython',
-    version='0.0.9',
+    name='universalpython',
+    version='0.0.3',
     author='Saad Bazaz',
     author_email='saadbazaz@hotmail.com',
-    url='https://github.com/saadbazaz/UrduPython',
+    url='https://github.com/grayhatdevelopers/UniversalPython',
 
-    install_requires=required,
+    install_requires=[
+        "ply",
+        "PyYAML",
+        "Unidecode",
+    ],
+
     # packages=['urdupython', 'modes', 'filters', 'languages'],
     packages=find_packages(),
     package_data = {'urdupython' : files },
 
     entry_points={
         'console_scripts': [
+            'universalpython=urdupython.urdu_python:main',
             'urdupython=urdupython.urdu_python:main',
             'اردوپایتھان=urdupython.urdu_python:main',
             'اردوپای=urdupython.urdu_python:main'
