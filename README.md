@@ -5,7 +5,7 @@
 
 <div align="center">
   
-📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./urdupython/samples/) | 📄 [Research Paper](./paper/conference_101719.pdf)
+📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./urdupython/samples/) | 📄 [Research Paper](./paper/conference_101719.pdf) | 🔥 [Live demo (online)](https://universalpython.github.io/)
 
 **UniversalPython** is a transpiler that lets you write Python code in your own language. It translates your code into Python while keeping the syntax familiar.
 
@@ -43,9 +43,13 @@ Install UniversalPython with pip:
 pip install -i urdupython
 ```
 
+### Online Playground
+
+You can also try out UniversalPython in our [live online demo](https://universalpython.github.io/). It runs in your browser.
+
 ### Learn More
 
-Check out the [documentation](https://universalpython.github.io/docs/).
+Check out the [documentation](https://universalpython.github.io/docs/intro).
 
 ## Join Us!
 

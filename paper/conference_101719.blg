@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: conference_101719.aux
+The style file: bibtex/IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibtex/IEEEexample.bib
+Warning--entry type for "Hermans_Hedy_A_Gradual" isn't style-file defined
+--line 61 of file bibtex/IEEEexample.bib
+Warning--entry type for "Memon_UrduScript_2019" isn't style-file defined
+--line 67 of file bibtex/IEEEexample.bib
+Warning--entry type for "Kalam_Programming_Language" isn't style-file defined
+--line 76 of file bibtex/IEEEexample.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 12 entries,
+            4087 wiz_defined-function locations,
+            895 strings with 9428 characters,
+and the built_in function-call counts, 7286 in all, are:
+= -- 585
+> -- 116
+< -- 54
++ -- 66
+- -- 17
+* -- 320
+:= -- 1161
+add.period$ -- 25
+call.type$ -- 12
+change.case$ -- 12
+chr.to.int$ -- 132
+cite$ -- 12
+duplicate$ -- 531
+empty$ -- 633
+format.name$ -- 21
+if$ -- 1669
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 94
+newline$ -- 67
+num.names$ -- 12
+pop$ -- 229
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 569
+stack$ -- 0
+substring$ -- 320
+swap$ -- 402
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 12
+warning$ -- 0
+while$ -- 36
+width$ -- 14
+write$ -- 135
+(There were 3 warnings)
