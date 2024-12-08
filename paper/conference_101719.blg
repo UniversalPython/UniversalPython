@@ -12,52 +12,58 @@ Warning--entry type for "Hermans_Hedy_A_Gradual" isn't style-file defined
 --line 61 of file bibtex/IEEEexample.bib
 Warning--entry type for "Memon_UrduScript_2019" isn't style-file defined
 --line 67 of file bibtex/IEEEexample.bib
+Warning--entry type for "Kalam_Programming_Language" isn't style-file defined
+--line 120 of file bibtex/IEEEexample.bib
+Warning--entry type for "alif_language" isn't style-file defined
+--line 286 of file bibtex/IEEEexample.bib
 Warning--entry type for "legesher" isn't style-file defined
---line 266 of file bibtex/IEEEexample.bib
+--line 309 of file bibtex/IEEEexample.bib
+Warning--entry type for "wenyan_lang" isn't style-file defined
+--line 315 of file bibtex/IEEEexample.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 20 entries,
+You've used 30 entries,
             4087 wiz_defined-function locations,
-            946 strings with 11190 characters,
-and the built_in function-call counts, 13344 in all, are:
-= -- 1043
-> -- 286
-< -- 98
-+ -- 157
-- -- 50
-* -- 596
-:= -- 2036
-add.period$ -- 43
-call.type$ -- 20
-change.case$ -- 24
-chr.to.int$ -- 237
-cite$ -- 20
-duplicate$ -- 975
-empty$ -- 1144
-format.name$ -- 58
-if$ -- 3091
+            1014 strings with 13408 characters,
+and the built_in function-call counts, 18575 in all, are:
+= -- 1496
+> -- 358
+< -- 113
++ -- 194
+- -- 65
+* -- 818
+:= -- 2940
+add.period$ -- 65
+call.type$ -- 30
+change.case$ -- 35
+chr.to.int$ -- 267
+cite$ -- 30
+duplicate$ -- 1394
+empty$ -- 1628
+format.name$ -- 75
+if$ -- 4297
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 185
-newline$ -- 91
-num.names$ -- 22
-pop$ -- 452
+int.to.str$ -- 30
+missing$ -- 265
+newline$ -- 133
+num.names$ -- 32
+pop$ -- 653
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1030
+skip$ -- 1449
 stack$ -- 0
-substring$ -- 578
-swap$ -- 747
-text.length$ -- 19
+substring$ -- 684
+swap$ -- 1034
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 20
+type$ -- 30
 warning$ -- 0
-while$ -- 64
-width$ -- 22
-write$ -- 208
-(There were 3 warnings)
+while$ -- 83
+width$ -- 32
+write$ -- 313
+(There were 6 warnings)

@@ -20,6 +20,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Difficulties_of_Learning}
+\BIBentryALTinterwordspacing
+Y.~Qian, P.~Yan, and M.~Zhou, ``Using data to understand difficulties of learning to program: A study with chinese middle school students,'' in \emph{Proceedings of the ACM Conference on Global Computing Education}, ser. CompEd '19.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association for Computing Machinery, 2019, p. 185–191. [Online]. Available: \url{https://doi.org/10.1145/3300115.3309521}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Wiki_NonEnglish}
 {Wikipedia contributors}, ``Non-english-based programming languages --- wikipedia, the free encyclopedia,'' [Online; accessed 7-December-2024].
 
@@ -46,7 +51,7 @@ B.~Trudell, ``Local-language literacy and sustainable development in africa,'' \
 \bibitem{unescobangkok2005mothertongue}
 U.~Bangkok, ``Advocacy brief: Mother tongue-based teaching and education for girls,'' 2005, p. 2.
 
-\bibitem{10.1145/3304221.3319778}
+\bibitem{localized_content}
 \BIBentryALTinterwordspacing
 H.~Gedawy, S.~Razak, and H.~Alshikhabobakr, ``The effectiveness of creating localized content for middle school computing curriculum,'' in \emph{Proceedings of the 2019 ACM Conference on Innovation and Technology in Computer Science Education}, ser. ITiCSE '19.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association for Computing Machinery, 2019, pp. 478--484. [Online]. Available: \url{https://doi.org/10.1145/3304221.3319778}
 \BIBentrySTDinterwordspacing
@@ -54,11 +59,43 @@ H.~Gedawy, S.~Razak, and H.~Alshikhabobakr, ``The effectiveness of creating loca
 \bibitem{dasgupta2017learning}
 S.~Dasgupta and B.~M. Hill, ``Learning to code in localized programming languages,'' in \emph{Proceedings of the fourth (2017) ACM conference on learning@ scale}, 2017, pp. 33--39.
 
+\bibitem{universaldesign}
+E.~Steinfeld, \emph{Universal Design: Creating Inclusive Environments}.\hskip 1em plus 0.5em minus 0.4em\relax John Wiley \& Sons, Inc, 2012.
+
+\bibitem{NonNative_English_Speakers}
+\BIBentryALTinterwordspacing
+P.~J. Guo, ``Non-native english speakers learning computer programming: Barriers, desires, and design opportunities,'' in \emph{Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems}, ser. CHI '18.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association for Computing Machinery, 2018, pp. 1--14. [Online]. Available: \url{https://doi.org/10.1145/3173574.3173970}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Robik_Programming_Language}
+�.~Звенигородский, ``Язык начального обучения Робик в учебной системе программирования,'' \emph{Программное обеспечение задач информатики}, pp. 72--85, 1982.
+
+\bibitem{african_native_language}
+E.~Olatunji, J.~Oladosu, O.~Odejobi, and S.~Olabiyisi, ``Design and implementation of an african native language-based programming language,'' \emph{International Journal of Advances in Applied Sciences}, vol.~10, p. 171, 06 2021.
+
+\bibitem{Kalam_Programming_Language}
+\BIBentryALTinterwordspacing
+S.~Kadam, ``Kalaam - programming language in hindi.'' [Online]. Available: \url{https://github.com/Kalaam-Programming-Language/Kalaam}
+\BIBentrySTDinterwordspacing
+
+\bibitem{wenyan_lang}
+L.~Huang, ``Wenyan-lang: A programming language for the ancient chinese,'' \url{https://github.com/wenyan-lang/wenyan}, 2019, accessed: 2024-12-08.
+
+\bibitem{alif_language}
+\BIBentryALTinterwordspacing
+A.~Community, ``Alif arabic programming language,'' GitHub repository, 2024. [Online]. Available: \url{https://github.com/alifcommunity/Alif}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Hermans_Hedy_A_Gradual}
 F.~Hermans, ``{Hedy: A Gradual Language for Programming Education}.''
 
 \bibitem{resnick2009scratch}
 M.~Resnick, J.~Maloney, A.~Monroy-Hern{\'a}ndez, N.~Rusk, E.~Eastmond, K.~Brennan, A.~Millner, E.~Rosenbaum, J.~Silver, B.~Silverman \emph{et~al.}, ``Scratch: programming for all,'' \emph{Communications of the ACM}, vol.~52, no.~11, pp. 60--67, 2009.
+
+\bibitem{freitasfilho2022scratch}
+\BIBentryALTinterwordspacing
+W.~N. Freitas~Filho, ``\BIBforeignlanguage{pt}{Scratch software as a possibility for mathematics classes},'' Course Completion Work (Undergraduate Degree in Mathematics), Uberlândia, 08 2022, uRI: https://repositorio.ufu.br/handle/123456789/36259. [Online]. Available: \url{https://repositorio.ufu.br/handle/123456789/36259}
+\BIBentrySTDinterwordspacing
 
 \bibitem{wang2021pseutopy}
 P.~Wang, ``Pseutopy: Towards a non-english natural programming language,'' in \emph{Proceedings of the 17th ACM Conference on International Computing Education Research}, 2021, pp. 429--430.
@@ -73,6 +110,11 @@ A.~Memon, ``{UrduScript},'' Aug. 2019. [Online]. Available: \url{https://www.git
 
 \bibitem{swidan2023framework}
 A.~Swidan and F.~Hermans, ``A framework for the localization of programming languages,'' in \emph{Proceedings of the 2023 ACM SIGPLAN International Symposium on SPLASH-E}, 2023, pp. 13--25.
+
+\bibitem{coghlan2014transition}
+\BIBentryALTinterwordspacing
+N.~Coghlan, ``The transition to multilingual programming with python,'' Red Hat Blog, 9 2014. [Online]. Available: \url{https://developers.redhat.com/blog/2014/09/09/transition-to-multilingual-programming-python}
+\BIBentrySTDinterwordspacing
 
 \bibitem{legesher}
 \BIBentryALTinterwordspacing
