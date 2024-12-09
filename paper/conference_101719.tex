@@ -25,27 +25,27 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \lstset{
-  frame=tb,
-  language=Python,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle=\ttfamily,
-  columns=fullflexible,
-  keepspaces=true,
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true,
-  tabsize=3,
-  literate={
-    {helloworldurdu} {{\urdufont سلام دنیا}}1
-    {goodbyeurdu} {{\urdufont خدا ہافظ}}1
-  }
+ frame=tb,
+ language=Python,
+ aboveskip=3mm,
+ belowskip=3mm,
+ showstringspaces=false,
+ columns=flexible,
+ basicstyle=\ttfamily,
+ columns=fullflexible,
+ keepspaces=true,
+ numbers=none,
+ numberstyle=\tiny\color{gray},
+ keywordstyle=\color{blue},
+ commentstyle=\color{dkgreen},
+ stringstyle=\color{mauve},
+ breaklines=true,
+ breakatwhitespace=true,
+ tabsize=3,
+ literate={
+ {helloworldurdu} {{\urdufont سلام دنیا}}1
+ {goodbyeurdu} {{\urdufont خدا ہافظ}}1
+ }
 }
 
 % Enable multilingual typesetting
@@ -57,14 +57,13 @@
 \newfontfamily\urdufont[Script=Arabic,Scale=1.2]{Jameel Noori Nastaleeq} % Urdu font
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
 \title{UniversalPython - A Multilingual Python Programming Language*\\
 {\footnotesize \textsuperscript{*}
 Note: This draft was submitted in partial fulfillment of the requirements for the course "Research Methodology"
 at FAST-NUCES
-
 }
 }
 
@@ -78,7 +77,7 @@ bazaz@grayhat.studio}
 \maketitle
 
 \begin{abstract}
-    % All widely used and useful programming languages have a common problem. They restrict entry on the basis of knowledge of the English language. The lack of knowledge of English poses a major hurdle to many newcomers who do not have the resources, in terms of time and money, to learn the language. Furthermore, studies back up the fact that learning is better when it’s done in the person’s local language. Therefore, we propose a language wrapper built on top of the Python programming language which can be directly used in the native Urdu language. This eliminates the need for any intermediate language as well. In the future, we aim to scale the language to encapsulate more languages to increase the availability of programming.
+  All widely used and useful programming languages have a common problem. They restrict entry on the basis of knowledge of the English language. The lack of knowledge of English poses a major hurdle to many newcomers who do not have the resources, in terms of time and money, to learn the English language. Studies show that people learn better in their own language. Therefore, we propose a language transpiler built on top of the Python programming language, called UniversalPython, which allows one to write Python in their own human language. We demonstrate the ability to create an "Urdu Python" with this transpiler. In the future, we aim to scale the language to encapsulate more human languages to increase the availability of programming. The source code for this transpiler is open-source, and available at https://github.com/universalpython/universalpython
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -86,86 +85,87 @@ computer science, computer science education, multilingual, programming language
 \end{IEEEkeywords}
 
 \section{Introduction}
+In our interconnected world, English often serves as the dominant language in technology and communication. However, a majority of the world still struggles with it \cite{cia_world_factbook_people_and_society}, which creates significant barriers to education, particularly in fields like computer science and programming.
 
-Students face difficulty in learning coding in a language other than their native one \cite{Difficulties_of_Learning}
+As coding education grows through boot camps and online platforms, it's crucial to embrace linguistic diversity. Research demonstrates that incorporating localized languages into curricula enhances students' comprehension and engagement in learning activities. This need is particularly pressing in developing regions, where there is an urgent call to democratize access to technology education. By aligning educational content with students' native languages, we create a more inclusive environment that encourages diverse participation in tech \cite{Difficulties_of_Learning}.
 
-Many non-English programming languages \cite{Wiki_NonEnglish}
+Our research seeks to challenge existing linguistic barriers by proposing a multilingual wrapper on the Python programming language, specifically designed for non-English speakers. By enabling coding in one's native human language, in a fairly popular programming language like Python, we empower a broader demographic of learners to engage with technology without the constraints of language proficiency. This approach has the potential to reshape how coding is taught and learned, fostering a more equitable future in tech education.
 
 \section{Related Work}
 
-High-level computer programming languages have been predominantly in the English language, ever since the first widespread high-level programming language, FORTRAN \cite{backus1978history}, which had an English instruction set. It is interesting to note, however, that the first high-level programming language recorded in history, the “Plankalkül” of German civil engineer Konrad Zuse \cite{zuse1963ansaetze}, often considered a forerunner of today's programming languages \cite{bauer1972plankalkul}.
-
+Since the inception of high-level computer programming languages, English has been the predominant language used. FORTRAN, the first widely adopted high-level programming language, utilized an English instruction set \cite{backus1978history}. Interestingly, however, the first high-level programming language ever recorded, “Plankalkül,” was developed by the German engineer Konrad Zuse \cite{zuse1963ansaetze}. This language is often regarded as a forerunner to modern programming languages \cite{bauer1972plankalkul}.
 \subsection{Learning in your own language}
 
-Studies have shown that students in K-12 are able to learn better, in general studies, in their localized language. \cite{buhmann2008mother} Some successful attempts have been made across the globe in making non-dominant languages part of the curriculum, to make classrooms inclusive, preserve culture, and improve understanding. \cite{taylor2015finding}
+Research indicates that students in K-12 education tend to learn more effectively in their localized language \cite{buhmann2008mother}. Various successful initiatives around the globe have aimed to integrate non-dominant languages into school curricula, fostering inclusivity, preserving culture, and enhancing comprehension \cite{taylor2015finding}. In several developing regions, language can act as a significant barrier to education, leading youths in rural areas to drop out when instruction is delivered in a non-native language \cite{trudell2009local}. Literacy classes conducted in students' mother tongues have proven beneficial in re-integrating these young individuals into formal education. Notably, girls in particular have demonstrated marked improvements in achievement, self-image as learners, and retention rates when educated in their local language \cite{unescobangkok2005mothertongue}.
 
-In certain developing parts of the world, language can present a barrier to entry, where young people in rural settings may dropout of school due to education being in a language other than their own \cite{trudell2009local}, and so literacy classes in the mother tongue can be of great help in re-integrating these youth into the school
-system. Girls in particular experience significant positive effects of
-local-language learning contexts, including better achievement,
-better self-image as learners and longer retention in school
-\cite{unescobangkok2005mothertongue}.
+Computing education is particularly challenging, due to the overarching presence of English in programming. Efforts to localize computing education content have shown promise, as exemplified by a Qatari middle school curriculum \cite{localized_content}. Longitudinal studies spanning five countries and involving over 15,000 users of Scratch, a prominent informal learning platform, reveal that novice users coding with localized programming language keywords and environments grasp new programming concepts more rapidly compared to those using English \cite{dasgupta2017learning}. This suggests potential pathways to "universal design" \cite{universaldesign} by internationalizing code examples, making programming more accessible and robust for diverse learners. Furthermore, an exciting parallel emerges: flipping the "language bit" may also facilitate English speakers in learning foreign languages within their usual programming practices \cite{NonNative_English_Speakers}.
 
-Computing education is particularly challenging, due to English being the predominant language for programming. Efforts have been made to localize computing education content to local, with the example of a Qatari middle school curriculum \cite{localized_content}, which have shown promising results.
-
-Recent tests have shown that, using longitudinal data drawn from five countries and over 15,000 users of Scratch, a large informal learning community, novice users who code with their programming language keywords and environment localized into their home countries' primary language demonstrate new programming concepts at a faster rate than users from the same countries whose interface is in English. \cite{dasgupta2017learning} This presents the opportunity to explore a form of universal design \cite{universaldesign} by internationalizing (also called localizing) code examples helps everyone learn to write more robust
-  code. One should also be able to “flip the language bit” and use those ideas to
-  instead help native English speakers learn a foreign language within the context of their normal programming activities.\cite{NonNative_English_Speakers}
 
 \subsection{Non-English, monolingual programming languages}
 
-One of the earliest examples of a programming language dedicated to localized education dates to 1975 during the USSR era, when a Russian programming language called Robic \cite{Robik_Programming_Language}, was developed for primary school education (8-11 year-old children). It was later modified to be included in a software system called "Schoolgirl" for the computer Agat. The language uses syntax based on the Russian vocabulary.
+The history of localized educational programming languages began as early as 1975 during the USSR era with the development of Robic, a Russian programming language designed for children aged 8 to 11 \cite{Robik_Programming_Language}. This language was later adapted into a software system called "Schoolgirl" for the Agat computer, utilizing syntax derived from the Russian vocabulary.
 
-Various languages have been built since then, targeting a single language (mono-lingual) other than English. A Yoruba-based programming language \cite{african_native_language}, and Kalaam \cite{Kalam_Programming_Language}, a programming language in Hindi, are examples of such. However, such projects often die out due to lack of community engagement and interest, and cannot gather enough attention as there is not much practical use for the learner other than learning programming constructs, and because the language eventually becomes "another syntax to learn".
+Since then, various programming languages have emerged, focusing on single languages (monolingual) distinct from English. For instance, a Yoruba-based programming language \cite{african_native_language} and a Hindi programming language named Kalaam \cite{Kalam_Programming_Language} exemplify this trend. However, many of these initiatives fall short due to a lack of community engagement and interest, hindering their practical applicability beyond simply teaching programming constructs. Consequently, these languages often become "another syntax to learn."
 
-A for-fun programming language in Ancient Chinese \cite{wenyan_lang} took the Internet by storm upon its release, prompting hundreds of thousands of users to create interesting programs in it.
-
-More recently, an Arabic programming language, Alif \cite{alif_language}, sports a Pythonic syntax, while itself being written in C/C++. While it benefits from aligning itself with Python, making it familiar enough for programmers to take on for fun and for learning, it struggles to catch up with the developments happening in Python itself, simultaneously.
+In a more recent development, a programming language in Ancient Chinese \cite{wenyan_lang} took the internet by storm, inspiring hundreds of thousands of users to create engaging programs. Additionally, Alif, an Arabic programming language with a Pythonic syntax \cite{alif_language}, has emerged. Alif is crafted in C/C++ and aligns itself with Python, allowing programmers to explore it for enjoyment and educational purposes, though it faces challenges in keeping pace with Python's continued advancements.
 
 \subsection{Multilingual programming languages}
 
-There have been multiple attempts at multilingual programming languages. These are languages built from the ground up to be simple, many of them using just symbols and illustrations to explain programming to novices. They also make use of labelling for these symbols, which are then localized for audiences. Most of such programming languages are for educational purposes only.
+There have been several attempts to create multilingual programming languages, designed to simplify programming concepts for novices through the use of symbols and illustrations \cite{suleiman1995visual}. These languages often label the symbols, localizing them to cater to specific audiences. Most of these languages serve primarily educational roles.
 
-Hedy \cite{Hermans_Hedy_A_Gradual} is a notable example, which is a mostly-textual focused programming language and environment focused on teaching novices how to code.
+Notably, Hedy \cite{Hermans_Hedy_A_Gradual} stands out as a text-focused programming language and environment tailored for teaching beginners how to code. Scratch, a well-known example in this domain, has also played a pivotal role in engaging learners through its visual and interactive programming approach \cite{resnick2009scratch}.
 
-A famous example in this space is Scratch \cite{resnick2009scratch}, which allows learners to visually program in easy, understandable steps.
+Such attempts are great for learning, yet require a large amount of funding for the maintenance of the entire ecosystem. Also, these tools and programming languages are mostly restricted to basic operations. However, some content creators like \textit{Griffpatch} on YouTube \cite{freitasfilho2022scratch} have been able to produce impressive games with tools like Scratch.
 
-Such attempts are great for learning, yet require a large amount of funding for maintenance of the entire ecosystem. Also, these tools and programming languages are mostly restricted to basic operations. Although, some content creators like \textit{Griffpatch} on YouTube \cite{freitasfilho2022scratch} have been able to produce impressive games with the tool.
+\subsection{Localizing Existing Programming Languages}
 
-\subsection{Localizing existing programming languages}
+PseuToPy \cite{wang2021pseutopy} introduces an intermediate pseudo language designed to interact with the Python interpreter. This method can complicate the user experience due to possible inconsistencies in machine translation. Furthermore, PseuToPy lacks a standardized structure, complicating transitions between languages.
 
-PseuToPy \cite{wang2021pseutopy} proposes an intermediate pseudo language to communicate with the Python interpreter. This approach adds complexity for users due to potential inconsistencies in machine translation. Additionally, PsueToPy lacks a standard structure, making it difficult to transition between languages. 
+UrduScript \cite{Memon_UrduScript_2019}, a JavaScript dialect in Urdu, aims to "... make programming more accessible to beginners from South Asia" \cite{Urdu_Mein_Programming}.
 
-A JavaScript dialect in Urdu, UrduScript \cite{Memon_UrduScript_2019}, aims to "... make programming more accessible to beginners from South Asia" \cite{Urdu_Mein_Programming}
+Another notable project is Chinese Python \cite{Glace_ChinesePython_2002}, an open-source initiative that adapts Python source code to incorporate Chinese symbols. However, applying this to various human languages would necessitate a complete recompilation of the Python programming language for each language and nearly every major version.
 
-Another team took the approach of editing the Python source code to accommodate Chinese symbols [6]. However, this method is difficult to implement and maintain across different versions and languages.
+While these projects employ familiar syntax due to their foundations in existing languages, maintaining them across new versions and scaling them to different human languages remains challenging.
 
-Overall issues: Lacking open-source libraries, and limited scalability to other human languages.
+\subsection{Research Gap}
 
-\subsection{Thin wrappers}
+As outlined earlier, localized programming languages face several key challenges:
 
-The challenges faced by multilingual programming is summarized well in \cite{swidan2023framework}, 
+\begin{itemize}
+\item Community adoption issues stemming from unfamiliar syntax and rules
+\item Maintenance difficulties arising from complexity or high overhead
+\item Limited scalability to other human languages
+\item Visual tools and programming languages primarily supporting only basic operations
+\item Insufficient third-party library support
+\end{itemize}
 
-The Python language has been more welcoming to a broader range of Unicode, allowing for variable names in other languages, which not only interpret correctly, but are also correctly referenceable. \cite{coghlan2014transition}
+The difficulties encountered by both monolingual and multilingual programming languages are well summarized in \cite{swidan2023framework}, which presents a framework for evaluating the localization of a programming language. Given these challenges, we pose the following questions:
 
-- Star Projects:
-  - 
-  - legesher \cite{legesher}
-  - Universal Python \cite{otten2023towards}
+\begin{itemize}
+  \item \textbf{Can a programming language designed to facilitate education in localized languages also be easy to maintain, have a low learning curve, and support novices in advancing to professional levels?}
+  
+  \item \textbf{Can this language be flexible enough to facilitate the development of complex programs and maintain interoperability with existing libraries and languages?}
+\end{itemize}
 
-% Studies have shown that students face problems learning the syntax and rules of a programming language initially [1]. However, learning in a local language has a significant positive impact on learning outcomes [2]. This supports the idea that programming should not be restricted by a language barrier.
+Today, Python welcomes a broader range of Unicode, allowing variable names in various languages to be both interpreted correctly and referenced accurately \cite{coghlan2014transition}.
+
+The Legesher \cite{legesher} project aims to empower individuals to code in any programming language using their native language. Currently in beta, it holds promise by enabling the community to define translations of programming languages through simple YAML files, supporting major scripting languages like Python, JavaScript, and Julia.
+
+Universal Python \cite{otten2023towards}, another relevant project, proposes a straightforward solution: a transpiler built over the Python language, allowing users to code in their native languages (e.g., French Python, Italian Python, etc.). We further this discussion by not only implementing this concept but also benchmarking and abstracting it for broader application across languages.
 
 \section{Design of UniversalPython}
 
-We propose a simple framework as shown in Figure \ref{flowchart}, which is a wrapper around the Python interpreter. This is a transpiler, that is, a source-to-source compiler, which is able to translate a higher-level programming language (e.g. Urdu Python, Chinese Python, Hindi Python, Arabic Python, etcetera) to the underlying language (in this case, just standard Python).
+We have implemented a simple framework, illustrated in Figure \ref{fig:flowchart}, which serves as a transpiler (also known as a \textbf{source-to-source compiler}) on top of the Python interpreter. This transpiler translates a higher-level, non-English variant of the Python programming language (e.g., Urdu Python, Chinese Python, Hindi Python, Arabic Python, etc.) into the standard Python programming language, which is in English.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=\columnwidth]{UniversalPython-flowchart.png}}
 \caption{A high-level abstraction of how the UniversalPython transpiler works.}
-\label{flowchart}
+\label{fig:flowchart}
 \end{figure}
 
-For example, if the user writes the following code in Urdu\footnote{Throughout this paper, we take the example of \textit{Urdu} (\texturdu{اردو}), the national language of Pakistan (the author's home country), and a traditional Right-to-left language, as an example translation language. }:
+\subsection{Walkthrough}
 
+For instance, if a user writes the following code in Urdu\footnote{Throughout this paper, we take the example of \textit{Urdu} (\texturdu{اردو}), the national language of Pakistan (the author's home country), and a traditional right-to-left language, as an example translation language.}:
 
 \begin{urdu} % Begin Urdu text block
 \urdufont 
@@ -181,27 +181,27 @@ For example, if the user writes the following code in Urdu\footnote{Throughout t
 
 \end{urdu} % End Urdu text block
 
-This is passed to “UniversalPython”, which first translates the code to English using Lexical Analysis and Parsing with the PLY library.
-To do this, it first loads the Urdu dictionary, which is a YAML file containing mappings from Urdu to English. This dictionary is a mapping of each Urdu word to a Python keyword. Here is an example of such a dictionary:
-In PLY, we have the option to reserve some keywords so that the library automatically tokenizes them. We set a Grammar Rule which, whenever a reserved keyword (i.e. a word which is present as a key in a language dictionary) is tokenized, simply looks for the token in the language dictionary (key) and replaces it with the corresponding English keyword (value).
-We also set a Grammar Rule to ignore all content within double quotes or single quotes (i.e. strings and docstring) and to ignore content in comments (which start with a \#). We achieve this using Regular Expressions.
-Urdu numbers also lie on the Unicode scale. \texturdu{۰} (or roman 0) is at 1776, while \texturdu{۹} (or roman 9) is at 1785.
+This code is passed to “UniversalPython,” which first translates it to English using Lexical Analysis and Parsing with the PLY library. To achieve this, it initially loads the Urdu dictionary, a YAML file containing mappings from Urdu to English. This dictionary maps each Urdu word to its corresponding Python keyword. An example of such a dictionary is provided in Table \ref{tab:language_dictionary}. 
 
-Keeping this in mind, we define a Regular Expression which detects any symbols equal to or between this range, 1776 - 1785. These are the Urdu digits. We then use the same language dictionary to translate these numbers into roman numerals. For example, \texturdu{۵} becomes 5, \texturdu{۹۰} becomes 90, \texturdu{۱۰} becomes 10, \texturdu{۲۰۲۵} becomes 2025.
-Furthermore, we also replace all periods ( . ) and commas ( , ), as these look different in Urdu than they do in English.
+In PLY, we can reserve certain keywords, allowing the library to automatically tokenize them. We establish a Grammar Rule whereby, whenever a reserved keyword (i.e., a word present as a key in the language dictionary) is tokenized, the lexer simply searches for that token in the language dictionary (key) and replaces it with the corresponding English keyword (value). Additionally, we set a Grammar Rule to ignore all content within double or single quotes (i.e., strings and docstrings) and content within comments (which begin with a \#). We accomplish this using Regular Expressions.
 
-The rest of the code remains untouched. Whether it is a symbol like :, ;, etc, or even if it causes the lexer to crash, we ignore it so we can preserve the original structure of the code as much as possible. It is not required to translate such symbols and errors anyway; They are meant to be handled by Python, not UniversalPython. Back to our initial example code, our transpiler detects and replaces it with print , \texturdu{اگر} is replaced with if,
-\texturdu{ورنہ} is replaced with else, and all Arabic digits are replaced with Roman digits. Hence the translated code would be:
+Urdu numbers also exist within the Unicode scale. For instance, \texturdu{۰} (or roman 0) is mapped to 1776, while \texturdu{۹} (or roman 9) is at 1785. 
+
+With this in mind, we define a Regular Expression that detects any symbols within the range of 1776 to 1785, which corresponds to Urdu digits. We then utilize the same language dictionary to translate these numbers into Roman numerals. For example, \texturdu{۵} becomes 5, \texturdu{۹۰} becomes 90, \texturdu{۱۰} translates to 10, and \texturdu{۲۰۲۵} becomes 2025. Furthermore, we replace all periods (.) and commas (,), as these appear differently in Urdu compared to English.
+
+The remaining code is left untouched. Symbols such as :, ;, etc., or any lexer errors are ignored to preserve the original structure of the code as much as possible. There is no need to translate such symbols and errors; they are meant to be handled by Python, not by UniversalPython. Referring back to our initial example code, our transpiler detects and replaces it with `print`, translates \texturdu{اگر} to `if`, replaces \texturdu{ورنہ} with `else`, and changes all Arabic digits to Roman numerals. Consequently, the translated code reads as follows:
 
 \begin{lstlisting}
 khchh = 2
 if khchh == 1:
-  print ("helloworldurdu")
+ print ("helloworldurdu")
 else:
-  print ("goodbyeurdu")
+ print ("goodbyeurdu")
 \end{lstlisting}
 
-The above code is essentially vanilla Python code which can now simply be executed by the Python interpreter. The Urdu variable name was auto-translated to English using the unidecode library, however, even  does not present any issue to Python, as from Python 3.0 onwards, Unicode is fully supported. So the above code is passed on to the Python interpreter. The Python interpreter outputs some response; it can be some print statements which the user entered, compiler/interpreter warnings, and/or errors. This response is passed up to UniversalPython, where again it is tokenized to replace keywords in case of error messages. In our example, since there are no errors, it simply outputs the response as-is. So the response would be:
+The above code is essentially vanilla Python code that can now be executed by the Python interpreter. The Urdu variable name is automatically converted to English using the unidecode library. However, even if it were in Arabic script, this would not pose an issue for newer versions of Python, as support for Unicode variable names has been available since Python 3.0 \cite{coghlan2014transition}.
+
+Returning to the example, this code is then passed to the Python interpreter, which outputs a response. This response could include print statements entered by the user, compiler/interpreter warnings, or errors. This output is then relayed back to UniversalPython, where it is tokenized again to replace keywords in the event of error messages. In our example, since there are no errors, it simply outputs the response as-is. Thus, the response would be:
 
 \begin{urdu} % Begin Urdu text block
 \urdufont 
@@ -209,174 +209,236 @@ The above code is essentially vanilla Python code which can now simply be execut
 
 \end{urdu} % End Urdu text block
   
+\begin{table}[h]
+\centering
+\caption{Language dictionary for periods and commas}
+\label{tab:language_dictionary}
+\vspace{3mm}
+\begin{tabular}{cc}
+\hline
+Key & Value \\
+\hline
+. & \texturdu{۔} \\
+, & \texturdu{،} \\
+\hline
+\end{tabular}
+\end{table}
 
-To demonstrate the ease by which plugins can be made for UniversalPython, we made a wrapper for the IPython kernel in which we imported UniversalPython as a package, and processed the code (i.e. translated it from Urdu to English) before it was passed onto IPython. This way, we overrode the functions and achieved a working kernel for UniversalPython. It works line-by-line while maintaining the program memory. This also gave us a visual interface for the language to test it thoroughly.
+\subsection{Language dictionary}
+
+The language dictionary for the Urdu variant of UniversalPython is a YAML file containing mappings from Urdu to English keywords. The PLY library enables the reservation of keywords for automatic tokenization and replacement with their English equivalents. Additionally, grammar rules are established to ignore content within quotes, comments, and Urdu numbers (which exist on the Unicode scale).
 
 \begin{table}[h]
-    \centering
-    \caption{Language dictionary for periods and commas}
-    \label{tab:language_dictionary}
-    \begin{tabular}{cc}
-    \hline
-    Key & Value \\
-    \hline
-    . & \texturdu{۔} \\
-    , & \texturdu{،} \\
-    \hline
-    \end{tabular}
-    \end{table}
+  \centering
+  \caption{Comparison of Python Keywords and their Urdu Equivalents}
+  \label{tab:python_urdu}
+  \vspace{3mm}
+\begin{tabular}{|c|c|}
+\hline
+Python (original) & Urdu (\texturdu{اردو}) \\
+\hline
+`print` & \texturdu{لکھو} \\
+`if` & \texturdu{اگر} \\
+`elif` & \texturdu{ورنہاگر} \\
+`else` & \texturdu{ورنہ} \\
+`while` & \texturdu{جبتک} \\
+`for` & \texturdu{جو} \\
+`in` & \texturdu{اندر} \\
+`input` & \texturdu{داخله} \\
+`break` & \texturdu{توڑ} \\
+`continue` & \texturdu{جاری} \\
+`pass` & \texturdu{گزر} \\
+`True` & \texturdu{حق} \\
+`False` & \texturdu{باطل} \\
+\hline
+\end{tabular}
+\end{table}
 
-The Urdu dictionary is a YAML file containing mappings from Urdu to English keywords, is used for translation. The PLY library allows reserving keywords for automatic tokenization and replacement with their English equivalents. Additionally, grammar rules are set to ignore content within quotes, comments, and Urdu numbers (which lie on the Unicode scale).
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|}
-    \hline
-    Python (original) & Urdu (\texturdu{اردو}) \\
-    \hline
-    `print` & \texturdu{لکھو} \\
-    `if` & \texturdu{اگر} \\
-    `elif` & \texturdu{ورنہاگر} \\
-    `else` & \texturdu{ورنہ} \\
-    `while` & \texturdu{جبتک} \\
-    `for` & \texturdu{جو} \\
-    `in` & \texturdu{اندر} \\
-    `input` & \texturdu{داخله} \\
-    `break` & \texturdu{توڑ} \\
-    `continue` & \texturdu{جاری} \\
-    `pass` & \texturdu{گزر} \\
-    `True` & \texturdu{حق} \\
-    `False` & \texturdu{باطل} \\
-    \hline
-    \end{tabular}
-    \caption{Comparison of Python Keywords and their Urdu Equivalents}
-    \label{tab:python_urdu}
-    \end{table}
-
-    
 \section{Experimentation}
 
 \subsection{Evaluation metrics}\label{AA}
 
-We propose the following metrics which UniversalPython should meet in order than it is considered effective:
+We propose the following metrics which UniversalPython should meet, so it can be considered an effective solution for our research problem:
 
-1) Programs which work in Python, should work in UniversalPython.
+\begin{enumerate}
 
-2) UniversalPython should operate as a reasonable speed which at least does not disturb the programmer.
+\item Programs which work in Python, should work in UniversalPython.
 
-3) UniversalPython should be able to translate from one non-English language to another
+\item UniversalPython should operate as a reasonable speed which at least does not disturb the programmer.
 
-4) A comparison should be made against other existing non-English, monolingual programming languages and multilingual programming languages
+\item UniversalPython should be able to translate from one non-English language to another
 
-5) A user experience test should be conducted to find out user acceptability towards a language in their native tongue.
+\item A comparison should be made against other existing non-English, monolingual programming languages and multilingual programming languages
+
+\item A user experience test should be conducted to find out user acceptability towards a language in their native tongue.
+
+\end{enumerate}
 
 \subsection{Benchmarks with Python}\label{BB}
 
-\textbf{Time:} Check the execution time / performance of Python vs UniversalPython. We use a benchmarking tool called hyperfine which runs each program multiple times to produce a mean execution time.
+\textbf{Time:} Check the execution time/performance of Python vs UniversalPython. We use a benchmarking tool called hyperfine which runs each program multiple times to produce a mean execution time.
 
 \textbf{Conversion:} Convert simple programs from English Python to UniversalPython, and test if they still work. Our testing mechanism for the above is as below:
+\begin{enumerate}
+\item We take an existing Python program, lets say multiplication.py.
 
-1) We take an existing Python program, lets say multiplication.py.
+\item Run the UniversalPython system in reverse. This will flip the language dictionary and generate an Urdu version of the program (all the keywords would be translated from English to Urdu). Save it as multiplication.ur.py.
 
-2) Run the UniversalPython system in reverse. This will flip the language dictionary and generate an Urdu version of the program (all the keywords would be translated from English to Urdu). Save it as multiplication.ur.py.
-
-3) Run multiplication.ur.py using UniversalPython, and multiplication.py using Python.
-
+\item Run multiplication.ur.py using UniversalPython, and multiplication.py using Python.
+\end{enumerate}
 If both give the same output on the terminal then no data loss has occurred; Both Urdu program and English program output the same message. Hence we can say that the program has safely converted from English to UniversalPython and vice versa without breaking the code or changing the logic.
 
 We take simple algorithmic programs from TheAlgorithms/Python \cite{thealgorithms_python}, a repository containing implementations of well-known algorithms, in the Python programming language. We run a loop over them and run the above algorithm on each to test.
 
-Our framework allows easy support for UniversalPython plugins in existing Python IDEs. It acts as a bridge, translating Urdu code into English before passing it to the IDE.
-
-
 \section{Results}
-
 
 \subsection{Benchmarking Python and UniversalPython code}
 
-We evaluate the results of the experiment mentioned above in the following two ways:
-Execution Success Rate After running the experiment, we were able to achieve the following results.
+\section{Results}
 
+\subsection{Benchmarking Python and UniversalPython Code}
+
+We conducted our benchmarking experiments on a MacBook Air (Late 2019).
+
+\textbf{Execution Success Rate:} Table \ref{tab:execution_results} describes our results over 110 simple Python programs present in TheAlgorithms/Python [14] math implementation.
 
 \begin{table*}[t]
-    \caption{Comparing UniversalPython with other non-English, monolingual programming languages and multilingual programming languages using "A Framework for the Localization of Programming Languages" \cite{swidan2023framework} }
-    \centering
-    \begin{tabularx}{\textwidth}{l *{14}{c}}
-    \hline
-    Aspect/Prog Language & UniversalPython & Scratch & Snap! & Dolittle & Ebda3 & Qalb & Wenyan & Excel & PSeInt & Rapture & Hedy & Hindi & Linotte \\
-    \hline
-    Language & Multi & Multi & Multi & Japanese & Arabic & Arabic & Chinese & Multi & Spanish & Russian & Multi & Hindi & French \\
-    Alignment & N & N & N & N & N & T & N & T & N & T & NT & N & N \\
-    Non-English keywords & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-    Non-Latin variable names & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-    Non-English productions & $\bullet$ & $\circ$ & $\bullet$ & - & - & $\bullet$ & $\circ$ & $\bullet$ & - & - & - & $\bullet$ & - \\
-    Non-English numerals & $\bullet$ & - & - & - & - & $\bullet$ & $\bullet$ & $\bullet$ & - & - & $\bullet$ & - & - \\
-    Characters without meaning & $\bullet$ & - & - & - & - & $\bullet$ & $\bullet$ & - & - & - & $\circ$ & - & - \\
-    Diacritics & $\bullet$ & $\bullet$ & $\bullet$ & $\circ$ & $\circ$ & $\bullet$ & $\circ$ & - & $\bullet$ & $\circ$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-    Alternative keywords & $\bullet$ & - & - & - & $\circ$ & - & $\bullet$ & - & $\bullet$ & $\circ$ & $\bullet$ & - & - \\
-    Localized punctuation & $\bullet$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\bullet$ & $\bullet$ & - & - & $\bullet$ & - & - \\
-    Right to left support & $\bullet$ & $\circ$ & - & $\circ$ & $\bullet$ & $\bullet$ & $\circ$ & $\bullet$ & - & - & $\bullet$ & $\circ$ & $\circ$ \\
-    Multi-lingual programming & $\bullet$ & - & - & - & - & - & - & - & - & $\bullet$ & $\circ$ & - & - \\
-    Error messages & - & $\circ$ & $\circ$ & $\bullet$ & $\circ$ & $\circ$ & - & $\bullet$ & $\bullet$ & - & $\bullet$ & $\bullet$ & $\bullet$ \\
-    Multi-lingual 3rd-party libraries & $\circ$ & $\circ$ & - & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\bullet$ & - & - & $\bullet$ & $\bullet$ & $\bullet$ \\
-    \hline
-    \end{tabularx}
-    \end{table*}
+  \caption{Comparing UniversalPython with other non-English, monolingual programming languages and multilingual programming languages using "A Framework for the Localization of Programming Languages" \cite{swidan2023framework}}
+  \centering
+  \begin{tabularx}{\textwidth}{l *{12}{c}}
+  \hline
+ Aspect/Prog Language & UniversalPython & Scratch & Wenyan & Yoruba & Kalaam & Alif & Chinese Python & Hedy & Legesher \\
+  \hline
+ Language & Multi & Multi & Chinese & Yoruba & Hindi & Arabic & Chinese & Multi & Multi \\
+ Alignment & N & N & N & N & N & T & N & NT & NT \\
+ Non-English keywords & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+ Non-Latin variable names & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+ Non-English productions & $\bullet$ & $\circ$ & $\circ$ & - & - & $\bullet$ & $\circ$ & - & $\bullet$ \\
+ Non-English numerals & $\bullet$ & - & $\bullet$ & - & - & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+ Characters without meaning & $\bullet$ & - & $\bullet$ & - & - & $\bullet$ & $\bullet$ & $\circ$ & $\bullet$ \\
+ Diacritics & $\bullet$ & $\bullet$ & $\circ$ & $\circ$ & $\circ$ & $\bullet$ & $\circ$ & $\bullet$ & $\bullet$ \\
+ Alternative keywords & $\bullet$ & - & $\bullet$ & $\bullet$ & $\circ$ & - & $\bullet$ & $\bullet$ & $\bullet$ \\
+ Localized punctuation & $\bullet$ & $\circ$ & $\bullet$ & $\circ$ & $\circ$ & $\circ$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+ Right to left support & $\bullet$ & $\circ$ & $\circ$ & - & $\circ$ & $\bullet$ & $\circ$ & $\bullet$ & $\circ$ \\
+ Multi-lingual programming & $\bullet$ & - & - & - & - & - & - & $\circ$ & $\bullet$ \\
+ Error messages & - & $\circ$ & - & $\bullet$ & $\circ$ & $\circ$ & - & $\bullet$ & $\bullet$ \\
+ Multi-lingual 3rd-party libraries & $\circ$ & $\circ$ & $\circ$ & - & $\circ$ & $\circ$ & $\circ$ & $\bullet$ & $\bullet$ \\
+  \hline
+  \end{tabularx}
+  \end{table*}
+  
+
     
 
-“Table III“ describes our results over 110 simple Python programs present in TheAlgorithms/Python [14] maths implementation.
-We reported that 98\% of simple programs can be automatically converted into Urdu Python without breaking the code. Amongst the programs that failed, the reason was due to a problem in generating the Urdu version of an English program (i.e. running UniversalPython in reverse) - it cannot distinguish between “is” and “==”, as they have the same purpose in English Python.
-Execution Time Upon recording the execution time summary of the experiment we concluded that UniversalPython performed better with simpler and less wordy programs, whereas for more wordy and lengthy algorithms, python performed better in terms of execution time. However, it is well within the range of acceptable speed of a programming language. Some of the top differences in performances of some algorithms can be seen in the tables “Table IV“ and “Table V“.
-Table IV: Execution times of functions where our transpiler performed well.
+\begin{table}[h]
+\centering
+\caption{Results from conversion test}
+\vspace{3mm}
+\label{tab:execution_results}
+\begin{tabular}{cc}
+\hline
+ Execution Status & Number of Programs \\
+\hline
+ PASS & 108 \\
+ FAIL & 2 \\
+\hline
+\end{tabular}
+\end{table}
 
-\subsection{Trying out different languages and translating between them}
 
-It is possible to make this framework generic \textit{enough} to span multiple languages. We managed to make three variants; Urdu, Chinese and Hindi, to demonstrate UniversalPython's capability to extend multiple languages.
 
-We were then able to translate between languages, e.g. Urdu to Hindi (as shown in Figure \ref{language-to-language}), by using English as an \textit{intermediate language}.
+We found that 98\% of simple programs could be automatically converted into Urdu Python without disrupting the code. The two programs that failed encountered an issue with generating the Urdu version of an English program (i.e., running UniversalPython in reverse). The failure stemmed from the inability to distinguish between “is” and “==,” as they serve the same purpose in English Python.
 
+\textbf{Execution Time:} Upon summarizing the experiment, we concluded that UniversalPython performed better with simpler and less wordy programs. In contrast, for more verbose and lengthy algorithms, Python showed better performance in terms of execution time. Nevertheless, both languages operated within an acceptable speed range. Some notable performance differences among various algorithms are illustrated in Tables \ref{tab:execution_results} and \ref{tab:execution_times_poor}.
+
+\begin{table}[h]
+\centering
+\caption{Execution times of functions where our transpiler performed well.}
+\vspace{3mm}
+\label{tab:execution_times} 
+\begin{tabular}{lccc}
+\hline
+ Function & Python & UniversalPython & Difference \\
+\hline
+ softmax & 0.408194 & 0.061837 & 0.346357 \\
+ gaussian & 0.873841 & 0.558138 & 0.315703 \\
+ radix2 fft & 0.473321 & 0.187514 & 0.285806 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+  \begin{table}[h]
+\centering
+\caption{Execution times of functions where our transpiler performed poorly.}
+\vspace{3mm}
+\label{tab:execution_times_poor} 
+\begin{tabular}{lccc}
+\hline
+ Function & Python & UniversalPython & Difference \\
+\hline
+ simpson rule & 0.168146 & 0.428384 & 0.260238 \\
+ quad eqs complex num & 0.162974 & 0.400886 & 0.237912 \\
+ square root & 0.165146 & 0.330606 & 0.16546 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Exploring Different Languages and Interlanguage Translation}
+
+Our framework has the potential to be generic enough to span multiple languages. We successfully developed three variants—Urdu, Chinese, and Hindi—to showcase UniversalPython's capability to extend across various languages.
+
+Furthermore, we demonstrated language translation, for instance, from Urdu to Hindi (as depicted in Figure \ref{fig:language-to-language}), using English as an \textit{intermediate language}.
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=\columnwidth]{UniversalPython-language-to-language.png}}
 \caption{Urdu to Hindi code translation and successful compilation with UniversalPython.}
-\label{language-to-language}
+\label{fig:language-to-language}
 \end{figure}
 
-\subsection{Making the Jupyter Kernel}
 
-To demonstrate the ease by which plugins can be made for UniversalPython, we made a wrapper for the IPython kernel in which we imported UniversalPython as a package, and processed the code (i.e. translated it from Urdu to English) before it was passed onto IPython. This way, we overrode the \verb|do_execute| and \verb|do_complete| functions and achieved a working kernel for UniversalPython. It works line-by-line while maintaining the program memory. This also gave us a visual interface for the language to test it thoroughly.
+\subsection{Creating the Jupyter Kernel}
+
+To illustrate the ease with which plugins can be created for UniversalPython, we developed a wrapper for the IPython kernel. In this implementation, we imported UniversalPython as a package and translated the code (i.e., from Urdu to English) before passing it to IPython. By overriding the \verb|do_execute| and \verb|do_complete| functions in IPython, we achieved a functional kernel for UniversalPython that operates line by line while maintaining program memory. This provided us with a visual interface for comprehensive testing of the language.
+
+\subsection{User Testing through a Hackathon}
+
+In early 2022, we organized a "speed algorithm coding" hackathon at the National University of Computer and Emerging Sciences. During this event, we introduced UniversalPython at the outset, presenting it as the programming language for the challenge, but limited it to just an Urdu dictionary.
+
+The participants, aged between 13 and 28 and currently enrolled in high school or equivalent programs, or pursuing a Bachelor's degree in Computer Science (or equivalent), had preliminary knowledge of coding in Python and was familiar with implementing algorithms.
+
+The initial response to the new language was surprising; many participants were hesitant to use it. However, after consulting the documentation and understanding the syntax, more than 80\% of the participants successfully submitted their coding challenges. We received mixed feedback, with some participants appreciating the translation of Python, particularly those from remote areas in Pakistan, whereas others felt more comfortable coding directly in Python.
 
 \section{Limitations}
 
-- Third-party library support is vital for any software platform to flourish. While third-party libraries do not cause the program to crash, we would prefer a better developer experience in which third-party libraries are also translated.
+The growth and success of any software platform relies heavily on robust third-party library support. These libraries can allow developers to leverage existing solutions rather than building from scratch. However, in the context of UniversalPython, one notable limitation is the lack of translation support for these third-party libraries. Although these libraries may not directly lead to program crashes, it can significantly impact the overall developer experience. Developers often rely on documentation and error messages that are usually in English. Without translating these resources, non-English speakers may struggle to fully understand and integrate these libraries into their projects. A more seamless approach where third-party libraries and their associated documentation are fully translated would greatly improve accessibility and foster a more inclusive development environment.
 
-- It is currently not possible translate words with spaces in between them. For example, `elif` in Python actually translates to \texturdu{ورنہ اگر} (notice the space in the middle) in the Urdu language. Some languages may also have different placements for verbs and nouns, and different words for different quantities (e.g. mono, bi, tri). This may present a challenge for UniversalPython, where more creative effort may be needed to construct a better front-end experience for programmers, while ensuring compatibility with Python.
+The efficacy of translation tools can vary dramatically, particularly for low-resource languages or those with intricate contextual uses. While UniversalPython aims to bridge the gap between programming languages and everyday language, the quality of translations for certain languages may fall short, due to limitations of machine translation engines like Google Translate, leading to confusion or misinterpretation of code. Poor translation quality can be particularly detrimental when developers rely on translated keywords, function names, or error messages for debugging and learning. Some languages may lack the dataset or tools necessary for accurate translation, resulting in vague or inaccurate terms being utilized in the programming context. This limitation not only hinders the coding experience for non-native speakers but may also lead to errors in code execution.
 
-- Translation quality is very weak for certain low-resources and contextual languages.
-
+Another challenge within UniversalPython is the inability to translate words or phrases that contain spaces. For example, the Python keyword `elif` translates to \texturdu{ورنہ اگر} in Urdu, which presents a challenge due to the space separating the components of the translation. This issue can pose limitations not just for keywords but also for function names and variable declarations, which may have varying syntactical structures across languages. Additionally, many languages differ in their grammatical order, such as the placement of verbs and nouns, which can further complicate translation efforts. Furthermore, some languages require different terms based on quantity, like using distinct forms for singular versus plural. In creating a more user-friendly experience for UniversalPython users, thoughtful consideration must be given to these linguistic nuances. A more flexible developer experience may help accommodate these differences and allow developers to write and comprehend code more naturally in their native language.
 
 \section{Future Work}
 
-UniversalPython can be developed as an extensible programming language which would grow alongside Python and would be interoperable with it. It is also maintainable, because since it is simply a wrapper, only the keywords need to be updated in the dictionary, and it will work for any future (or past) versions of Python. Furthermore, it is scalable to other languages because the dictionary structure allows for any language to be added to UniversalPython.
+To enhance the development of UniversalPython, we envision it as an extensible programming language that evolves alongside Python, ensuring seamless interoperability. Its maintainability is a significant advantage; since it functions as a simple wrapper, only the keywords in the dictionary need to be updated to accommodate any future or past Python versions. This would, however, entail a better versioning mechanism for the dictionaries to maintain parity with Python versions.
 
-To improve the current implementation, it would be useful to accommodate as many Python keywords as possible, preferably all of them. It would also be useful to separately have translations for major libraries/packages such as pandas, numpy, cv2, etc. A scalable and efficient method for this would be to automatically scan such libraries (the Python source code) to identify important keywords, automatically translate them to the nearest and best possible Urdu word, and add them to the Grammar. This can be achieved using Natural Language Processing, Deep Learning, Machine Learning and similar methods.
+A key area for improvement lies in our goal to incorporate as many Python keywords as possible, ideally encompassing the entire set. Additionally, we should focus on translating major libraries and packages, such as pandas, numpy, and cv2. One efficient approach to achieve this could involve automatically scanning the source code of these libraries to identify critical keywords, translating them into their most suitable equivalents in the supported languages, and integrating them into our grammar. This process could leverage advanced technologies like Natural Language Processing, Deep Learning, and Machine Learning.
 
-This framework could take on a similar role as TypeScript does in the JavaScript world, where it is usually used as a build-time transpiler to JavaScript \cite{Understanding_TypeScript}. To make it easy for third-party libraries to integrate with UniversalPython, inspiration can be taken from TypeScript's {\em *.d.ts} files --- in UniversalPython's case, it could be an {\em interfaces.<language\_code>.yml} file containing the translations for the functions and variables, in a predefined format. Again, we leave this to the imagination of the reader.
+In drawing parallels with TypeScript's role in the JavaScript ecosystem \cite{Understanding_TypeScript}, we can inspire UniversalPython's functionality as a build-time transpiler to its underlying Python code. To facilitate third-party library integration, we could learn from TypeScript’s {\em *.d.ts} files. In our case, this might take the form of an {\em interfaces.<language\_code>.yml} file, outlining translations for functions and variables in a structured format. We leave the implementation details to the imagination of the reader.
 
-In the current framework, making it possible for the user to \textit{choose} whether or not to detect variables and functions, and translate them with machine translation into their corresponding names, could make the experience better.
+Enhancing user experience is another vital aspect. We could introduce a feature allowing users to choose whether they want the system to detect variables and functions and translate them using machine translation into their corresponding names. Offering this level of customization could significantly enrich the user experience.
 
-In order to increase the accuracy of the translations, a translation-verification system can be developed, where beginner and experienced programmers can be asked, "How would you write the following snippet of code in your language?", and let them write the code in any shape or form they desire. This could be done with data from platforms like Leetcode, however, we leave that to the imagination of the reader.
+To ensure translation accuracy, we propose developing a human-involved translation verification system. This system could engage both beginner and experienced programmers by asking them to express how they would write a specific code snippet in their native language. Using data from platforms such as Leetcode for this purpose could yield valuable insights, and we leave this idea open for further exploration.
 
-It would also be helpful to conduct more User Experience tests with programmers across the globe, so that it can be determined whether or not UniversalPython really does benefit people who speak non-English languages to learn programming.
+Conducting extensive User Experience tests with programmers from diverse backgrounds is crucial to determine if UniversalPython genuinely aids non-English speakers in their programming journey. Gathering feedback from such a wide demographic will help us refine our approach and ensure it meets the needs of its users.
 
-Designing and developing a better evaluation metric to test the effectiveness of UniversalPython and similar multilingual programming languages / frameworks.
+Additionally, it is essential to design and develop a robust evaluation metric to assess the effectiveness of UniversalPython and similar multilingual programming languages or frameworks. 
 
-A REPL can be made by hooking into the Python REPL. Integrations can be made with Replit, Leetcode etcetera.
+Our framework is designed to seamlessly support UniversalPython plugins within existing Python Integrated Development Environments (IDEs). By acting as a bridge, it translates non-English code into English before passing it on to the IDE. We can also develop a Read-Eval-Print Loop (REPL) by integrating it into the Python REPL, along with potential integrations with platforms like Replit and Leetcode.
 
-Support from official Python could boost the project a lot.
+Finally, securing official support from the Python Software Foundation or related organizations could significantly propel this project forward. Such endorsement would enhance credibility and provide a strong foundation for broader adoption of UniversalPython, ultimately benefiting non-English speaking programmers on a global scale.
 
 \section*{Acknowledgment}
 
-I would like to acknowledge my mentor, Dr Omer Beg, for always guiding me to the right path during my Bachelor's, professional life, and Master's degree.
+I would like to acknowledge my mentor, Dr Omer Beg, for always guiding me to the right path during my Bachelor's, professional life, and Master's degree. Without him, this project would have remained shelved for a few years further, since its inception in late 2021. I would also like to acknowledge my friend Syed Zohair Abbas Hadi for his technical support in creating the first draft of this paper.
 
 \bibliographystyle{bibtex/IEEEtran} % Or your desired style (e.g., IEEEtran)
 \bibliography{bibtex/IEEEexample} 

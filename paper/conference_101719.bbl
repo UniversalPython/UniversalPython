@@ -20,13 +20,15 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{cia_world_factbook_people_and_society}
+\BIBentryALTinterwordspacing
+C.~I. Agency, ``World factbook,'' accessed 2024-12-09. [Online]. Available: \url{https://www.cia.gov/the-world-factbook/countries/world/\#people-and-society}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Difficulties_of_Learning}
 \BIBentryALTinterwordspacing
 Y.~Qian, P.~Yan, and M.~Zhou, ``Using data to understand difficulties of learning to program: A study with chinese middle school students,'' in \emph{Proceedings of the ACM Conference on Global Computing Education}, ser. CompEd '19.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association for Computing Machinery, 2019, p. 185–191. [Online]. Available: \url{https://doi.org/10.1145/3300115.3309521}
 \BIBentrySTDinterwordspacing
-
-\bibitem{Wiki_NonEnglish}
-{Wikipedia contributors}, ``Non-english-based programming languages --- wikipedia, the free encyclopedia,'' [Online; accessed 7-December-2024].
 
 \bibitem{backus1978history}
 J.~Backus, ``The history of fortran i, ii, and iii,'' \emph{ACM Sigplan Notices}, vol.~13, no.~8, pp. 165--180, 1978.
@@ -86,6 +88,9 @@ L.~Huang, ``Wenyan-lang: A programming language for the ancient chinese,'' \url{
 A.~Community, ``Alif arabic programming language,'' GitHub repository, 2024. [Online]. Available: \url{https://github.com/alifcommunity/Alif}
 \BIBentrySTDinterwordspacing
 
+\bibitem{suleiman1995visual}
+K.~A. Suleiman and W.~V. Citrin, ``A visual approach to programming language internationalization: An arabic case study,'' \emph{Language Problems and Language Planning}, vol.~19, no.~2, pp. 113--132, 1995.
+
 \bibitem{Hermans_Hedy_A_Gradual}
 F.~Hermans, ``{Hedy: A Gradual Language for Programming Education}.''
 
@@ -107,6 +112,9 @@ A.~Memon, ``{UrduScript},'' Aug. 2019. [Online]. Available: \url{https://www.git
 
 \bibitem{Urdu_Mein_Programming}
 ------, ``Urduscript: Urdu mein programming,'' \url{https://asadmemon.com/urduscript/}.
+
+\bibitem{Glace_ChinesePython_2002}
+Glace, ``{ChinesePython},'' Apr. 2002.
 
 \bibitem{swidan2023framework}
 A.~Swidan and F.~Hermans, ``A framework for the localization of programming languages,'' in \emph{Proceedings of the 2023 ACM SIGPLAN International Symposium on SPLASH-E}, 2023, pp. 13--25.
