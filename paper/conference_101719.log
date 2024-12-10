@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.28)  9 DEC 2024 17:10
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.28)  10 DEC 2024 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -589,73 +589,54 @@ Underfull \hbox (badness 4569) in paragraph at lines 108--109
 File: UniversalPython-flowchart.png Graphic file (type bmp)
 <UniversalPython-flowchart.png>
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
-(Font)              scaled to size 9.59998pt on input line 168.
-LaTeX Info: Redefining \rmfamily on input line 168.
-LaTeX Info: Redefining \sffamily on input line 168.
-LaTeX Info: Redefining \ttfamily on input line 168.
+(Font)              scaled to size 9.59998pt on input line 172.
+LaTeX Info: Redefining \rmfamily on input line 172.
+LaTeX Info: Redefining \sffamily on input line 172.
+LaTeX Info: Redefining \ttfamily on input line 172.
 LaTeX Font Info:    Font shape `TU/JameelNooriNastaleeq(0)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 171.
+(Font)              scaled to size 11.99997pt on input line 175.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 182.
-LaTeX Info: Redefining \sffamily on input line 182.
-LaTeX Info: Redefining \ttfamily on input line 182.
-LaTeX Info: Redefining \rmfamily on input line 188.
-LaTeX Info: Redefining \sffamily on input line 188.
-LaTeX Info: Redefining \ttfamily on input line 188.
-LaTeX Info: Redefining \rmfamily on input line 188.
-LaTeX Info: Redefining \sffamily on input line 188.
-LaTeX Info: Redefining \ttfamily on input line 188.
-LaTeX Info: Redefining \rmfamily on input line 190.
-LaTeX Info: Redefining \sffamily on input line 190.
-LaTeX Info: Redefining \ttfamily on input line 190.
-LaTeX Info: Redefining \rmfamily on input line 190.
-LaTeX Info: Redefining \sffamily on input line 190.
-LaTeX Info: Redefining \ttfamily on input line 190.
-LaTeX Info: Redefining \rmfamily on input line 190.
-LaTeX Info: Redefining \sffamily on input line 190.
-LaTeX Info: Redefining \ttfamily on input line 190.
-LaTeX Info: Redefining \rmfamily on input line 190.
-LaTeX Info: Redefining \sffamily on input line 190.
-LaTeX Info: Redefining \ttfamily on input line 190.
+LaTeX Info: Redefining \rmfamily on input line 186.
+LaTeX Info: Redefining \sffamily on input line 186.
+LaTeX Info: Redefining \ttfamily on input line 186.
 LaTeX Info: Redefining \rmfamily on input line 192.
 LaTeX Info: Redefining \sffamily on input line 192.
 LaTeX Info: Redefining \ttfamily on input line 192.
 LaTeX Info: Redefining \rmfamily on input line 192.
 LaTeX Info: Redefining \sffamily on input line 192.
 LaTeX Info: Redefining \ttfamily on input line 192.
-Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 210.
-LaTeX Info: Redefining \sffamily on input line 210.
-LaTeX Info: Redefining \ttfamily on input line 210.
-LaTeX Info: Redefining \rmfamily on input line 221.
-LaTeX Info: Redefining \sffamily on input line 221.
-LaTeX Info: Redefining \ttfamily on input line 221.
-LaTeX Info: Redefining \rmfamily on input line 222.
-LaTeX Info: Redefining \sffamily on input line 222.
-LaTeX Info: Redefining \ttfamily on input line 222.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+LaTeX Info: Redefining \rmfamily on input line 194.
+LaTeX Info: Redefining \sffamily on input line 194.
+LaTeX Info: Redefining \ttfamily on input line 194.
+LaTeX Info: Redefining \rmfamily on input line 194.
+LaTeX Info: Redefining \sffamily on input line 194.
+LaTeX Info: Redefining \ttfamily on input line 194.
+LaTeX Info: Redefining \rmfamily on input line 194.
+LaTeX Info: Redefining \sffamily on input line 194.
+LaTeX Info: Redefining \ttfamily on input line 194.
+LaTeX Info: Redefining \rmfamily on input line 194.
+LaTeX Info: Redefining \sffamily on input line 194.
+LaTeX Info: Redefining \ttfamily on input line 194.
+LaTeX Info: Redefining \rmfamily on input line 196.
+LaTeX Info: Redefining \sffamily on input line 196.
+LaTeX Info: Redefining \ttfamily on input line 196.
+LaTeX Info: Redefining \rmfamily on input line 196.
+LaTeX Info: Redefining \sffamily on input line 196.
+LaTeX Info: Redefining \ttfamily on input line 196.
  [3]
-LaTeX Info: Redefining \rmfamily on input line 238.
-LaTeX Info: Redefining \sffamily on input line 238.
-LaTeX Info: Redefining \ttfamily on input line 238.
-LaTeX Info: Redefining \rmfamily on input line 240.
-LaTeX Info: Redefining \sffamily on input line 240.
-LaTeX Info: Redefining \ttfamily on input line 240.
-LaTeX Info: Redefining \rmfamily on input line 241.
-LaTeX Info: Redefining \sffamily on input line 241.
-LaTeX Info: Redefining \ttfamily on input line 241.
+Package polyglossia Info: Option: English, variant=american.
+LaTeX Info: Redefining \rmfamily on input line 214.
+LaTeX Info: Redefining \sffamily on input line 214.
+LaTeX Info: Redefining \ttfamily on input line 214.
+LaTeX Info: Redefining \rmfamily on input line 225.
+LaTeX Info: Redefining \sffamily on input line 225.
+LaTeX Info: Redefining \ttfamily on input line 225.
+LaTeX Info: Redefining \rmfamily on input line 226.
+LaTeX Info: Redefining \sffamily on input line 226.
+LaTeX Info: Redefining \ttfamily on input line 226.
 LaTeX Info: Redefining \rmfamily on input line 242.
 LaTeX Info: Redefining \sffamily on input line 242.
 LaTeX Info: Redefining \ttfamily on input line 242.
-LaTeX Info: Redefining \rmfamily on input line 243.
-LaTeX Info: Redefining \sffamily on input line 243.
-LaTeX Info: Redefining \ttfamily on input line 243.
 LaTeX Info: Redefining \rmfamily on input line 244.
 LaTeX Info: Redefining \sffamily on input line 244.
 LaTeX Info: Redefining \ttfamily on input line 244.
@@ -683,57 +664,60 @@ LaTeX Info: Redefining \ttfamily on input line 251.
 LaTeX Info: Redefining \rmfamily on input line 252.
 LaTeX Info: Redefining \sffamily on input line 252.
 LaTeX Info: Redefining \ttfamily on input line 252.
+LaTeX Info: Redefining \rmfamily on input line 253.
+LaTeX Info: Redefining \sffamily on input line 253.
+LaTeX Info: Redefining \ttfamily on input line 253.
+LaTeX Info: Redefining \rmfamily on input line 254.
+LaTeX Info: Redefining \sffamily on input line 254.
+LaTeX Info: Redefining \ttfamily on input line 254.
+LaTeX Info: Redefining \rmfamily on input line 255.
+LaTeX Info: Redefining \sffamily on input line 255.
+LaTeX Info: Redefining \ttfamily on input line 255.
+LaTeX Info: Redefining \rmfamily on input line 256.
+LaTeX Info: Redefining \sffamily on input line 256.
+LaTeX Info: Redefining \ttfamily on input line 256.
 
-Underfull \hbox (badness 4108) in paragraph at lines 261--262
+Underfull \hbox (badness 4108) in paragraph at lines 265--266
 [][]\TU/ptm/bx/it/10 We propose the following metrics which Univer-[]
  []
 
 
-Underfull \hbox (badness 2343) in paragraph at lines 279--280
+Underfull \hbox (badness 2343) in paragraph at lines 283--284
 [][]\TU/lmr/bx/n/10 Time: \TU/ptm/bx/it/10 Check the execution time/performance of[]
  []
 
 
-Underfull \hbox (badness 2591) in paragraph at lines 287--288
+Underfull \hbox (badness 2591) in paragraph at lines 291--292
 [][]\TU/ptm/bx/it/10 Run multiplication.ur.py using UniversalPython,[]
  []
 
 
-Overfull \hbox (34.00832pt too wide) in alignment at lines 323--323
+Overfull \hbox (34.00832pt too wide) in alignment at lines 327--327
 [][][][][][][][][][][][][]
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (11.9682pt too wide) in paragraph at lines 369--378
+[4]
+Overfull \hbox (11.9682pt too wide) in paragraph at lines 373--382
  [][][][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 5403) in paragraph at lines 381--381
+Underfull \hbox (badness 5403) in paragraph at lines 385--385
 [] \TU/lmr/m/it/10 B. Exploring Different Languages and Interlanguage[]
  []
 
 File: UniversalPython-language-to-language.png Graphic file (type bmp)
 <UniversalPython-language-to-language.png>
-[4]
-Underfull \vbox (badness 2951) has occurred while \output is active []
+[5]
+LaTeX Info: Redefining \rmfamily on input line 415.
+LaTeX Info: Redefining \sffamily on input line 415.
+LaTeX Info: Redefining \ttfamily on input line 415.
 
- [5]
-LaTeX Info: Redefining \rmfamily on input line 411.
-LaTeX Info: Redefining \sffamily on input line 411.
-LaTeX Info: Redefining \ttfamily on input line 411.
-
-Underfull \hbox (badness 5345) in paragraph at lines 419--420
-[]\TU/ptm/bx/it/10 JavaScript ecosystem [32], we can inspire Univer-[]
+Underfull \hbox (badness 5345) in paragraph at lines 423--424
+[]\TU/ptm/bx/it/10 JavaScript ecosystem [33], we can inspire Univer-[]
  []
 
 [6] (./conference_101719.bbl
@@ -859,17 +843,17 @@ Underfull \hbox (badness 1460) in paragraph at lines 88--90
 ** loaded for the language `pt'. Using the pattern for
 ** the default language instead.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 [][]\TU/lmr/m/n/8 ——, “Urduscript: Urdu mein programming,”[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 []\TU/lmr/m/n/8 https://developers.redhat.com/blog/2014/09/09/transition-to-[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 [][]\TU/lmr/m/n/8 T. A. Community, “The algorithms - python,”[]
  []
 
@@ -885,7 +869,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (./conference_101719.aux)
+[8
+
+] (./conference_101719.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -896,12 +882,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11564 strings out of 476290
- 251023 string characters out of 5789827
- 1954839 words of memory out of 5000000
- 33377 multiletter control sequences out of 15000+600000
+ 11565 strings out of 476290
+ 251042 string characters out of 5789827
+ 1953839 words of memory out of 5000000
+ 33378 multiletter control sequences out of 15000+600000
  563260 words of font info for 105 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  93i,9n,107p,1218b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on conference_101719.pdf (7 pages).
+Output written on conference_101719.pdf (8 pages).

@@ -117,6 +117,8 @@ Notably, Hedy \cite{Hermans_Hedy_A_Gradual} stands out as a text-focused program
 
 Such attempts are great for learning, yet require a large amount of funding for the maintenance of the entire ecosystem. Also, these tools and programming languages are mostly restricted to basic operations. However, some content creators like \textit{Griffpatch} on YouTube \cite{freitasfilho2022scratch} have been able to produce impressive games with tools like Scratch.
 
+A subsequent consequence of designing a programming language from the ground up which supports all human languages, can possibly lead to a "Turing tarpit" problem \cite{perlis1982special}, which refers to a programming language which is so flexible, almost nothing worth building can be built in it, without a huge amount of complexity. Any programs with slightly heavier-than-usual computing requirements, or with multiple transformations, can become cumbersome in such a language.
+
 \subsection{Localizing Existing Programming Languages}
 
 PseuToPy \cite{wang2021pseutopy} introduces an intermediate pseudo language designed to interact with the Python interpreter. This method can complicate the user experience due to possible inconsistencies in machine translation. Furthermore, PseuToPy lacks a standardized structure, complicating transitions between languages.
@@ -151,7 +153,9 @@ Today, Python welcomes a broader range of Unicode, allowing variable names in va
 
 The Legesher \cite{legesher} project aims to empower individuals to code in any programming language using their native language. Currently in beta, it holds promise by enabling the community to define translations of programming languages through simple YAML files, supporting major scripting languages like Python, JavaScript, and Julia.
 
-Universal Python \cite{otten2023towards}, another relevant project, proposes a straightforward solution: a transpiler built over the Python language, allowing users to code in their native languages (e.g., French Python, Italian Python, etc.). We further this discussion by not only implementing this concept but also benchmarking and abstracting it for broader application across languages.
+Universal Python \cite{otten2023towards}, another relevant project, proposes a straightforward solution: a transpiler built over the Python language, allowing users to code in their native languages (e.g., French Python, Italian Python, etc.). 
+
+To solve our research gap, we build on top of the Python language itself. We not only implement the idea in \cite{otten2023towards}, but also benchmark it against Python and other languages. Finally, we abstracting it for broader application across other human languages.
 
 \section{Design of UniversalPython}
 
@@ -396,7 +400,7 @@ To illustrate the ease with which plugins can be created for UniversalPython, we
 
 \subsection{User Testing through a Hackathon}
 
-In early 2022, we organized a "speed algorithm coding" hackathon at the National University of Computer and Emerging Sciences. During this event, we introduced UniversalPython at the outset, presenting it as the programming language for the challenge, but limited it to just an Urdu dictionary.
+On May 21, 2022, we organized a "speed algorithm coding" hackathon at the National University of Computer and Emerging Sciences. During this event, we introduced UniversalPython at the outset, presenting it as the programming language for the challenge, but limited it to just an Urdu dictionary.
 
 The participants, aged between 13 and 28 and currently enrolled in high school or equivalent programs, or pursuing a Bachelor's degree in Computer Science (or equivalent), had preliminary knowledge of coding in Python and was familiar with implementing algorithms.
 

@@ -102,6 +102,9 @@ M.~Resnick, J.~Maloney, A.~Monroy-Hern{\'a}ndez, N.~Rusk, E.~Eastmond, K.~Brenna
 W.~N. Freitas~Filho, ``\BIBforeignlanguage{pt}{Scratch software as a possibility for mathematics classes},'' Course Completion Work (Undergraduate Degree in Mathematics), Uberlândia, 08 2022, uRI: https://repositorio.ufu.br/handle/123456789/36259. [Online]. Available: \url{https://repositorio.ufu.br/handle/123456789/36259}
 \BIBentrySTDinterwordspacing
 
+\bibitem{perlis1982special}
+A.~J. Perlis, ``Special feature: Epigrams on programming,'' \emph{ACM Sigplan Notices}, vol.~17, no.~9, pp. 7--13, 1982.
+
 \bibitem{wang2021pseutopy}
 P.~Wang, ``Pseutopy: Towards a non-english natural programming language,'' in \emph{Proceedings of the 17th ACM Conference on International Computing Education Research}, 2021, pp. 429--430.
 

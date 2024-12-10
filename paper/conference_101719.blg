@@ -27,45 +27,45 @@ Warning--entry type for "wenyan_lang" isn't style-file defined
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 32 entries,
+You've used 33 entries,
             4087 wiz_defined-function locations,
-            1027 strings with 13695 characters,
-and the built_in function-call counts, 19848 in all, are:
-= -- 1606
-> -- 379
-< -- 124
-+ -- 206
-- -- 68
-* -- 876
-:= -- 3145
-add.period$ -- 69
-call.type$ -- 32
-change.case$ -- 37
-chr.to.int$ -- 291
-cite$ -- 32
-duplicate$ -- 1487
-empty$ -- 1727
-format.name$ -- 79
-if$ -- 4588
+            1032 strings with 13773 characters,
+and the built_in function-call counts, 20563 in all, are:
+= -- 1672
+> -- 388
+< -- 132
++ -- 211
+- -- 69
+* -- 910
+:= -- 3266
+add.period$ -- 71
+call.type$ -- 33
+change.case$ -- 38
+chr.to.int$ -- 306
+cite$ -- 33
+duplicate$ -- 1539
+empty$ -- 1779
+format.name$ -- 80
+if$ -- 4752
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 281
-newline$ -- 141
-num.names$ -- 34
-pop$ -- 688
+int.to.str$ -- 33
+missing$ -- 289
+newline$ -- 144
+num.names$ -- 35
+pop$ -- 699
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1549
+skip$ -- 1606
 stack$ -- 0
-substring$ -- 742
-swap$ -- 1111
-text.length$ -- 27
+substring$ -- 777
+swap$ -- 1156
+text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 32
+type$ -- 33
 warning$ -- 0
-while$ -- 89
-width$ -- 34
-write$ -- 334
+while$ -- 94
+width$ -- 35
+write$ -- 345
 (There were 7 warnings)
