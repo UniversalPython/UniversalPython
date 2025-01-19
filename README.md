@@ -41,8 +41,10 @@ You only need [Python 3.4+](https://www.python.org/downloads/).
 Install UniversalPython with pip:
 
 ```bash
-pip install -i urdupython
+pip install universalpython
 ```
+
+See more details about the package on [PyPi](https://pypi.org/project/universalpython/).
 
 ### Online Playground
 
