@@ -30,7 +30,7 @@
 - **Cultural Connection:** Code in the language you love.
 - **Have fun:** Makes programming available to more people.
 
-## 🚀 Get Started
+## 🚀 Getting Started
 
 ### Requirements
 
