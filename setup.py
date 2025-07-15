@@ -28,11 +28,11 @@ setup(
 
     # packages=['urdupython', 'modes', 'filters', 'languages'],
     packages=find_packages(),
-    package_data = {'urdupython' : files },
+    package_data = {'universalpython' : files },
 
     entry_points={
         'console_scripts': [
-            'universalpython=urdupython.urdu_python:main',
+            'universalpython=universalpython.universalpython:main',
             'urdupython=urdupython.urdu_python:main',
             'اردوپایتھان=urdupython.urdu_python:main',
             'اردوپای=urdupython.urdu_python:main'

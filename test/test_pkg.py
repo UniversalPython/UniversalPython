@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from urdupython import run_module
+from universalpython import run_module
 
 print ("Imported successfully.")
 

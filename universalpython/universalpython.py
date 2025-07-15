@@ -24,7 +24,7 @@ def run_module(
             'return': True,
         }, 
     ):
-    mod = importlib.import_module(".modes."+mode, package='urdupython')
+    mod = importlib.import_module(".modes."+mode, package='universalpython')
     return mod.run(args, code)
 
 def main():

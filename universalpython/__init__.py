@@ -9,4 +9,4 @@ __author__ = 'Saad Bazaz'
 __credits__ = 'Grayhat'
 __url__ = 'https://github.com/saadbazaz/UrduPython'
 
-from .urdu_python import *
+from .universalpython import *
