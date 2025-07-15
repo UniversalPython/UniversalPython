@@ -1,0 +1,18 @@
+name: Deploy Docs to GitHub Pages
+on:
+  push:
+    branches: [ main ]  # Trigger on main branch updates
+    paths: [ 'web/**' ]  # Only if files in 'web/' change
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync to GitHub Pages repo
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main  # Branch in UniversalPython.github.io repo
+          folder: web   # Folder to deploy
+          repository: UniversalPython/UniversalPython.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
