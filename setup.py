@@ -15,10 +15,10 @@ files = ["samples/*/*", "languages/*/*.yaml"]
 
 setup(
     name='universalpython',
-    version='0.0.3',
+    version='0.0.5',
     author='Saad Bazaz',
     author_email='saadbazaz@hotmail.com',
-    url='https://github.com/grayhatdevelopers/UniversalPython',
+    url='https://github.com/UniversalPython/UniversalPython',
 
     install_requires=[
         "ply",
@@ -33,9 +33,9 @@ setup(
     entry_points={
         'console_scripts': [
             'universalpython=universalpython.universalpython:main',
-            'urdupython=urdupython.urdu_python:main',
-            'اردوپایتھان=urdupython.urdu_python:main',
-            'اردوپای=urdupython.urdu_python:main'
+            # 'urdupython=urdupython.urdu_python:main',
+            # 'اردوپایتھان=urdupython.urdu_python:main',
+            # 'اردوپای=urdupython.urdu_python:main'
         ]
     }
 )
