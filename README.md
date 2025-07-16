@@ -50,7 +50,7 @@ See more details about the package on [PyPi](https://pypi.org/project/universalp
 
 You can also try out UniversalPython in our [live online demo](https://universalpython.github.io/). It runs in your browser.
 
-## UniversalPython in Jupyter
+### UniversalPython in Jupyter
 Install our Jupyter Kernel to easily use UniversalPython in Jupyter Notebook or Jupyter Lab. Instructions are here: https://github.com/UniversalPython/universalpython_kernel
 
 ### Learn More
