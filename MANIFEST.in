@@ -1,1 +1,1 @@
-include urdupython/languages/*/*.yaml
+include universalpython/languages/*/*.yaml

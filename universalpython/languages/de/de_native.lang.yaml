@@ -19,7 +19,7 @@ reserved:
   "8"           :       "8"
   "9"           :       "9"
   "0"           :       "0"
-  "drucke"      :       "print"
+  "drucken"      :       "print"
   "sonstwenn"   :       "elif"
   "wenn"        :       "if"
   "sonst"       :       "else"

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------
-# urdu_python.py
+# universalpython.py
 #
 # Main driver file. 
 # - Arguments are captured here
