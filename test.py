@@ -1,0 +1,1 @@
+drucke("hello world")
