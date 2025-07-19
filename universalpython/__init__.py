@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-UrduPython.
+UniversalPython.
 
-Python, but in Urdu.
+Python, but in different human languages.
 """
 
 __author__ = 'Saad Bazaz'

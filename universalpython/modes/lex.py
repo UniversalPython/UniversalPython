@@ -1,14 +1,33 @@
 # ------------------------------------------------------------
 # lex.py
 #
-# tokenizer to test UniversalPython grammer
+# tokenizer to test UniversalPython grammar
 # ------------------------------------------------------------
 
 
 def run(args, code):
-
     import yaml
-    language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
+    language_dict = {}
+    if args["dictionary"]:
+        try:
+            language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
+        except:
+            if not args.get("suppress_warnings", False):
+                print("\033[93m⚠️ Warning: Could not load language dictionary file. Defaulting to English Python.\033[0m")
+                print("\033[93mDocumentation: https://universalpython.github.io\033[0m")
+    else:
+        if not args.get("suppress_warnings", False):
+            print("\033[93m⚠️ Warning: No language dictionary specified. Defaulting to English Python.\033[0m")
+            print("\033[93mDocumentation: https://universalpython.github.io\033[0m")
+            print("\033[93mUse --suppress-warnings to hide these messages.\033[0m")
+
+    # ------------- Debugging ---------------
+    # print("Using language dictionary:", language_dict)
+    # ------------- Debugging ---------------
+
+    if language_dict == {}:
+        exec(code)  # Fallback to direct execution
+        return code if args.get("return") else None
 
     if args["reverse"]:
         reserved = {value:key for key, value in language_dict.get("reserved").items()}
@@ -130,7 +149,7 @@ def run(args, code):
                 value_str[i] = reserved.get(value_str[i], value_str[i])
             t.value = ''.join(value_str)
         else:
-            import universalpython.filters.unidecoder as num_filter
+            import universalpython.filters.translate.unidecoder as num_filter
             t.value = num_filter.filter(t.value)
         
         # ------------- Debugging ---------------
@@ -252,11 +271,12 @@ def run(args, code):
         # print ("Value is:", t.value)
         # ------------- Debugging ---------------
 
-        if args['translate']:
+        if args['translate'] is not False:
             if args['translate'] == 'argostranslate':
                 from universalpython.filters.translate.argos_translator import argos_translator
                 if t.type == 'ID':
-                    t.value = argostranslate(t.value)
+                    # Only pass the source language, not the whole args dict
+                    t.value = argos_translator(t.value, args.get("source_language", "en"))
             else:
                 if t.type == 'ID':
                     t.value = unidecode(t.value)
