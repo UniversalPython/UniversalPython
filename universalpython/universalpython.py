@@ -8,16 +8,90 @@
 import importlib
 import inspect
 import sys
-
 import os
+import re
+import yaml
+
 SCRIPTDIR = os.path.dirname(__file__)
+LANGUAGES_DIR = os.path.join(SCRIPTDIR, 'languages')
+
+def build_language_map():
+    """Build language map in the format {lang: {filename: fullpath}}"""
+    language_map = {}
+    
+    if not os.path.exists(LANGUAGES_DIR):
+        return language_map
+    
+    for lang_dir in os.listdir(LANGUAGES_DIR):
+        lang_path = os.path.join(LANGUAGES_DIR, lang_dir)
+        if not os.path.isdir(lang_path):
+            continue
+            
+        lang_files = {}
+        for filename in os.listdir(lang_path):
+            if filename.endswith('.yaml'):
+                filepath = os.path.join(lang_path, filename)
+                if os.path.isfile(filepath):
+                    name = os.path.splitext(filename)[0]  # Remove .yaml
+                    lang_files[name] = filepath
+        
+        if lang_files:  # Only add if we found YAML files
+            language_map[lang_dir] = lang_files
+            
+    return language_map
+# Build language map at module load
+DEFAULT_LANGUAGE_MAP = build_language_map()
+
+def detect_language_from_filename(filename):
+    """Detect language from file extension (e.g., my-program.de.py -> german)"""
+    parts = filename.split('.')
+
+    # ------------- Debugging ---------------
+    # print("filename", filename)
+    # print("parts", parts)
+    # print("DEFAULT_LANGUAGE_MAP", DEFAULT_LANGUAGE_MAP)
+    # ------------- Debugging ---------------
+
+    if len(parts) > 2:  # Has language code in extension
+        lang_code = parts[-2].lower()
+        return DEFAULT_LANGUAGE_MAP.get(lang_code, None)['default']
+    return None
+
+def detect_language_from_comment(code):
+    """Detect language from comment (e.g., # language:fr)"""
+    first_lines = code.split('\n')[:5]  # Check first 5 lines for comment
+    for line in first_lines:
+        match = re.search(r'^#\s*language\s*:\s*(\w+)', line, re.IGNORECASE)
+        if match:
+            lang_code = match.group(1).lower()
+            return DEFAULT_LANGUAGE_MAP.get(lang_code, None)['default']
+    return None
+
+def determine_language(args, filename, code):
+    """Determine target language based on priority rules"""
+    # If dictionary is explicitly provided, use that
+    if args.get('dictionary'):
+        return args['dictionary']
+    
+    # Check for language comment (higher priority)
+    lang = detect_language_from_comment(code)
+    if lang:
+        return lang
+    
+    # Check file extension
+    lang = detect_language_from_filename(filename)
+    if lang:
+        return lang
+    
+    # Default to empty (no translation)
+    return ""
 
 def run_module(
         mode, 
         code,
         args={
             'translate': False,
-            'dictionary': os.path.join(SCRIPTDIR, 'languages/ur/ur_native.lang.yaml'),
+            'dictionary': "",
             'reverse': False,
             'keep': False,         
             'keep_only': False,
@@ -34,52 +108,51 @@ def main():
     ap = argparse.ArgumentParser()
     
     ap.add_argument('file', metavar='F', type=str, nargs='+',
-                        help='File to compile.')
+                   help='File to compile.')
 
     ap.add_argument("-t", "--translate", 
-                        action='store_true',
-                        default=False, required = False, 
-                        help = "Translate variables and functions to English, using the unicode.")
-    ap.add_argument("-m", "--mode",
-                        default="lex", required = False, 
-                        help = "The mode to use to translate the code.")
+                   action='store_true',
+                   default=False, required=False, 
+                   help="Translate variables and functions to English, using the unicode.")
+    
     ap.add_argument("-d", "--dictionary",
-                        default=os.path.join(SCRIPTDIR, 'languages/ur/ur_native.lang.yaml'), required = False, 
-                        help = "The dictionary to use to translate the code.")
+                   default="", required=False, 
+                   help="The dictionary to use to translate the code.")
 
     ap.add_argument("-r", "--reverse",
-                        action='store_true',
-                        default=False, required = False, 
-                        help = "Translate English code to the language of your choice.")
-
+                   action='store_true',
+                   default=False, required=False, 
+                   help="Translate English code to the language of your choice.")
 
     ap.add_argument("-re", "--return",
-                        action='store_false',
-                        default=False, required = False, 
-                        help = "Return the code instead of executing (used in module mode).")
-
-
-
+                   action='store_false',
+                   default=False, required=False, 
+                   help="Return the code instead of executing (used in module mode).")
 
     group = ap.add_mutually_exclusive_group(required=False)
 
     group.add_argument("-k", "--keep", 
-                        action='store_true',
-                        default=False, required = False, 
-                        help = "Save the compiled file to the specified location.")
+                      action='store_true',
+                      default=False, required=False, 
+                      help="Save the compiled file to the specified location.")
     group.add_argument("-ko", "--keep-only", 
-                        action='store_true',
-                        default=False, required = False, 
-                        help = "Save the compiled file to the specified location, but don't run the file.")
+                      action='store_true',
+                      default=False, required=False, 
+                      help="Save the compiled file to the specified location, but don't run the file.")
 
     args = vars(ap.parse_args())
 
-    code_pyfile = open(args["file"][0])
+    filename = args["file"][0]
+    code_pyfile = open(filename)
     code = code_pyfile.read()
-    mode = args["mode"]
+    
+    # Determine language if not explicitly provided
+    args['dictionary'] = determine_language(args, filename, code)
+    
+    # Default mode is 'lex' if not specified
+    mode = args.get('mode', 'lex')
 
-    run_module (mode, code, args)
-
+    return run_module(mode, code, args)
 
 if __name__ == "__main__":
     sys.exit(main())
