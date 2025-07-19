@@ -252,14 +252,14 @@ def run(args, code):
         # print ("Value is:", t.value)
         # ------------- Debugging ---------------
 
-
         if args['translate']:
-            if t.type == 'ID':
-                t.value = unidecode(t.value)
-
-
-
-
+            if args['translate'] == 'argostranslate':
+                from universalpython.filters.translate.argos_translator import argos_translator
+                if t.type == 'ID':
+                    t.value = argostranslate(t.value)
+            else:
+                if t.type == 'ID':
+                    t.value = unidecode(t.value)
         return t
 
     if args["reverse"]:
