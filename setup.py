@@ -15,7 +15,7 @@ files = ["samples/*/*", "languages/*/*.yaml"]
 
 setup(
     name='universalpython',
-    version='0.0.6',
+    version='0.1.0',
     author='Saad Bazaz',
     author_email='saadbazaz@hotmail.com',
     url='https://github.com/UniversalPython/UniversalPython',

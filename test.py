@@ -1,1 +1,0 @@
-drucke("hello world")

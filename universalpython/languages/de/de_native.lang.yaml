@@ -1,6 +1,7 @@
 letters:
   start         :       "a"
   end           :       "z"
+  extra         : "äöüßÄÖÜ"
 
 numbers:
   start         :       "0"

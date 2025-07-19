@@ -1,7 +1,7 @@
 # ------------------------------------------------------------
-# ply_test.py
+# lex.py
 #
-# tokenizer to test UrduPython grammer
+# tokenizer to test UniversalPython grammer
 # ------------------------------------------------------------
 
 
@@ -264,9 +264,13 @@ def run(args, code):
 
     if args["reverse"]:
         t_ID.__doc__ = r'[a-zA-Z_][a-zA-Z_0-9]*'
-    else:    
-        t_ID.__doc__ = r'['+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+'_]['+language_dict["numbers"]["start"]+'-'+language_dict["numbers"]["end"]+'_'+language_dict["letters"]["start"]+'-'+language_dict["letters"]["end"]+']*'
-
+    else:
+        # Get base letters and any extra characters
+        letter_range = language_dict["letters"]["start"] + "-" + language_dict["letters"]["end"]
+        if "extra" in language_dict["letters"]:
+            letter_range += language_dict["letters"]["extra"]
+        
+        t_ID.__doc__ = r'[' + letter_range + '_][' + letter_range + language_dict["numbers"]["start"] + '-' + language_dict["numbers"]["end"] + '_]*'
 
     # A string containing ignored characters (spaces and tabs)
     # t_ignore  = ' \t'
@@ -374,9 +378,9 @@ def run(args, code):
             break      # No more input
 
         # ------------- Debugging ---------------
-        #print(tok)
-        #print ("Tok's value is:", tok.value)
-        #print ("Tok's type is:", tok.type)
+        # print(tok)
+        # print ("Tok's value is:", tok.value)
+        # print ("Tok's type is:", tok.type)
         # ------------- Debugging ---------------
 
 
@@ -386,12 +390,14 @@ def run(args, code):
             # ------------- Debugging ---------------
             # if tok.type == '۔':
             #     print ("Found an Urdu dot!")
+            # print ("Found a reserved word:", tok.value, "as", tok.type)
+            # print ("tok.type == 'NUMBER'", tok.type == 'NUMBER')
             # ------------- Debugging ---------------
-    
-            # if args["reverse"] and tok.type == 'NUMBER':
-            #     compiled_code += tok.value
-            # else:
-            compiled_code += tok.type
+
+            if tok.type == 'NUMBER':
+                compiled_code += tok.value
+            else:
+                compiled_code += tok.type
         else:
             compiled_code += tok.value
 
