@@ -43,48 +43,54 @@ def build_language_map():
 DEFAULT_LANGUAGE_MAP = build_language_map()
 
 def detect_language_from_filename(filename):
-    """Detect language from file extension (e.g., my-program.de.py -> german)"""
+    """Detect language from file extension (e.g., my-program.de.py -> german)
+    Returns tuple: (filepath, two_letter_code) or None"""
     parts = filename.split('.')
-
-    # ------------- Debugging ---------------
-    # print("filename", filename)
-    # print("parts", parts)
-    # print("DEFAULT_LANGUAGE_MAP", DEFAULT_LANGUAGE_MAP)
-    # ------------- Debugging ---------------
-
+    
     if len(parts) > 2:  # Has language code in extension
         lang_code = parts[-2].lower()
-        return DEFAULT_LANGUAGE_MAP.get(lang_code, None)['default']
+        if lang_code in DEFAULT_LANGUAGE_MAP:
+            # Return first filepath found and the language code
+            lang_files = DEFAULT_LANGUAGE_MAP[lang_code]
+            first_file = next(iter(lang_files.values())) if lang_files else None
+            return (first_file, lang_code)
     return None
 
 def detect_language_from_comment(code):
-    """Detect language from comment (e.g., # language:fr)"""
+    """Detect language from comment (e.g., # language:fr)
+    Returns tuple: (filepath, two_letter_code) or None"""
     first_lines = code.split('\n')[:5]  # Check first 5 lines for comment
     for line in first_lines:
         match = re.search(r'^#\s*language\s*:\s*(\w+)', line, re.IGNORECASE)
         if match:
             lang_code = match.group(1).lower()
-            return DEFAULT_LANGUAGE_MAP.get(lang_code, None)['default']
+            if lang_code in DEFAULT_LANGUAGE_MAP:
+                # Return first filepath found and the language code
+                lang_files = DEFAULT_LANGUAGE_MAP[lang_code]
+                first_file = next(iter(lang_files.values())) if lang_files else None
+                return (first_file, lang_code)
     return None
 
 def determine_language(args, filename, code):
     """Determine target language based on priority rules"""
-    # If dictionary is explicitly provided, use that
+    detected_dictionary = None
+    
+    detected_lang = None
+
+    # Check detection methods in priority order
     if args.get('dictionary'):
-        return args['dictionary']
-    
-    # Check for language comment (higher priority)
-    lang = detect_language_from_comment(code)
-    if lang:
-        return lang
-    
-    # Check file extension
-    lang = detect_language_from_filename(filename)
-    if lang:
-        return lang
-    
-    # Default to empty (no translation)
-    return ""
+        detected_dictionary = args['dictionary']
+    elif args.get('source_language'):
+        detected_dictionary = DEFAULT_LANGUAGE_MAP.get(args['source_language'], {})['default']
+    else:
+        detected_dictionary, detected_lang = detect_language_from_comment(code) or detect_language_from_filename(filename)
+
+    # Update source_language with the detected language if not explicitly set
+    # if not args.get('source_language') and detected_lang:
+    if detected_lang: 
+        args['source_language'] = detected_lang
+
+    return detected_dictionary or ""
 
 def run_module(
         mode, 
@@ -92,6 +98,7 @@ def run_module(
         args={
             'translate': False,
             'dictionary': "",
+            'source_language': "",
             'reverse': False,
             'keep': False,         
             'keep_only': False,
@@ -111,14 +118,23 @@ def main():
                    help='File to compile.')
 
     ap.add_argument("-t", "--translate", 
-                   action='store_true',
-                   default=False, required=False, 
-                   help="Translate variables and functions to English, using the unicode.")
+                   choices=["", "argostranslate", "unicode"],
+                   const="",  # Default when --translate is used without value
+                   default=None,  # Default when --translate is not used at all
+                   nargs='?',  # Makes the argument optional
+                   required=False, 
+                   help="Translate variables and functions. Options: "
+                        "no value (unicode), 'argostranslate', or 'unicode'")
     
     ap.add_argument("-d", "--dictionary",
                    default="", required=False, 
                    help="The dictionary to use to translate the code.")
 
+    ap.add_argument("-sl", "--source-language",
+                   default="", required=False, 
+                   dest="source_language",
+                   help="The source language of the code (for translation).")
+    
     ap.add_argument("-r", "--reverse",
                    action='store_true',
                    default=False, required=False, 
@@ -143,10 +159,10 @@ def main():
     args = vars(ap.parse_args())
 
     filename = args["file"][0]
-    code_pyfile = open(filename)
-    code = code_pyfile.read()
+    with open(filename) as code_pyfile:
+        code = code_pyfile.read()
     
-    # Determine language if not explicitly provided
+    # Determine language and update source_language
     args['dictionary'] = determine_language(args, filename, code)
     
     # Default mode is 'lex' if not specified

@@ -1,1 +1,2 @@
-drucken("hello world")
+etwas = "hello world"
+drucken(etwas)
