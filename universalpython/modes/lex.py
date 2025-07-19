@@ -1,14 +1,33 @@
 # ------------------------------------------------------------
 # lex.py
 #
-# tokenizer to test UniversalPython grammer
+# tokenizer to test UniversalPython grammar
 # ------------------------------------------------------------
 
 
 def run(args, code):
-
     import yaml
-    language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
+    language_dict = {}
+    if args["dictionary"]:
+        try:
+            language_dict = yaml.load(open(args["dictionary"]), Loader=yaml.SafeLoader)
+        except:
+            if not args.get("suppress_warnings", False):
+                print("\033[93m⚠️ Warning: Could not load language dictionary file. Defaulting to English Python.\033[0m")
+                print("\033[93mDocumentation: https://universalpython.github.io\033[0m")
+    else:
+        if not args.get("suppress_warnings", False):
+            print("\033[93m⚠️ Warning: No language dictionary specified. Defaulting to English Python.\033[0m")
+            print("\033[93mDocumentation: https://universalpython.github.io\033[0m")
+            print("\033[93mUse --suppress-warnings to hide these messages.\033[0m")
+
+    # ------------- Debugging ---------------
+    # print("Using language dictionary:", language_dict)
+    # ------------- Debugging ---------------
+
+    if language_dict == {}:
+        exec(code)  # Fallback to direct execution
+        return code if args.get("return") else None
 
     if args["reverse"]:
         reserved = {value:key for key, value in language_dict.get("reserved").items()}
@@ -130,7 +149,7 @@ def run(args, code):
                 value_str[i] = reserved.get(value_str[i], value_str[i])
             t.value = ''.join(value_str)
         else:
-            import universalpython.filters.unidecoder as num_filter
+            import universalpython.filters.translate.unidecoder as num_filter
             t.value = num_filter.filter(t.value)
         
         # ------------- Debugging ---------------
@@ -254,12 +273,12 @@ def run(args, code):
 
 
         if args['translate']:
+            # if args['translate'] == 'argostranslate':
+            #     if t.type == 'ID':
+            #         t.value = unidecode(t.value)
+            # else:
             if t.type == 'ID':
                 t.value = unidecode(t.value)
-
-
-
-
         return t
 
     if args["reverse"]:
