@@ -118,13 +118,13 @@ def main():
                    help='File to compile.')
 
     ap.add_argument("-t", "--translate", 
-                   choices=["", "argostranslate", "unicode"],
+                   choices=["", "argostranslate", "unidecode"],
                    const="",  # Default when --translate is used without value
                    default=None,  # Default when --translate is not used at all
                    nargs='?',  # Makes the argument optional
                    required=False, 
                    help="Translate variables and functions. Options: "
-                        "no value (unicode), 'argostranslate', or 'unicode'")
+                        "no value (unidecode), 'argostranslate', or 'unidecode'")
     
     ap.add_argument("-d", "--dictionary",
                    default="", required=False, 
