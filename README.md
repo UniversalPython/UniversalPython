@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./images/universalpython-logo.png" alt="UniversalPython Logo" style="width: 240px; padding-bottom: 10px" />
+  <img src="./static/images/universalpython-logo.png" alt="UniversalPython Logo" style="width: 240px; padding-bottom: 10px" />
   <h1>UniversalPython</h1>
 </div>
 
@@ -14,7 +14,7 @@
 
 </div>
 
-![UniversalPython Flow Chart](./images/flow-chart.png)
+![UniversalPython Flow Chart](./static/images/flow-chart.png)
 
 ## Features
 
