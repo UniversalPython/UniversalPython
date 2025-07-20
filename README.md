@@ -5,7 +5,7 @@
 
 <div align="center">
   
-📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./universalpython/test/samples/) | 📄 [Research Paper](./static/paper/conference_101719.pdf) | 🔥 [Live demo (online)](https://universalpython.github.io/)
+📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./test/samples/) | 📄 [Research Paper](./static/paper/conference_101719.pdf) | 🔥 [Live demo (online)](https://universalpython.github.io/)
 
 **UniversalPython** is a transpiler that lets you write Python code in your own language. It translates your code into Python while keeping the syntax familiar.
 
