@@ -174,6 +174,9 @@ def main():
     with open(filename) as code_pyfile:
         code = code_pyfile.read()
 
+    # Default mode is 'lex' if not specified
+    mode = args.get('mode', 'lex')
+    
     return run_module(mode, code, args)
 
 if __name__ == "__main__":

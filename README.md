@@ -5,7 +5,7 @@
 
 <div align="center">
   
-📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./urdupython/samples/) | 📄 [Research Paper](./paper/conference_101719.pdf) | 🔥 [Live demo (online)](https://universalpython.github.io/)
+📖 [Documentation](https://universalpython.github.io/) | 🎯 [Examples](./test/samples/) | 📄 [Research Paper](./static/paper/conference_101719.pdf) | 🔥 [Live demo (online)](https://universalpython.github.io/)
 
 **UniversalPython** is a transpiler that lets you write Python code in your own language. It translates your code into Python while keeping the syntax familiar.
 
@@ -52,6 +52,25 @@ You can also try out UniversalPython in our [live online demo](https://universal
 
 ### UniversalPython in Jupyter
 Install our Jupyter Kernel to easily use UniversalPython in Jupyter Notebook or Jupyter Lab. Instructions are here: https://github.com/UniversalPython/universalpython_kernel
+
+### Want to add your language? Or edit one?
+Follow the documentation [here](./universalpython/languages/README.md) to add a new human language, or edit an existing one.
+
+### Build and release
+Install packaging dependencies:
+```bash
+pip install -U packaging
+```
+
+To build:
+```bash
+python setup.py sdist bdist_wheel
+```
+
+To release on PyPI:
+```bash
+twine upload --repository testpypi dist/* --verbose
+```
 
 ### Learn More
 
