@@ -53,6 +53,9 @@ You can also try out UniversalPython in our [live online demo](https://universal
 ### UniversalPython in Jupyter
 Install our Jupyter Kernel to easily use UniversalPython in Jupyter Notebook or Jupyter Lab. Instructions are here: https://github.com/UniversalPython/universalpython_kernel
 
+### Want to add your language? Or edit one?
+Follow the documentation [here](./universalpython/languages/README.md) to add a new human language, or edit an existing one.
+
 ### Build and release
 Install packaging dependencies:
 ```bash
