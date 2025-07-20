@@ -33,7 +33,7 @@ reserved:
   "geç"         :       "pass"
   "doğru"       :       "True"
   "yanlış"      :       "False"
-  "o"           :       "is"
+  "ise"         :       "is"
   "sınıf"       :       "class"
   "fonksiyon"   :       "def"
   "__başlangıç__"  :       "__init__"
