@@ -38,7 +38,7 @@ reserved:
   "déf"    :       "def"
   "__init__"  :       "__init__"
   "auto"      :       "self"
-  "retour"      :       "return"
+  "rendre"      :       "return"
   "chaîne":       "string"
   "chn"         :       "str"
   "ajouter"  :       "append"
