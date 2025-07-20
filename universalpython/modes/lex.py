@@ -13,9 +13,10 @@ import yaml
 def run(args, code):
     # Load language dictionary
     language_dict = {}
-    if args["dictionary"]:
+    dictionary = args.get("dictionary", "")
+    if dictionary:
         try:
-            with open(args["dictionary"]) as f:
+            with open(dictionary) as f:
                 language_dict = yaml.safe_load(f)
         except (yaml.YAMLError, OSError) as e:
             if not args.get("suppress_warnings", False):
@@ -35,8 +36,7 @@ def run(args, code):
 
     # Fallback to direct execution if no dictionary
     if not language_dict:
-        exec(code)
-        return code if args.get("return") else None
+        return code if args.get("return") else exec(code)
 
     # Handle reserved words
     reserved = language_dict.get("reserved", {})

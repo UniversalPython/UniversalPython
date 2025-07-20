@@ -83,11 +83,13 @@ def determine_language(args, filename, code):
     elif args.get('source_language'):
         detected_dictionary = DEFAULT_LANGUAGE_MAP.get(args['source_language'], {})['default']
     else:
-        detected_dictionary, detected_lang = detect_language_from_comment(code) or detect_language_from_filename(filename)
+        detected_dictionary, detected_lang = (detect_language_from_comment(code) or 
+                                     detect_language_from_filename(filename) or 
+                                     (None, None))
 
     # Update source_language with the detected language if not explicitly set
     # if not args.get('source_language') and detected_lang:
-    if detected_lang: 
+    if detected_lang:
         args['source_language'] = detected_lang
 
     return detected_dictionary or ""
@@ -105,6 +107,16 @@ def run_module(
             'return': True,
         }, 
     ):
+    
+    # Determine language and update source_language
+    filename = ""
+    if args["file"]: 
+        filename = args["file"][0]
+    args['dictionary'] = determine_language(args, filename, code)
+        
+    # Default mode is 'lex' if not specified
+    mode = args.get('mode', 'lex')
+
     mod = importlib.import_module(".modes."+mode, package='universalpython')
     return mod.run(args, code)
 
@@ -161,12 +173,6 @@ def main():
     filename = args["file"][0]
     with open(filename) as code_pyfile:
         code = code_pyfile.read()
-    
-    # Determine language and update source_language
-    args['dictionary'] = determine_language(args, filename, code)
-    
-    # Default mode is 'lex' if not specified
-    mode = args.get('mode', 'lex')
 
     return run_module(mode, code, args)
 
