@@ -53,6 +53,22 @@ You can also try out UniversalPython in our [live online demo](https://universal
 ### UniversalPython in Jupyter
 Install our Jupyter Kernel to easily use UniversalPython in Jupyter Notebook or Jupyter Lab. Instructions are here: https://github.com/UniversalPython/universalpython_kernel
 
+### Build and release
+Install packaging dependencies:
+```bash
+pip install -U packaging
+```
+
+To build:
+```bash
+python setup.py sdist bdist_wheel
+```
+
+To release on PyPI:
+```bash
+twine upload --repository testpypi dist/* --verbose
+```
+
 ### Learn More
 
 Check out the [documentation](https://universalpython.github.io/docs/intro).
