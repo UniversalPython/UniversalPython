@@ -140,8 +140,8 @@ def run(args, code):
 
     # Punctuation translation
     punctuation_map = {
-        "۔": ".",
-        "،": ",",  
+        ".": language_dict.get("reserved", {}).get(".", "."),
+        ",": language_dict.get("reserved", {}).get(",", ","),
     }
     if args["reverse"]:
         punctuation_map = {v: k for k, v in punctuation_map.items()}
@@ -164,7 +164,7 @@ def run(args, code):
             break
 
         if tok.value in reserved:
-            compiled_code += tok.type if tok.type != 'NUMBER' else tok.value
+            compiled_code += tok.type if (tok.type != 'NUMBER' and tok.value not in punctuation_map and tok.type not in punctuation_map) else tok.value
         else:
             compiled_code += tok.value
 

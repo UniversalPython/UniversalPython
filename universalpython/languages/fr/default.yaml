@@ -39,7 +39,7 @@ reserved:
   "__init__"  :       "__init__"
   "auto"      :       "self"
   "retour"      :       "return"
-  "chaîne ":       "string"
+  "chaîne":       "string"
   "chn"         :       "str"
   "ajouter"  :       "append"
   "pop"   :       "pop"
