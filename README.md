@@ -53,23 +53,20 @@ You can also try out UniversalPython in our [live online demo](https://universal
 ### UniversalPython in Jupyter
 Install our Jupyter Kernel to easily use UniversalPython in Jupyter Notebook or Jupyter Lab. Instructions are here: https://github.com/UniversalPython/universalpython_kernel
 
-### Want to add your language? Or edit one?
-Follow the documentation [here](./universalpython/languages/README.md) to add a new human language, or edit an existing one.
-
 ### Build and release
 Install packaging dependencies:
 ```bash
-pip install -U packaging
+python -m pip install --upgrade pip setuptools wheel build twine
 ```
 
 To build:
 ```bash
-python setup.py sdist bdist_wheel
+python -m build
 ```
 
 To release on PyPI:
 ```bash
-twine upload --repository testpypi dist/* --verbose
+twine upload --repository testpypi dist/* --verbose --skip-existing
 ```
 
 ### Learn More
@@ -84,6 +81,14 @@ Check out the [documentation](https://universalpython.github.io/docs/intro).
 
 UniversalPython is still growing. Join us to make programming truly universal!
 
+### Want to add your language? Or edit one?
+Follow the documentation [here](./universalpython/languages/README.md) to add a new human language, or edit an existing one.
+
 ## License
 
 [Apache-2.0 license](./LICENSE)
+
+### Contributors
+<a href="https://github.com/UniversalPython/UniversalPython/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UniversalPython/UniversalPython" />
+</a>

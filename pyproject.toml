@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universalpython"
+version = "0.1.3"
+authors = [
+    {name = "Saad Bazaz", email = "saadbazaz@hotmail.com"},
+]
+description = "Universal Python - Write Python in your native language"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Internationalization",
+    "Topic :: Software Development :: Interpreters",
+]
+keywords = ["i18n", "localization", "programming-language"]
+dependencies = [
+    "ply>=3.11",
+    "PyYAML>=6.0",
+    "Unidecode>=1.3.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/UniversalPython/UniversalPython"
+Repository = "https://github.com/UniversalPython/UniversalPython"
+Issues = "https://github.com/UniversalPython/UniversalPython/issues"
+
+[tool.setuptools]
+# If your package is in a 'src' directory:
+# package-dir = {"" = "src"}
+packages = ["universalpython"]
+
+[tool.setuptools.package-data]
+universalpython = ["samples/*/*", "languages/*/*.yaml"]
+
+[project.scripts]
+universalpython = "universalpython.universalpython:main"
