@@ -9,9 +9,10 @@ jobs:
   deploy:
     name: Build and Publish to Test PyPI
     runs-on: ubuntu-latest
-
+    environment: test-pypi-universalpython
+    
     permissions:
-      id-token: write  # Required for Trusted Publisher authentication
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -33,4 +34,3 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-          verbose: true
