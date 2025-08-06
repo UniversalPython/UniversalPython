@@ -1,6 +1,6 @@
 funktion haupt():
-    drucken("Hallo Welt.")
+    ausgeben("Hallo Welt.")
     hallo = 1 
-    zurück 0
+    zurückgeben 0
 
 haupt()
