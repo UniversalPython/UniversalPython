@@ -1,4 +1,4 @@
-name: Publish to Test PyPI
+name: Publish to PyPI
 
 on:
   push:
@@ -9,6 +9,10 @@ jobs:
   deploy:
     name: Build and Publish to PyPI
     runs-on: ubuntu-latest
+    environment: pypi-universalpython
+    
+    permissions:
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -26,8 +30,5 @@ jobs:
       - name: Build package
         run: python -m build
 
-      - name: Publish to Test PyPI
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        run: twine upload --repository testpypi dist/*
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
