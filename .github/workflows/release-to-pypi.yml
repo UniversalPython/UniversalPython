@@ -3,11 +3,11 @@ name: Publish to Test PyPI
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   deploy:
-    name: Build and Publish to Test PyPI
+    name: Build and Publish to PyPI
     runs-on: ubuntu-latest
 
     steps:
