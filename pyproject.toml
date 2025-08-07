@@ -4,14 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universalpython"
-version = "0.1.4"
+version = "0.1.5"
 authors = [
     {name = "Saad Bazaz", email = "saadbazaz@hotmail.com"},
 ]
-description = "Universal Python - Write Python in your native language"
+description = "UniversalPython - Write Python in your native language"
 readme = "README.md"
 requires-python = ">=3.7"
-license = {text = "MIT"}
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -30,7 +29,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/UniversalPython/UniversalPython"
+Homepage = "https://universalpython.github.io"
 Repository = "https://github.com/UniversalPython/UniversalPython"
 Issues = "https://github.com/UniversalPython/UniversalPython/issues"
 
@@ -40,7 +39,7 @@ Issues = "https://github.com/UniversalPython/UniversalPython/issues"
 packages = ["universalpython"]
 
 [tool.setuptools.package-data]
-universalpython = ["samples/*/*", "languages/*/*.yaml"]
+universalpython = ["languages/**/*.yaml", "modes/*.py"]
 
 [project.scripts]
 universalpython = "universalpython.universalpython:main"
