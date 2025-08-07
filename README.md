@@ -44,7 +44,7 @@ Install UniversalPython with pip:
 pip install universalpython
 ```
 
-See more details about the package on [PyPi](https://pypi.org/project/universalpython/).
+See more details about the package on [PyPI](https://pypi.org/project/universalpython/).
 
 ### Online Playground
 
