@@ -2,6 +2,7 @@
 # Repo specific
 /dist/
 /build/
+.build
 /MANIFEST
 
 __pycache__/
