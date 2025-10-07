@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BASE_URL="https://github.com/UniversalPython/UniversalPython"
+BASE_URL="https://github.com/UniversalPython/UniversalPython/blob/main"
 README="README.md"
 README_BAK="$README.bak"
 
