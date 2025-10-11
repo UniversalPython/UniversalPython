@@ -39,10 +39,17 @@ jobs:
 
       - name: Build package
         run: bash utils/build_package.sh
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          packages-dir: dist/
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-
+        with:
+          packages-dir: dist/
+          
       - name: Create PR to sync release → main
         uses: peter-evans/create-pull-request@v5
         with:

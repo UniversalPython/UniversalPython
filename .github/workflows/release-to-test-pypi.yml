@@ -35,7 +35,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           semantic-release version --prerelease --prerelease-token b --commit --tag --push
-
+          semantic-release changelog --post --commit --push
+          
       - name: Build package
         run: bash utils/build_package.sh
 
