@@ -43,3 +43,18 @@ universalpython = ["languages/**/*.yaml", "modes/*.py"]
 
 [project.scripts]
 universalpython = "universalpython.universalpython:main"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+build_command = "bash ./utils/build_package.sh"
+commit_parser = "conventional"
+major_on_zero = true
+allow_zero_version = true
+
+[tool.semantic_release.commit_parser_options]
+parse_squash_commits = true
+ignore_merge_commits = true
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "./CHANGELOG.md"
+output_format = "md"
