@@ -1,22 +1,25 @@
-name: Publish to PyPI
+name: Release (release → PyPI)
 
 on:
   push:
     branches:
       - release
 
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
+
 jobs:
-  deploy:
-    name: Build and Publish to PyPI
+  release:
     runs-on: ubuntu-latest
     environment: pypi-universalpython
-    
-    permissions:
-      id-token: write
 
     steps:
       - uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -25,11 +28,28 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install build twine
+          pip install build twine python-semantic-release
           pip install -r utils/requirements.txt
-          
+
+      - name: Create stable release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          semantic-release version --commit --tag --push
+
       - name: Build package
         run: bash utils/build_package.sh
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+
+      - name: Create PR to sync release → main
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          head: release
+          title: "chore: merge release changes back into main"
+          body: |
+            This PR was created automatically after publishing a new PyPI release.
+            It keeps `main` in sync with version and changelog updates.

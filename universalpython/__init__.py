@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+from importlib.metadata import version as get_version, PackageNotFoundError
+
+try:
+    __version__ = get_version("universalpython")
+except PackageNotFoundError:
+    # When running locally before installation
+    __version__ = "0.0.0"
+
 """
 UniversalPython.
 

@@ -46,10 +46,13 @@ universalpython = "universalpython.universalpython:main"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
+upload_to_pypi = false
+tag_format = "{version}"
 build_command = "bash ./utils/build_package.sh"
 commit_parser = "conventional"
 major_on_zero = true
 allow_zero_version = true
+prerelease_token = "b"
 
 [tool.semantic_release.commit_parser_options]
 parse_squash_commits = true
@@ -58,3 +61,12 @@ ignore_merge_commits = true
 [tool.semantic_release.changelog.default_templates]
 changelog_file = "./CHANGELOG.md"
 output_format = "md"
+
+[tool.semantic_release.branches.release]
+match = "release"
+prerelease = false
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = true
+prerelease_token = "b"
