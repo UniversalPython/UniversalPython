@@ -4,7 +4,10 @@ authors:
 - family-names: "Bazaz"
   given-names: "Saad"
   orcid: "https://orcid.org/0009-0000-1038-3410"
-title: "UniversalPython - A Multilingual, Pythonic Programming Language"
+title: "A Multilingual Python Programming Language"
 version: 0.0.1
 date-released: 2024-12-06
+identifiers:
+- type: doi
+  value: 10.48550/arXiv.2510.09591
 url: "https://github.com/UniversalPython/UniversalPython"
