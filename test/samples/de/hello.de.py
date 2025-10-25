@@ -1,2 +1,2 @@
 etwas = "hello world"
-drucken(etwas)
+ausgeben(etwas)

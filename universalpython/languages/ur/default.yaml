@@ -24,7 +24,7 @@ reserved:
   "اگر"         :       "if"
   "ورنہ"        :       "else"
   "جبتک"        :       "while"
-  "جو"          :       "for"
+  "ہر"          :       "for"
   "اندر"        :       "in"
   "داخلہ"       :       "input"
   "توڑ"         :       "break"
