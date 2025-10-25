@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.8-b.8 (2025-10-25)
+
+### Chores
+
+- Clean unnecessary files
+  ([`1443106`](https://github.com/UniversalPython/UniversalPython/commit/1443106c5c22ae8e9282e30be0ef220bb62c0d8f))
+
+
 ## v0.1.8-b.7 (2025-10-20)
 
 
