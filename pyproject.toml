@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universalpython"
-version = "0.1.9"
+version = "0.1.9-b.2"
 authors = [
     {name = "Saad Bazaz", email = "saadbazaz@hotmail.com"},
 ]
