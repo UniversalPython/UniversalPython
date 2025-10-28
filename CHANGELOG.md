@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.9-b.2 (2025-10-28)
+
+### Documentation
+
+- Update readme link
+  ([`6fad2d8`](https://github.com/UniversalPython/UniversalPython/commit/6fad2d88a949a033386d2afea122d19ffaba8711))
+
+
 ## v0.1.9-b.1 (2025-10-28)
 
 
