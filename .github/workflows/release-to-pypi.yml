@@ -56,7 +56,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          brach: release
+          branch: release
           title: "chore: merge release changes back into main"
           body: |
             This PR was created automatically after publishing a new PyPI release.
