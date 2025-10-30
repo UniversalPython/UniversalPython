@@ -38,10 +38,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           semantic-release version --commit --tag --push
-          echo "released=$?" >> $GITHUB_OUTPUT
 
       - name: Build package
-        if: steps.release.outputs.released == '0'
         run: bash utils/build_package.sh
 
       # - name: Publish to TestPyPI
