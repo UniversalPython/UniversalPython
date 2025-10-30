@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.0 (2025-10-30)
+
+### Features
+
+- Major update
+  ([`ba34ec4`](https://github.com/UniversalPython/UniversalPython/commit/ba34ec4e9b8a153aa0a3699a65e27609733e87da))
+
+
 ## v0.1.0 (2025-10-30)
 
 - Initial Release
