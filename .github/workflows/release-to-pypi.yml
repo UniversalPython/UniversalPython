@@ -51,13 +51,4 @@ jobs:
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir: dist/nc release → main
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          head: release
-          title: "chore: merge release changes back into main"
-          body: |
-            This PR was created automatically after publishing a new PyPI release.
-            It keeps `main` in sync with version and changelog updates.
+          packages-dir: dist/
