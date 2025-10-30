@@ -17,7 +17,8 @@ jobs:
       name: pypi-universalpython
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -32,33 +33,34 @@ jobs:
           pip install build twine python-semantic-release
           pip install -r utils/requirements.txt
 
-      - name: Create stable release
+      - name: Bump version using semantic-release
+        id: semantic
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          semantic-release version --commit --tag --push
+          echo "🚀 Running semantic-release..."
+          semantic-release version --commit --tag --push || echo "No version bump"
+
+      - name: Check updated version
+        id: version_check
+        run: |
+          VERSION=$(grep -E '^version\s*=' pyproject.toml | head -n 1 | sed -E 's/version\s*=\s*"(.*)"/\1/')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "📦 Detected version: $VERSION"
 
       - name: Build package
-        run: bash utils/build_package.sh
-
-      # - name: Publish to TestPyPI
-      #   uses: pypa/gh-action-pypi-publish@release/v1
-      #   with:
-      #     repository-url: https://test.pypi.org/legacy/
-      #     packages-dir: dist/
+        run: |
+          echo "🛠️ Building package..."
+          bash utils/build_package.sh
+          echo "✅ Build complete"
+          ls -l dist/
 
       - name: Publish to PyPI
+        if: success()
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
           
-      # - name: Create PR to sync release → main
-      #   uses: peter-evans/create-pull-request@v5
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     base: main
-      #     head: release
-      #     title: "chore: merge release changes back into main"
-      #     body: |
-      #       This PR was created automatically after publishing a new PyPI release.
-      #       It keeps `main` in sync with version and changelog updates.
+      - name: Confirm release complete
+        run: |
+          echo "🎉 PyPI release complete for version: ${{ steps.version_check.outputs.version }}"
