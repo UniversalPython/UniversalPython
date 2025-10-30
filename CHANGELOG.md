@@ -2,6 +2,43 @@
 
 <!-- version list -->
 
+## v0.3.0 (2025-10-30)
+
+### Bug Fixes
+
+- Correct tag format in semantic-release config
+  ([`3489464`](https://github.com/UniversalPython/UniversalPython/commit/3489464c881636194b07308d3d30576fc26469c7))
+
+- Small change
+  ([`4e64415`](https://github.com/UniversalPython/UniversalPython/commit/4e64415073a8d968660bf78988987c014349da05))
+
+- Small update
+  ([`858e633`](https://github.com/UniversalPython/UniversalPython/commit/858e6339c7c86f74e6588c8466f48bd36ade7ef9))
+
+- Trigger version 0.2.2
+  ([`0813f71`](https://github.com/UniversalPython/UniversalPython/commit/0813f71927fa955ed7b8879a9d40d4fa0e709e22))
+
+### Features
+
+- Major update
+  ([`1d8fa54`](https://github.com/UniversalPython/UniversalPython/commit/1d8fa54bde24743548d7845d693fa9fa4a544ea5))
+
+- Major update
+  ([`16d8c90`](https://github.com/UniversalPython/UniversalPython/commit/16d8c9081a8f3d38e90ad68b20beb17552f433e5))
+
+- MAJOR UPDATE
+  ([`7b9d30d`](https://github.com/UniversalPython/UniversalPython/commit/7b9d30dfcb92edfcf4a475b6e68b19e75988065e))
+
+- TEST
+  ([`af6f56d`](https://github.com/UniversalPython/UniversalPython/commit/af6f56df74dca5910a348d8a93cf49b86b333d10))
+
+- TESTING
+  ([`b1d0d18`](https://github.com/UniversalPython/UniversalPython/commit/b1d0d189fb998e9537e35840dae4c657598c7515))
+
+- TESTING 1
+  ([`2e83c3e`](https://github.com/UniversalPython/UniversalPython/commit/2e83c3e773ea15d8e7af41a2ac50b014f8bac03f))
+
+
 ## v0.2.0 (2025-10-30)
 
 ### Features
