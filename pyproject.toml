@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universalpython"
-version = "0.1.9b7"
+version = "0.2.0"
 authors = [
     {name = "Saad Bazaz", email = "saadbazaz@hotmail.com"},
 ]
@@ -49,7 +49,7 @@ version_toml = ["pyproject.toml:project.version"]
 upload_to_pypi = false
 tag_format = "{version}"
 build_command = "bash ./utils/build_package.sh"
-commit_parser = "angular"
+commit_parser = "conventional"
 major_on_zero = true
 allow_zero_version = true
 prerelease_token = "b"
