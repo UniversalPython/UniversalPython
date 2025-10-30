@@ -47,8 +47,9 @@ universalpython = "universalpython.universalpython:main"
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
 upload_to_pypi = false
-tag_format = "{version}"
+tag_format = "v{version}"
 build_command = "bash ./utils/build_package.sh"
+commit_parser = "angular"
 commit_parser = "angular"
 major_on_zero = true
 allow_zero_version = true
