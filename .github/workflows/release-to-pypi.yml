@@ -37,11 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set +e
-          semantic-release version --commit --tag --push --verbose
-          EXIT_CODE=$?
-          set -e
-          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
+          semantic-release -v version --commit --tag --push --verbose
 
       - name: Build package
         run: bash utils/build_package.sh
