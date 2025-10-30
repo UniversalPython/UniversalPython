@@ -52,13 +52,13 @@ jobs:
         with:
           packages-dir: dist/
           
-      - name: Create PR to sync release → main
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          head: release
-          title: "chore: merge release changes back into main"
-          body: |
-            This PR was created automatically after publishing a new PyPI release.
-            It keeps `main` in sync with version and changelog updates.
+      # - name: Create PR to sync release → main
+      #   uses: peter-evans/create-pull-request@v5
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: main
+      #     head: release
+      #     title: "chore: merge release changes back into main"
+      #     body: |
+      #       This PR was created automatically after publishing a new PyPI release.
+      #       It keeps `main` in sync with version and changelog updates.
