@@ -17,10 +17,10 @@ jobs:
       name: pypi-universalpython
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,34 +33,66 @@ jobs:
           pip install build twine python-semantic-release
           pip install -r utils/requirements.txt
 
-      - name: Bump version using semantic-release
-        id: semantic
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run semantic release
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "🚀 Running semantic-release..."
-          semantic-release version --commit --tag --push || echo "No version bump"
-
-      - name: Check updated version
-        id: version_check
-        run: |
-          VERSION=$(grep -E '^version\s*=' pyproject.toml | head -n 1 | sed -E 's/version\s*=\s*"(.*)"/\1/')
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "📦 Detected version: $VERSION"
+          set +e
+          python -m semantic_release version --no-push
+          RELEASE_EXIT_CODE=$?
+          set -e
+          
+          if [ $RELEASE_EXIT_CODE -eq 0 ]; then
+            echo "version_created=true" >> $GITHUB_OUTPUT
+            # Get the new version
+            NEW_VERSION=$(grep '^version = ' pyproject.toml | sed 's/version = "\(.*\)"/\1/')
+            echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+            echo "New version: $NEW_VERSION"
+            
+            # Push changes
+            git push origin release --tags
+          else
+            echo "version_created=false" >> $GITHUB_OUTPUT
+            echo "No new version created (exit code: $RELEASE_EXIT_CODE)"
+          fi
 
       - name: Build package
+        if: steps.release.outputs.version_created == 'true'
+        run: bash utils/build_package.sh
+
+      - name: Check distribution files
+        if: steps.release.outputs.version_created == 'true'
         run: |
-          echo "🛠️ Building package..."
-          bash utils/build_package.sh
-          echo "✅ Build complete"
-          ls -l dist/
+          ls -lah dist/
+          echo "Files to be uploaded:"
+          find dist/ -type f
 
       - name: Publish to PyPI
-        if: success()
+        if: steps.release.outputs.version_created == 'true'
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
-          
-      - name: Confirm release complete
+          skip-existing: true
+          verbose: true
+
+      - name: Summary
+        if: steps.release.outputs.version_created == 'true'
         run: |
-          echo "🎉 PyPI release complete for version: ${{ steps.version_check.outputs.version }}"
+          echo "## 🚀 Release Published" >> $GITHUB_STEP_SUMMARY
+          echo "Version: ${{ steps.release.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
+          echo "Package: https://pypi.org/project/universalpython/${{ steps.release.outputs.new_version }}/" >> $GITHUB_STEP_SUMMARY
+
+      - name: No release needed
+        if: steps.release.outputs.version_created != 'true'
+        run: |
+          echo "## ℹ️ No Release Created" >> $GITHUB_STEP_SUMMARY
+          echo "No new version was created. Make sure you have commits following conventional commit format:" >> $GITHUB_STEP_SUMMARY
+          echo "- \`feat:\` for new features (minor version bump)" >> $GITHUB_STEP_SUMMARY
+          echo "- \`fix:\` for bug fixes (patch version bump)" >> $GITHUB_STEP_SUMMARY
+          echo "- \`BREAKING CHANGE:\` in commit body for major version bump" >> $GITHUB_STEP_SUMMARY
