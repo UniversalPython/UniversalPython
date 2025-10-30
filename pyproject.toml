@@ -47,7 +47,7 @@ universalpython = "universalpython.universalpython:main"
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
 upload_to_pypi = false
-tag_format = "{version}"
+tag_format = "v{version}"
 build_command = "bash ./utils/build_package.sh"
 commit_parser = "conventional"
 major_on_zero = true
