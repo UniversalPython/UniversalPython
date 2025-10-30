@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.3.1 (2025-10-30)
+
+### Bug Fixes
+
+- Correct tag format in semantic-release config
+  ([`47a0c3d`](https://github.com/UniversalPython/UniversalPython/commit/47a0c3dd8ed6590a74cc52072d7af5ee885bb8de))
+
+
 ## v0.3.0 (2025-10-30)
 
 ### Bug Fixes
