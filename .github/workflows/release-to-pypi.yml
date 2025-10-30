@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          semantic-release version
+          semantic-release version --commit --tag --push --verbose
 
       - name: Build package
         run: bash utils/build_package.sh
