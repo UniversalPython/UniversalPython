@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universalpython"
-version = "0.1.9-b.7"
+version = "0.5.1"
 authors = [
     {name = "Saad Bazaz", email = "saadbazaz@hotmail.com"},
 ]
@@ -47,7 +47,7 @@ universalpython = "universalpython.universalpython:main"
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
 upload_to_pypi = false
-tag_format = "{version}"
+tag_format = "v{version}"
 build_command = "bash ./utils/build_package.sh"
 commit_parser = "conventional"
 major_on_zero = true
@@ -56,6 +56,9 @@ prerelease_token = "b"
 changelog_file = "./CHANGELOG.md"
 
 [tool.semantic_release.commit_parser_options]
+allowed_tags = ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
 parse_squash_commits = true
 ignore_merge_commits = true
 
@@ -70,4 +73,3 @@ prerelease = false
 [tool.semantic_release.branches.main]
 match = "main"
 prerelease = true
-prerelease_token = "b"
