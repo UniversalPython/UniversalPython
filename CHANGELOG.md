@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.1 (2025-10-31)
+
+### Bug Fixes
+
+- Remove extra heading
+  ([`4bb85eb`](https://github.com/UniversalPython/UniversalPython/commit/4bb85ebf2ae78ea704770c94c12bff7708b31031))
+
+
 ## v0.5.0 (2025-10-31)
 
 
