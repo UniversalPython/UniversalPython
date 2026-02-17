@@ -1,3 +1,7 @@
+aliases:
+  - "univerzálnípython"
+  - "českýpython"
+
 letters:
   start         :       "A"
   end           :       "Ž"

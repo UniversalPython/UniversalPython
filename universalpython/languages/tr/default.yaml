@@ -1,3 +1,7 @@
+aliases:
+  - "evrenselpython"
+  - "türkçepython"
+
 letters:
   start         :       "a"
   end           :       "z"

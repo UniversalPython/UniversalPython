@@ -1,3 +1,7 @@
+aliases:
+  - "universelepython"
+  - "nederlandsepython"
+
 letters:
   start         :       "a"
   end           :       "z"

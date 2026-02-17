@@ -1,3 +1,7 @@
+aliases:
+  - "universellpython"
+  - "deutschpython"
+
 letters:
   start         :       "a"
   end           :       "z"

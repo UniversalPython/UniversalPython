@@ -1,3 +1,6 @@
+aliases:
+  - "emojipython"
+
 letters:
   start         :       "a"
   end           :       "z"

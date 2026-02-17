@@ -1,3 +1,7 @@
+aliases:
+  - "univerzálispython"
+  - "magyarpython"
+
 letters:
   start         :       "a"
   end           :       "z"
