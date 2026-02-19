@@ -85,6 +85,18 @@ def detect_language_from_comment(code):
                 return (first_file, lang_code)
     return None
 
+def detect_language_from_alias(invoked_name):
+    """Detect language from command alias.
+    Returns: (filepath, lang_code) or None"""
+    command = os.path.basename(invoked_name).lower()
+    lang_code = DEFAULT_ALIAS_MAP.get(command)
+    
+    if lang_code and lang_code in DEFAULT_LANGUAGE_MAP:
+        lang_files = DEFAULT_LANGUAGE_MAP[lang_code]
+        first_file = next(iter(lang_files.values())) if lang_files else None
+        return (first_file, lang_code)
+    return None
+
 def determine_language(args, filename, code):
     """Determine target language based on priority rules"""
     detected_dictionary = None
@@ -99,6 +111,7 @@ def determine_language(args, filename, code):
     else:
         detected_dictionary, detected_lang = (detect_language_from_comment(code) or 
                                      detect_language_from_filename(filename) or 
+                                     detect_language_from_alias(sys.argv[0]) or
                                      (None, None))
 
     # Update source_language with the detected language if not explicitly set
@@ -183,12 +196,6 @@ def main():
                       help="Save the compiled file to the specified location, but don't run the file.")
 
     args = vars(ap.parse_args())
-
-    invoked_as = os.path.splitext(os.path.basename(sys.argv[0]))[0].lower()
-    auto_language = DEFAULT_ALIAS_MAP.get(invoked_as)
-
-    if auto_language and not args.get('source_language'):
-        args['source_language'] = auto_language
 
     filename = args["file"][0]
     with open(filename, encoding='utf-8') as code_pyfile:
