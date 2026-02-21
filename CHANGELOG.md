@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.1-b.3 (2026-02-21)
+
+### Features
+
+- Add custom command alias support per language
+  ([`b72162a`](https://github.com/UniversalPython/UniversalPython/commit/b72162a9b0d1c0851fcb4b0cc282bb8343c1ad19))
+
+
 ## v0.5.1-b.2 (2025-10-31)
 
 
