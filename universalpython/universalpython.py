@@ -39,8 +39,22 @@ def build_language_map():
             language_map[lang_dir] = lang_files
             
     return language_map
+
+def build_alias_map():
+    """Build a map of {alias_name: lang_code} from language YAML files."""
+    alias_map = {}
+    for lang_code, lang_files in DEFAULT_LANGUAGE_MAP.items():
+        if 'default' not in lang_files:
+            continue
+        with open(lang_files['default'], encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+        for alias in data.get('aliases', []):
+            alias_map[alias] = lang_code
+    return alias_map
+
 # Build language map at module load
 DEFAULT_LANGUAGE_MAP = build_language_map()
+DEFAULT_ALIAS_MAP = build_alias_map()
 
 def detect_language_from_filename(filename):
     """Detect language from file extension (e.g., my-program.de.py -> german)
@@ -71,6 +85,18 @@ def detect_language_from_comment(code):
                 return (first_file, lang_code)
     return None
 
+def detect_language_from_alias(invoked_name):
+    """Detect language from command alias.
+    Returns: (filepath, lang_code) or None"""
+    command = os.path.basename(invoked_name).lower()
+    lang_code = DEFAULT_ALIAS_MAP.get(command)
+    
+    if lang_code and lang_code in DEFAULT_LANGUAGE_MAP:
+        lang_files = DEFAULT_LANGUAGE_MAP[lang_code]
+        first_file = next(iter(lang_files.values())) if lang_files else None
+        return (first_file, lang_code)
+    return None
+
 def determine_language(args, filename, code):
     """Determine target language based on priority rules"""
     detected_dictionary = None
@@ -85,6 +111,7 @@ def determine_language(args, filename, code):
     else:
         detected_dictionary, detected_lang = (detect_language_from_comment(code) or 
                                      detect_language_from_filename(filename) or 
+                                     detect_language_from_alias(sys.argv[0]) or
                                      (None, None))
 
     # Update source_language with the detected language if not explicitly set
@@ -171,7 +198,7 @@ def main():
     args = vars(ap.parse_args())
 
     filename = args["file"][0]
-    with open(filename) as code_pyfile:
+    with open(filename, encoding='utf-8') as code_pyfile:
         code = code_pyfile.read()
 
     # Default mode is 'lex' if not specified

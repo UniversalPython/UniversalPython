@@ -1,10 +1,11 @@
 [build-system]
-requires = ["setuptools>=64.0.0", "wheel"]
+requires = ["setuptools>=64.0.0", "wheel", "PyYAML>=6.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "universalpython"
 version = "0.5.1-b.2"
+dynamic = ["scripts"]
 authors = [
     {name = "Saad Bazaz", email = "saadbazaz@hotmail.com"},
 ]
@@ -40,9 +41,6 @@ packages = ["universalpython"]
 
 [tool.setuptools.package-data]
 universalpython = ["languages/**/*.yaml", "modes/*.py"]
-
-[project.scripts]
-universalpython = "universalpython.universalpython:main"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]

@@ -1,3 +1,7 @@
+aliases:
+  - "pythonuniversel"
+  - "françaispython"
+
 letters:
   start         :       "a"
   end           :       "z"

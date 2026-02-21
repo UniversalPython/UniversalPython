@@ -16,7 +16,7 @@ def run(args, code):
     dictionary = args.get("dictionary", "")
     if dictionary:
         try:
-            with open(dictionary) as f:
+            with open(dictionary, encoding='utf-8') as f:
                 language_dict = yaml.safe_load(f)
         except (yaml.YAMLError, OSError) as e:
             if not args.get("suppress_warnings", False):
@@ -170,7 +170,7 @@ def run(args, code):
 
     # Output handling
     if args.get("keep") or args.get("keep_only"):
-        with open("compiled.en.py", "w") as f:
+        with open("compiled.en.py", "w", encoding='utf-8') as f:
             f.write(compiled_code)
 
     if args.get("return"):

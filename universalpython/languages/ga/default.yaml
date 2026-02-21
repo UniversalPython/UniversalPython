@@ -1,3 +1,7 @@
+aliases:
+  - "pythonuile"
+  - "gaeilgepython"
+
 letters:
   start         :       "a"
   end           :       "z"
