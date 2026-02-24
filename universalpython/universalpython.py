@@ -10,6 +10,7 @@ import inspect
 import sys
 import os
 import re
+import subprocess
 import yaml
 
 SCRIPTDIR = os.path.dirname(__file__)
@@ -55,6 +56,17 @@ def build_alias_map():
 # Build language map at module load
 DEFAULT_LANGUAGE_MAP = build_language_map()
 DEFAULT_ALIAS_MAP = build_alias_map()
+
+UP_FLAGS = {
+    '-t',  '--translate',
+    '-d',  '--dictionary',
+    '-sl', '--source-language',
+    '-r',  '--reverse',
+    '-re', '--return',
+    '-k',  '--keep',
+    '-ko', '--keep-only',
+    '-o',  '--options',
+}
 
 def detect_language_from_filename(filename):
     """Detect language from file extension (e.g., my-program.de.py -> german)
@@ -147,7 +159,93 @@ def run_module(
     mod = importlib.import_module(".modes."+mode, package='universalpython')
     return mod.run(args, code)
 
+def passthrough_to_python():
+    """Replace this process with the real Python interpreter, forwarding all args."""
+    if os.name == 'nt':
+        sys.exit(subprocess.call([sys.executable] + sys.argv[1:]))
+    os.execvp(sys.executable, [sys.executable] + sys.argv[1:])
+
+
+def print_version():
+    """Print UniversalPython version alongside the Python version."""
+    try:
+        from importlib.metadata import version as get_version
+        up_version = get_version("universalpython")
+    except Exception:
+        up_version = "dev"
+    py_version = sys.version.split()[0]
+    print(f"UniversalPython {up_version}  (Python {py_version})")
+
+
+def print_help():
+    """Print UP-specific help, noting that unknown flags pass through to Python."""
+    print(
+        "UniversalPython \u2014 Python, but in your native language.\n"
+        "\n"
+        "Usage:\n"
+        "  universalpython <file>              Compile & run a UniversalPython file\n"
+        "  universalpython --options <file>     Compile & run a UP file (explicit)\n"
+        "  universalpython --version | -V      Show UP + Python version\n"
+        "  universalpython --help | -h         Show this help message\n"
+        "\n"
+        "UP compile options:\n"
+        "  -o,  --options <file>        Compile & run a UniversalPython file\n"
+        "  -t,  --translate [engine]   Translate identifiers (unidecode | argostranslate)\n"
+        "  -d,  --dictionary <path>    Path to language dictionary YAML\n"
+        "  -sl, --source-language <code>  Source language code (e.g. fr, de)\n"
+        "  -r,  --reverse              Reverse-translate (English \u2192 target language)\n"
+        "  -re, --return               Return compiled code instead of executing\n"
+        "  -k,  --keep                 Save compiled .en.py file and run\n"
+        "  -ko, --keep-only            Save compiled .en.py file without running\n"
+        "\n"
+        "Anything else (e.g. -c, -m, script.py) is forwarded to Python as-is."
+    )
+
+
 def main():
+    cli_args = sys.argv[1:]
+
+    if not cli_args:
+        passthrough_to_python()
+        return
+
+    first = cli_args[0]
+
+    if first in ('--version', '-V'):
+        print_version()
+        return
+
+    if first in ('--help', '-h'):
+        print_help()
+        return
+
+    if first in ('--options', '-o'):
+        if len(cli_args) < 2:
+            print("Error: --options requires a filename.")
+            return
+        filename = cli_args[1]
+        try:
+            with open(filename, encoding='utf-8') as f:
+                code = f.read()
+        except FileNotFoundError:
+            print(f"Error: file not found: {filename}")
+            return
+        args = {
+            'file': [filename],
+            'translate': False,
+            'dictionary': "",
+            'source_language': "",
+            'reverse': False,
+            'keep': False,
+            'keep_only': False,
+            'return': False,
+        }
+        return run_module('lex', code, args)
+
+    if first.startswith('-') and first not in UP_FLAGS:
+        passthrough_to_python()
+        return
+
     import argparse
 
     # construct the argument parser and parse the argument
@@ -180,7 +278,7 @@ def main():
                    help="Translate English code to the language of your choice.")
 
     ap.add_argument("-re", "--return",
-                   action='store_false',
+                   action='store_true',
                    default=False, required=False, 
                    help="Return the code instead of executing (used in module mode).")
 
@@ -196,6 +294,9 @@ def main():
                       help="Save the compiled file to the specified location, but don't run the file.")
 
     args = vars(ap.parse_args())
+
+    if args['dictionary']:
+        args['dictionary'] = os.path.abspath(args['dictionary'])
 
     filename = args["file"][0]
     with open(filename, encoding='utf-8') as code_pyfile:
