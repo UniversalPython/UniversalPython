@@ -1,103 +1,28 @@
-[Wed Mar  4 17:22:55 PST 2026] FAIL: Phase 1 (Native -> English) crashed for german
 ----------------------------------------------------
-[Wed Mar  4 17:25:25 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-./test.sh: line 14: universalpython: command not found
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:30:05 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:31:31 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-C:\Users\Administrator\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'F:\\UniversalPython\\UniversalPython\\universalpython.py': [Errno 2] No such file or directory
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:33:48 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-C:\Users\Administrator\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'F:\\UniversalPython\\UniversalPython\\UniversalPythonUniversalPythonuniversalpython.py': [Errno 2] No such file or directory
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:35:01 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-C:\Users\Administrator\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'F:\\UniversalPython\\UniversalPython\\UniversalPythonUniversalPythonuniversalpythonuniversalpython.py': [Errno 2] No such file or directory
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:36:03 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-C:\Users\Administrator\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'F:\\UniversalPython\\UniversalPython\\universalpythonuniversalpython.py': [Errno 2] No such file or directory
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:36:57 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-C:\Users\Administrator\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'F:\\universalpython\\universalpython.py': [Errno 2] No such file or directory
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:37:43 PST 2026] FAIL: Phase 1 (german)
+[Fri Mar  6 20:10:09 PST 2026] FAIL: Phase 1 (french)
 Error Detail:
 Traceback (most recent call last):
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 13, in <module>
-    import yaml
-ModuleNotFoundError: No module named 'yaml'
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:43:37 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-usage: universalpython.py [-h] [-t [{,argostranslate,unidecode}]]
-                          [-d DICTIONARY] [-sl SOURCE_LANGUAGE] [-r] [-re]
-                          [-k | -ko]
-                          F [F ...]
-universalpython.py: error: unrecognized arguments: --lang
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 17:45:29 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-Traceback (most recent call last):
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+  File "F:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
     sys.exit(main())
              ~~~~^^
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 201, in main
+  File "F:\UniversalPython\universalpython\universalpython.py", line 201, in main
     with open(filename, encoding='utf-8') as code_pyfile:
          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'C:/Program Files/Git/test/samples/de/hello.de.py'
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/UniversalPython/UniversalPython/test/samples/fr/hello.fr.py'
 ----------------------------------------------------
 ----------------------------------------------------
-[Wed Mar  4 17:48:42 PST 2026] FAIL: Phase 1 (german)
+[Fri Mar  6 20:11:20 PST 2026] FAIL: Phase 1 (french)
 Error Detail:
 Traceback (most recent call last):
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+  File "F:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
     sys.exit(main())
              ~~~~^^
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 207, in main
+  File "F:\UniversalPython\universalpython\universalpython.py", line 207, in main
     return run_module(mode, code, args)
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 142, in run_module
+  File "F:\UniversalPython\universalpython\universalpython.py", line 142, in run_module
     args['dictionary'] = determine_language(args, filename, code)
                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 110, in determine_language
-    detected_dictionary = DEFAULT_LANGUAGE_MAP.get(args['source_language'], {})['default']
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'default'
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 20:38:55 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-C:\Users\Administrator\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'F:\\UniversalPython\\UniversalPython\\test\\universalpython\\universalpython.py': [Errno 2] No such file or directory
-----------------------------------------------------
-----------------------------------------------------
-[Wed Mar  4 20:39:37 PST 2026] FAIL: Phase 1 (german)
-Error Detail:
-Traceback (most recent call last):
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 210, in <module>
-    sys.exit(main())
-             ~~~~^^
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 207, in main
-    return run_module(mode, code, args)
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 142, in run_module
-    args['dictionary'] = determine_language(args, filename, code)
-                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\UniversalPython\UniversalPython\universalpython\universalpython.py", line 110, in determine_language
+  File "F:\UniversalPython\universalpython\universalpython.py", line 110, in determine_language
     detected_dictionary = DEFAULT_LANGUAGE_MAP.get(args['source_language'], {})['default']
                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
 KeyError: 'default'
