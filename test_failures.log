@@ -1,0 +1,29 @@
+----------------------------------------------------
+[Fri Mar  6 20:10:09 PST 2026] FAIL: Phase 1 (french)
+Error Detail:
+Traceback (most recent call last):
+  File "F:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "F:\UniversalPython\universalpython\universalpython.py", line 201, in main
+    with open(filename, encoding='utf-8') as code_pyfile:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/UniversalPython/UniversalPython/test/samples/fr/hello.fr.py'
+----------------------------------------------------
+----------------------------------------------------
+[Fri Mar  6 20:11:20 PST 2026] FAIL: Phase 1 (french)
+Error Detail:
+Traceback (most recent call last):
+  File "F:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "F:\UniversalPython\universalpython\universalpython.py", line 207, in main
+    return run_module(mode, code, args)
+  File "F:\UniversalPython\universalpython\universalpython.py", line 142, in run_module
+    args['dictionary'] = determine_language(args, filename, code)
+                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\UniversalPython\universalpython\universalpython.py", line 110, in determine_language
+    detected_dictionary = DEFAULT_LANGUAGE_MAP.get(args['source_language'], {})['default']
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'default'
+----------------------------------------------------
