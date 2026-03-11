@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Configuration
-NATIVE_FILE="F:/UniversalPython/test/samples/fr/hello.fr.py"
-ENGLISH_FILE="F:/UniversalPython/test/samples/en/conditionals.py"
-LANGUAGE="french"
+NATIVE_FILE="D:/UniversalPython/test/samples/fr/hello.fr.py"
+ENGLISH_FILE="D:/UniversalPython/test/samples/en/conditionals.py"
+LANGUAGE="fr"
 LOG_FILE="test_failures.log"
 
 echo "Starting crash test for $LANGUAGE"

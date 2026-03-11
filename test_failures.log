@@ -1,29 +1,84 @@
 ----------------------------------------------------
-[Fri Mar  6 20:10:09 PST 2026] FAIL: Phase 1 (french)
+[Tue Mar 10 15:14:37 PST 2026] FAIL: Phase 1 (fr)
 Error Detail:
 Traceback (most recent call last):
-  File "F:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+  File "D:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
     sys.exit(main())
-             ~~~~^^
-  File "F:\UniversalPython\universalpython\universalpython.py", line 201, in main
-    with open(filename, encoding='utf-8') as code_pyfile:
-         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'F:/UniversalPython/UniversalPython/test/samples/fr/hello.fr.py'
-----------------------------------------------------
-----------------------------------------------------
-[Fri Mar  6 20:11:20 PST 2026] FAIL: Phase 1 (french)
-Error Detail:
-Traceback (most recent call last):
-  File "F:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
-    sys.exit(main())
-             ~~~~^^
-  File "F:\UniversalPython\universalpython\universalpython.py", line 207, in main
+  File "D:\UniversalPython\universalpython\universalpython.py", line 207, in main
     return run_module(mode, code, args)
-  File "F:\UniversalPython\universalpython\universalpython.py", line 142, in run_module
-    args['dictionary'] = determine_language(args, filename, code)
-                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "F:\UniversalPython\universalpython\universalpython.py", line 110, in determine_language
-    detected_dictionary = DEFAULT_LANGUAGE_MAP.get(args['source_language'], {})['default']
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'default'
+  File "D:\UniversalPython\universalpython\universalpython.py", line 147, in run_module
+    mod = importlib.import_module(".modes."+mode, package='universalpython')
+  File "C:\Users\shahr\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1001, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'universalpython.modes'; 'universalpython' is not a package
+----------------------------------------------------
+----------------------------------------------------
+[Tue Mar 10 15:15:28 PST 2026] FAIL: Phase 1 (fr)
+Error Detail:
+Traceback (most recent call last):
+  File "D:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+    sys.exit(main())
+  File "D:\UniversalPython\universalpython\universalpython.py", line 207, in main
+    return run_module(mode, code, args)
+  File "D:\UniversalPython\universalpython\universalpython.py", line 147, in run_module
+    mod = importlib.import_module(".modes."+mode, package='universalpython')
+  File "C:\Users\shahr\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1001, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'universalpython.modes'; 'universalpython' is not a package
+----------------------------------------------------
+----------------------------------------------------
+[Tue Mar 10 15:34:43 PST 2026] FAIL: Phase 1 (fr)
+Error Detail:
+Traceback (most recent call last):
+  File "D:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+    sys.exit(main())
+  File "D:\UniversalPython\universalpython\universalpython.py", line 207, in main
+    return run_module(mode, code, args)
+  File "D:\UniversalPython\universalpython\universalpython.py", line 147, in run_module
+    mod = importlib.import_module(".modes."+mode, package='universalpython')
+  File "C:\Users\shahr\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1001, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'universalpython.modes'; 'universalpython' is not a package
+----------------------------------------------------
+----------------------------------------------------
+[Tue Mar 10 15:39:05 PST 2026] FAIL: Phase 1 (fr)
+Error Detail:
+Traceback (most recent call last):
+  File "D:\UniversalPython\universalpython\universalpython.py", line 210, in <module>
+    sys.exit(main())
+  File "D:\UniversalPython\universalpython\universalpython.py", line 207, in main
+    return run_module(mode, code, args)
+  File "D:\UniversalPython\universalpython\universalpython.py", line 147, in run_module
+    mod = importlib.import_module(".modes."+mode, package='universalpython')
+  File "C:\Users\shahr\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1001, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'universalpython.modes'; 'universalpython' is not a package
 ----------------------------------------------------

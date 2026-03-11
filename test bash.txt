@@ -2,7 +2,7 @@
 
 NATIVE_FILE="/test/samples/fr/hello.fr.py"
 ENGLISH_FILE="/test/samples/en/conditionals.py"
-LANGUAGE="french"
+LANGUAGE="fr"
 
 echo "Native to English Transpilation"
 universalpython -sl $LANGUAGE $NATIVE_FILE > /dev/null 2>&1
