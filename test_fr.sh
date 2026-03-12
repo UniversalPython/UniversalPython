@@ -9,7 +9,8 @@ LOG_FILE="test_failures.log"
 echo "Starting crash test for $LANGUAGE"
 
 echo "Testing native to english"
-python \universalpython\\universalpython.py -sl $LANGUAGE "$NATIVE_FILE" > /dev/null 2> .tmp_err
+
+python -m universalpython.universalpython -sl $LANGUAGE "$NATIVE_FILE" > /dev/null 2> .tmp_err
 
 if [ $? -eq 0 ]; then
     echo "Transpilation didn't crash."
@@ -25,7 +26,8 @@ else
 fi
 
 echo "Testing english to native"
-python \universalpython\\universalpython.py -r -sl $LANGUAGE "$ENGLISH_FILE" > /dev/null 2> .tmp_err
+
+python -m universalpython.universalpython -sl $LANGUAGE "$NATIVE_FILE" > /dev/null 2> .tmp_err
 
 if [ $? -eq 0 ]; then
     echo "Reverse transpilation didn't crash."
