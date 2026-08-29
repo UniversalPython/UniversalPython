@@ -46,7 +46,7 @@ reserved:
   "chèn":       "string"
   "chn"         :       "str"
   "ajoute"  :       "append"
-  "retire"   :       "pop"
+  "rale"   :       "pop"
   "e"         :       "and"
   "ou"        :       "or"
   "tout"        :       "all"
