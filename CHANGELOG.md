@@ -2,6 +2,27 @@
 
 <!-- version list -->
 
+## v0.5.1-b.6 (2026-08-30)
+
+### Bug Fixes
+
+- Replace 'ent' with 'ant' in language mappings
+  ([`0ba0cb7`](https://github.com/UniversalPython/UniversalPython/commit/0ba0cb731dd0e6192195ad41c67db7fd45fcb3af))
+
+### Features
+
+- Add Haitian Creole language support
+  ([`d78cbae`](https://github.com/UniversalPython/UniversalPython/commit/d78cbae3060f7b1c1821e74d4a6149f34700757c))
+
+### Refactoring
+
+- Rename 'retire' to 'rale' in Haitian Creole mappings
+  ([`9b3946c`](https://github.com/UniversalPython/UniversalPython/commit/9b3946c2260fe4101375f42b0c4eb0df55b3f81b))
+
+- Rename keywords in Haitian Creole language file
+  ([`eda5b6f`](https://github.com/UniversalPython/UniversalPython/commit/eda5b6fec61134a4ba29d07c75a082bc17a82f65))
+
+
 ## v0.5.1-b.5 (2026-03-11)
 
 
