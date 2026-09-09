@@ -1,0 +1,100 @@
+aliases:
+  - "universalpython"
+  - "romanurdupython"
+
+letters:
+  start         :       "a"
+  end           :       "z"
+
+numbers:
+  start         :       "0"
+  end           :       "9"
+
+reserved:
+  
+  # Core Statements & Logic
+  "chapo"             :       "print"
+  "wrna_agr"          :       "elif"
+  "agr"               :       "if"
+  "wrna"              :       "else"
+  "jab_tak"           :       "while"
+  "har"               :       "for"
+  "andar"             :       "in"
+  "andar_nahi"        :       "not in"
+  "pucho"             :       "input"
+  "toro"              :       "break"
+  "jari"              :       "continue"
+  "guzro"             :       "pass"
+  "sahi"              :       "True"
+  "ghalat"            :       "False"
+  "hai"               :       "is"
+  "jamaat"            :       "class"
+  "tareef"            :       "def"
+  "__shuru__"         :       "__init__"
+  "khud"              :       "self"
+  "wapas"             :       "return"
+  "aur"               :       "and"
+  "ya"                :       "or"
+  "nahi"              :       "not"
+  "milao"             :       "match"
+  "soorat"            :       "case"
+  
+  # Error Handling
+  "koshish"           :       "try"
+  "masla"             :       "except"
+  "btao"              :       "raise"
+
+  # Imports & Contexts
+  "se"                :       "from"
+  "le_ao"             :       "import"
+  "bna_kr"            :       "as"
+  "saath"             :       "with"
+  "aalmi"             :       "global"
+
+  # Built-in Types & Advanced Collections
+  "jumla"             :       "str"
+  "adad"              :       "int"
+  "isharia"           :       "float"
+  "mushkil"           :       "complex"
+  "mantaq"            :       "bool"
+  "fehrist"           :       "list"
+  "jor"               :       "tuple"
+  "hadd"              :       "range"
+  "lughat"            :       "dict"
+  "gurooh"            :       "set"
+  "sakin_gurooh"      :       "frozenset"
+  "khali"             :       "None"
+  "khali_qisam"       :       "NoneType"
+
+  # Core Built-in Functions & Methods
+  "shamil"            :       "append"
+  "nikalo"            :       "pop"
+  "sab"               :       "all"
+  "koi"               :       "any"
+  "lambai"            :       "len"
+  "qisam"             :       "type"
+  "tarteeb"           :       "sort"
+  "saaf"              :       "clear"
+  "takrar"            :       "iter"
+  "sab_se_kam"        :       "min"
+  "sab_se_ziada"      :       "max"
+  
+  # File Operations
+  "kholo"             :       "open"
+  "parho"             :       "read"
+  "likho"             :       "write"
+
+  # Math operations
+  "jazar"             :       "sqrt"
+  "uncha_karo"        :       "ceil"
+  "neeche_karo"       :       "floor"
+  "mutlaq"            :       "abs"
+  "quwat"             :       "pow"
+
+  # OS Module 
+  "jaga_fehrist"      :       "listdir"
+  "jaga_mitao"        :       "rmdir"
+  "jaga_banao"        :       "mkdir"
+  "mitao"             :       "remove"
+  "naam_badlo"        :       "rename"
+  "jaghe_bnao"         :       "makedirs"
